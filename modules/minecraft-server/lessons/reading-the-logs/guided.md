@@ -36,6 +36,8 @@ You need:
   coding machine](../../../setup/lessons/dev-machine-setup/guided.md). Quick check: you can `cd` into your
   server folder in the terminal and open that folder in VS Code.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

@@ -33,6 +33,8 @@ You need:
   other people make it a real game; one is enough to test every phase. Quick check:
   a second account or housemate has joined your sandbox server before.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

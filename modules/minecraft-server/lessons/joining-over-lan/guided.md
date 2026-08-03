@@ -37,6 +37,8 @@ If you've been through [The server is yours to change](../server-settings/guided
 already met the `address:port` idea from moving the server's front door — it comes
 back today. If you haven't, it gets explained here from scratch.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+
 ---
 
 ## What you'll have at the end

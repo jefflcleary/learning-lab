@@ -40,6 +40,8 @@ You need:
   If someone else runs the home network, they'll need to be part of that route —
   the other two routes don't touch the router at all.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+
 ---
 
 ## What you'll have at the end

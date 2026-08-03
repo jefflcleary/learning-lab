@@ -17,6 +17,7 @@ before producing or changing any content.
 | Path | What it is | Audience |
 |---|---|---|
 | `README.md`, `HOW-TO-LEARN.md`, `logbook.md`, `about-this-repo.md` | Lab-wide top-level files | Learner |
+| `reference/<name>.md` | Reference pages: transferable craft (debugging, docs habits); theme-neutral, not lessons | Learner |
 | `modules/<name>/README.md` | The module's front page | Learner |
 | `modules/<name>/PATH.md` | That module's suggested order | Learner |
 | `modules/<name>/MODULE.md` | That module's design: arcs, milestones, lesson status, module-specific constraints | Authors |
@@ -41,6 +42,8 @@ before producing or changing any content.
   belongs to exists), then lesson-core workflow, then delivery workflow.
 - **"Generate / regenerate the guided (or other) version of X"** → delivery
   workflow.
+- **"Add general debugging / craft guidance"** → reference-page workflow
+  (`reference/`), not a lesson and not per-lesson resource lists.
 - **"Change how lessons are written"** → update `authoring/PRINCIPLES.md` or
   `PROFILES.md`, then regenerate every affected delivery.
 

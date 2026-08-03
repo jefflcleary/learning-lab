@@ -34,6 +34,8 @@ You need:
 - **Minecraft: Java Edition installed**, with an account that can play it. Quick
   check: you can open the game and load any world.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

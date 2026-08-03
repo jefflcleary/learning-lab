@@ -32,6 +32,8 @@ You need:
   [The server is yours to change](../server-settings/guided.md) covers it. Quick check: you
   can say from memory why editing `server.properties` does nothing until a restart.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

@@ -39,6 +39,8 @@ You need:
 Quick checks: `node bot.js` brings the bot up on your sandbox; `come` and `stay`
 work; `npm install` in the bot's folder completes without errors.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.
+
 ---
 
 ## What you'll have at the end

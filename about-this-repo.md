@@ -20,6 +20,8 @@ The layout, briefly:
   where it exists, is the compressed commands-and-decisions version. `core.md` is
   the working document the lesson is written from — it isn't part of the course, and
   it contains the answers, so reading it spoils the lesson.
+- `reference/` holds the Reference section: short theme-neutral pages on
+  transferable craft, like getting unstuck.
 - `authoring/` holds the rules and procedures used to write new lessons and modules.
 - `site/` holds the code that builds this website from the markdown.
 

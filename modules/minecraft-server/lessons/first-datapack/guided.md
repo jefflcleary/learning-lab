@@ -35,6 +35,8 @@ You need:
   [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md). Quick check: you can open
   your server's folder in VS Code and create files and folders from its sidebar.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.
+
 ---
 
 ## What you'll have at the end

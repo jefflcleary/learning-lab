@@ -36,6 +36,8 @@ You need:
   from memory why editing `server.properties` while the server is running changes
   nothing.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end
@@ -61,6 +63,11 @@ discover in a minute that it has an opinion about folders, and what to do about 
 
 **`du -sh <folder>`** prints how much disk space a folder takes, in human-readable
 units — `du` is short for disk usage, and it's how you'll measure a world.
+
+Both commands carry their own manuals: `man cp` and `man du` open them (press `q`
+to leave). Every terminal command ships a manual page like this — `man` is where a
+command's real documentation lives, and it's always exactly right for the version
+on your machine.
 
 One rule for today, stated up front: **the server is stopped whenever you copy a
 world you intend to trust.** A running server writes to its world files

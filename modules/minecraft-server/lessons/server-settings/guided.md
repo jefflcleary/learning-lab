@@ -28,6 +28,8 @@ You need:
   Quick check: you can open your server's folder in VS Code and see its files in the
   sidebar.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

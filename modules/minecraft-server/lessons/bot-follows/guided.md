@@ -43,6 +43,8 @@ operate on it. Keeping a copy of the working version costs one command —
 `cp bot.js bot-greeter.js` from inside the project folder — and means you can always
 get back to known-good. Do that or don't, but know it's cheap.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

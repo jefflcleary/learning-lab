@@ -48,6 +48,8 @@ Quick checks that you're ready:
 - Join it from your game. If you can walk around in it, everything downstream of
   this will work.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.
+
 ---
 
 ## What you'll have at the end

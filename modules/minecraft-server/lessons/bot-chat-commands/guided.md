@@ -37,6 +37,8 @@ You need:
 Quick checks: `node bot.js` brings the bot into the world; saying `come` in chat
 makes it walk to you; `stay` stops it.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

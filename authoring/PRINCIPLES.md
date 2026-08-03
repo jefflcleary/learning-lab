@@ -89,7 +89,8 @@ Written for someone who arrived here directly, with no prior context.
 **Before you start** — Conditions of the world, not lessons completed. "You need a server
 you can start and stop" rather than "you must have finished lesson three." Each condition
 links to a lesson where it's established, for anyone arriving cold. Include two or three
-concrete self-checks: run this, expect this.
+concrete self-checks: run this, expect this. The section ends with the standard
+stuck-pointer sentence (see "Reference pages").
 
 **What you'll have at the end** — Phrased as "by the end of this session you will have…"
 Observable, and where possible visible to other people.
@@ -195,6 +196,30 @@ course.
 When an invisible fundamental (working directory, file extensions, PATH, dependencies)
 causes friction, name it right there and go one layer deeper than the moment strictly
 requires.
+
+---
+
+## Reference pages
+
+A third content type, alongside lessons and top-level pages: short, theme-neutral
+pages under `reference/` teaching transferable craft — getting unstuck, isolating
+problems, finding documentation. They are not lessons: no cores, no deliveries, no
+hint ladders, and nothing withheld, because they teach *process*, not answers —
+handing a learner a debugging method never spoils a puzzle. House style applies in
+full.
+
+How lessons surface them, deliberately minimal:
+
+- Every guided lesson's "Before you start" section ends with one standard sentence
+  pointing at the "When you're stuck" page — plus, at most, one brief clause
+  naming a specific reference page when the lesson's territory makes it unusually
+  relevant. Never more than that; a resources dump is the failure mode.
+- Every entry in a lesson's "New tools" section names where that tool's real
+  documentation lives. This is how lessons carry their first-principles resources
+  without a separate list.
+
+Reference pages stay few and short. A new one must earn its place the way a
+profile does: a real recurring need, not a speculative topic.
 
 ---
 

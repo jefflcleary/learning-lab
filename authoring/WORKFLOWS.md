@@ -4,12 +4,13 @@ Step-by-step procedures for every kind of authoring task in this repo. Written p
 for LLM sessions, usable by anyone. `PRINCIPLES.md` governs content; this file governs
 process. When they seem to conflict, `PRINCIPLES.md` wins.
 
-There are four workflows:
+There are five workflows:
 
 1. [Capture an idea](#1-capture-an-idea)
 2. [Develop module](#2-develop-module)
 3. [Create or revise a lesson core](#3-create-or-revise-a-lesson-core)
 4. [Generate a delivery](#4-generate-a-delivery)
+5. [Add or revise a reference page](#5-add-or-revise-a-reference-page)
 
 A request like "create a lesson on X" usually runs 2 (if X has no home in an existing
 arc), then 3, then 4. Never skip 2's check: **no lesson is written before the arc it
@@ -164,6 +165,9 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] No time estimates. No exclamation marks. No assumed learner or journey position.
 - [ ] House style holds (PRINCIPLES.md "Voice and style"): no quips, asides, or a
       second authorial voice; excitement only via concrete specifics.
+- [ ] "Before you start" ends with the standard stuck-pointer sentence (plus at
+      most one lesson-specific reference-page clause).
+- [ ] Every "New tools" entry names where that tool's real documentation lives.
 - [ ] Audience separation holds: pages referenced by title, never filename; no
       mention of this project's files, folders, or machinery.
 - [ ] Learner work goes to the learner's logbook or their own projects — never into
@@ -177,6 +181,22 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
       hint blocks collapse, links resolve, nothing renders oddly. Markdown must stay
       compatible with both the site and GitHub's renderer; don't use
       generator-specific syntax.
+
+---
+
+## 5. Add or revise a reference page
+
+Trigger: a transferable-craft topic (debugging, documentation habits, diagnostic
+method) keeps coming up across lessons and has no home.
+
+1. Read the "Reference pages" section of `PRINCIPLES.md`. Confirm the topic is a
+   real recurring need, theme-neutral, and about process rather than any module's
+   subject matter. If it's module-specific, it belongs in that module's lessons.
+2. Write `reference/<name>.md` (kebab-case, no numbers). Short and skimmable;
+   house style; nothing withheld; refer to other pages by title.
+3. Add the page to the Reference section in `site/sidebars.js`.
+4. If an existing lesson's territory makes the new page unusually relevant, add
+   the one-clause pointer to that lesson's stuck-sentence — sparingly.
 
 ---
 

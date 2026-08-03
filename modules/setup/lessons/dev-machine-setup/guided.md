@@ -32,6 +32,8 @@ You need:
 
 That's all. This is a starting-point lesson; it assumes nothing else.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

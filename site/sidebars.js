@@ -73,6 +73,16 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Reference',
+      collapsed: false,
+      items: [
+        'reference/when-youre-stuck',
+        'reference/isolating-a-problem',
+        'reference/finding-the-docs',
+      ],
+    },
   ],
 };
 

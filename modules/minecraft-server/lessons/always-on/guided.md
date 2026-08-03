@@ -43,6 +43,8 @@ You need:
   broken something, and brought it back. The last part of this session cuts the
   power to a running machine, and you only do that with a proven safety net.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+
 ---
 
 ## What you'll have at the end

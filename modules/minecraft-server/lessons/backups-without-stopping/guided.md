@@ -41,6 +41,8 @@ You need:
   [A world is a folder](../worlds-and-copies/guided.md). Quick check: you can say what
   `level-name` does and what `world-experiments` is for.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end

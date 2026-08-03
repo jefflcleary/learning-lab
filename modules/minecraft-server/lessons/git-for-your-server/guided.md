@@ -38,6 +38,8 @@ You need:
   folder shows a datapack you built, and your backup script exists (for most people
   that's `backup.sh` in the server folder).
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end
@@ -61,7 +63,9 @@ By the end of this session you will have:
 takes a snapshot of the files you've told it to watch, attaches your name, the
 date, and a message you write, and files the snapshot away forever. It was
 installed during machine setup and hasn't been touched since; there is nothing more
-to install.
+to install. Its real documentation is built in — `git help <command>` opens the
+manual for any command — and the same pages live at
+[git-scm.com](https://git-scm.com/docs).
 
 One piece of one-time setup: every snapshot is stamped with an author, and git
 refuses to guess. Tell it who you are (these two are fine to copy):

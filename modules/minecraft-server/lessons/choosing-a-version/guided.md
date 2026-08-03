@@ -37,6 +37,8 @@ You need:
 Quick check that you're ready: start your server, look at the first few lines it prints,
 and find the version number in there. If you can do that, you're set.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.
+
 ---
 
 ## What you'll have at the end

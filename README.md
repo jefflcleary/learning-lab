@@ -58,6 +58,11 @@ Two short pages are worth reading first:
 - **[Your logbook](logbook.md)** — the one piece of writing you'll keep as you go:
   predictions before you run things, and a record of every wall you hit.
 
+There's also a Reference section — short pages on the craft that transfers
+everywhere, starting with [When you're stuck](reference/when-youre-stuck.md).
+Lessons point there when their own hints run out; it's worth knowing it exists
+before you need it.
+
 ## About this project
 
 Curious how this material is made, or want to read it offline? See

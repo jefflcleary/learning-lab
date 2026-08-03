@@ -37,6 +37,8 @@ You need:
   [Running your own server](../running-your-own-server/guided.md) gets you there. Quick
   check: start it, wait for the **Done** line, type `stop`.
 
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
+
 ---
 
 ## What you'll have at the end
@@ -58,7 +60,9 @@ By the end of this session you will have:
 **A shell script** is a plain text file full of terminal commands, which the shell
 runs top to bottom. Nothing more mysterious than that: the same commands you'd
 type, saved. Saved commands don't get mistyped, don't get skipped because it's
-late, and run the same on the hundredth day as the first.
+late, and run the same on the hundredth day as the first. Every command a script
+uses has its own manual through `man`, the way `cp` and `du` did — `man tar` will
+matter today.
 
 **`date`** is a command that prints the current date and time. It can be told the
 exact format to print in — you'll use that to put today's date into a folder name.
