@@ -29,18 +29,46 @@ whenever you want is half solved: every idea you have can now be tested in secon
 A problem you *can't* reproduce turns the question into a better one — what's
 different between the time it fails and the time it doesn't?
 
+From here on, one rule for every test: **change one thing at a time.** If you
+change three things and it works, you don't know which change mattered — and two of
+them may be new problems that currently cancel out. One change, one test, one
+conclusion.
+
 ## 4. Shrink it
 
-Cut things away until the smallest thing that still fails is in front of you.
-Comment out half the code. Test one command instead of the script. Try one file
-instead of the folder. Small failures have small explanations.
+Cut things away until the smallest thing that still fails is in front of you — and
+cut in halves, not slivers. Comment out half the code: does the failure survive?
+Then it lives in the other half. Test one command instead of the script, one file
+instead of the folder. Each halving is a single test, ten of them can search a
+thousand suspects, and small failures have small explanations.
 
 ## 5. Find the layer
 
-"It doesn't work" is too big to attack. Is it your input, your code, the
-configuration, the other program, the connection between programs, or the machine?
-[Isolating a problem](isolating-a-problem.md) is the map for this — it's the move
-that turns an hour of guessing into three quick tests.
+"It doesn't work" is too big to attack. When one thing talks to another and the
+result is wrong, the fault lives in one of a handful of places — name them, and you
+can test them separately:
+
+- **Your input** — a typo, a wrong name, a wrong address. Cheapest to check, most
+  often guilty. Look character by character; you read what you meant to type, not
+  what you typed.
+- **Your code or command** — the thing you wrote. Does the smallest piece of it
+  work alone?
+- **The configuration** — the settings the program actually read, which are not
+  always the settings you think you saved. When did the program last read its
+  settings? Some only look at startup.
+- **The other program** — is it even running? Is it the version you think? Its own
+  log usually says what it saw, which may be nothing at all.
+- **The connection between programs** — can the two sides reach each other at all?
+  A request that arrives and gets refused looks completely different from a
+  request that never arrives; learn to tell a fast "no" from silence.
+- **The machine** — full disk, missing permission, wrong folder. Rare, but cheap
+  to rule out, and it produces the strangest symptoms of the bunch.
+
+Two questions do the work here. *What's the smallest test that would prove one of
+these layers innocent?* — each acquittal shrinks the territory. And *can I swap a
+suspect part for a known-good one?* — a different client, a different machine, the
+self-address instead of the network. If the symptom follows the substitution,
+you've found your layer.
 
 ## 6. Go to the source
 
@@ -65,3 +93,10 @@ the answer that wouldn't come at the desk routinely arrives on the walk.
 
 And when you do get through — however long it takes — finish the entry. "What it
 actually was" is the most valuable line in your logbook.
+
+## The habit that makes all of this cheaper
+
+Every step above works better when you can always return to a state that works and
+step forward from it, one change at a time. That's half of why backups and version
+control exist: not just to survive disasters, but to make "get back to known-good,
+then advance carefully" an everyday move instead of a heroic one.

@@ -45,7 +45,7 @@ Quick checks: your SLP script prints a JSON status when the server is up; you ca
 say your Mac's local wifi address without looking at this page; a phone on the
 same wifi can see your Mac's name in some sharing context or ping it.
 
-If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, its layer-finding step is the one that pays fastest.
 
 ---
 

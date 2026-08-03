@@ -31,7 +31,7 @@ You need:
   refuse someone, and a friend who agrees to be temporarily bounced is the
   cleanest way. An alt account works too.
 
-If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, its layer-finding step is the one that pays fastest.
 
 ---
 

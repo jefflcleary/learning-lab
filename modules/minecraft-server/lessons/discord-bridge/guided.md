@@ -45,7 +45,7 @@ You need:
 - Helpful, for the payoff to outlast the session: a machine where things
   [stay running](../always-on/guided.md).
 
-If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, start with [Isolating a problem](../../../../reference/isolating-a-problem.md).
+If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. For connection mysteries, its layer-finding step is the one that pays fastest.
 
 ---
 
