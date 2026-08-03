@@ -4,6 +4,11 @@ A profile describes an audience and a style. A delivery is a lesson core rendere
 one profile. Profiles are defined here, once, so that every lesson's deliveries mean the
 same thing.
 
+Profiles are archetypes, never real people. They describe a *kind* of reader — their
+familiarity, their wants — and no profile is tied to, named for, or maintained in
+sync with any actual human. Different modules may serve the same profile to entirely
+different learners.
+
 Profile names are internal vocabulary and never appear inside learner-facing text (the
 filename is the only place a learner sees them).
 

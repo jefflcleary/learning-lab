@@ -18,6 +18,10 @@ independent — start with the one about a thing you care about.
   changing one settings file to writing bots, reading the world's raw data, speaking
   a network protocol byte by byte, and putting a live status page on the phones in
   your house.
+- **[Building a collection tracker](modules/collection-tracker/README.md)** — from
+  a blank Google Sheet to a trading-card tracker that knows what your collection is
+  worth, what you owe, and whether packs beat singles — and eventually updates
+  itself.
 
 ## How lessons work
 

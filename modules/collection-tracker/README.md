@@ -1,0 +1,52 @@
+# Building a collection tracker
+
+If you collect trading cards, you already have questions only data can answer. What
+is the collection actually worth? Am I up or down on what I've spent? Which set has
+been the best to open? What do I still owe for the packs someone else paid for?
+
+This module answers all of them by building a real collection tracker in Google
+Sheets — starting from one blank sheet, ending with a system that partly runs
+itself. Spreadsheets are the vehicle for the same reason they run half the world's
+businesses: they turn "I think" into "I know." The examples use Pokémon cards; the
+tracker works for any collection.
+
+Everything you build stays yours and stays real:
+
+- From the first session, one cell answers "what is it all worth?" — live,
+  recalculating every time you add a card.
+- The tracker goes green and red at a glance: which cards made money, which packs
+  were duds.
+- Money someone else fronted gets its own ledger, with a running balance you pay
+  down — a number both sides can trust, watched all the way to zero.
+- A chart shows the collection's value climbing (or not) week by week — and
+  another answers, from your own pull history, whether packs or singles are the
+  better buy.
+- Logging a purchase becomes a ten-second phone form instead of a chore.
+- Selling gets honest: after fees, shipping, and materials, what did that sale
+  actually earn?
+- And near the end, the tracker starts working while you sleep — snapshots on a
+  schedule, a weekly report, and an expedition to find out whether live market
+  prices can flow in on their own.
+
+Along the way you'll have learned formulas, live recalculation, data design,
+filtering and querying, charts, probability on your own data, the difference
+between paper value and real money, debt and paying it down, automation with real
+code, and how to find out what's possible when nobody has written the answer down.
+
+## Where to start
+
+The [recommended path](PATH.md) runs in order — each lesson builds on the tracker
+the previous one left behind. You can also ignore it: every lesson states its own
+requirements as facts about your setup, so any lesson whose requirements you meet
+is fair game.
+
+New to the lab entirely? Read [how lessons work](../../README.md) and
+[how to learn here](../../HOW-TO-LEARN.md) first — they're short, and every lesson
+assumes them.
+
+## What you'll need
+
+A web browser, a Google account (free; an adult may need to create it), and a
+collection you actually care about — cards you own, real purchases to record. The
+tracker is only interesting if the data is true. No software gets installed;
+everything happens in the browser.

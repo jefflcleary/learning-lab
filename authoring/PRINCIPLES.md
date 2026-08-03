@@ -27,7 +27,8 @@ Two consequences of that objective shape everything:
   stronger motivator than building from scratch.
 - **Something visible every session.** The social loop — friends and family seeing what
   the learner made — does much of the motivational work. No lesson ends with nothing
-  to show.
+  to show, and the payoff is deliverable-shaped: a concrete thing that now exists and
+  can be shown to someone, not an exercise completed.
 
 ---
 
@@ -248,6 +249,18 @@ In lesson cores, volatile facts *are* recorded (authors need them), but always t
 This keeps material from rotting, and doubles as practice at the most useful research
 skill there is: finding out the present state of something rather than trusting a
 description of it.
+
+## Exploration lessons
+
+Some lessons go further than pointing at a volatile fact: they are built around
+territory whose current state is unknown *even to the authors* — what data sources
+exist, what a tool currently permits, whether a thing is possible at all. These are
+legitimate and valuable, not gaps to be papered over. The material's job is to set
+up the exploration honestly: state plainly that the answer is unknown and may have
+changed, equip the learner with the finding-out method, and treat hitting a real
+constraint as a successful outcome to be understood and logged — not a failure of
+the lesson. Practicing "what's possible?" against genuinely open questions is where
+learning becomes growth.
 
 ---
 
