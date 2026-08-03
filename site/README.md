@@ -29,7 +29,7 @@ useful as a whole-repo link check.
   files render identically here and on GitHub — HTML comments, `<details>` hint
   blocks, and plain markdown links all work in both. Don't introduce
   generator-specific syntax into content.
-- `sidebars.js` is hand-curated: an Overview section for the lab's own pages, then
+- `sidebars.js` is hand-curated: a Welcome section for the lab's own pages, then
   a Modules section with one category per module, lessons in that module's PATH.md
   order. Adding a lesson means adding its `guided` doc id there (and `reference`,
-  under Quick references, if one exists).
+  under that module's Quick references, if one exists).

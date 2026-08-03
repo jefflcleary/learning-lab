@@ -10,9 +10,17 @@ matters is that it's one place, and that you actually write in it.
 
 ## Predictions
 
-Before you run something new — a command, a program, a changed setting — write one
-line saying what you expect to happen. Be concrete enough to be wrong: "the server
-will refuse and print an error naming the version."
+Before you run something new — a command, a program, a changed setting — write down
+what you expect to happen. Be concrete enough to be wrong: "the server will refuse
+and print an error naming the version." Then, after the run, finish the entry:
+
+```
+## <date> — <what I'm about to try>
+
+What I expect:
+What actually happened:
+What else I ran into:
+```
 
 This is not about being right. An unexpected result only teaches you something if
 you notice it's unexpected. Without a prediction, a strange result is noise and you
@@ -23,8 +31,8 @@ the answers go here.
 ## Walls
 
 Every time you get properly stuck — not ten-seconds stuck, actually stuck — add an
-entry with these four lines. Fill in the last line whenever you finally get through,
-even if that's days later.
+entry with these lines. Fill in the last two whenever you finally get through, even
+if that's days later.
 
 ```
 ## <date> — <a few words for what you were doing>
@@ -33,6 +41,7 @@ What stopped me:
 What I guessed:
 What I tried:
 What it actually was:
+What else I ran into:
 ```
 
 Writing this will feel unnecessary in the moment. Do it anyway. Right now, "stuck"
@@ -40,3 +49,12 @@ can feel like a verdict. Give this record a few months and it becomes a list of
 things that were impossible at the time — every one of which turned out to be
 temporary, with the real cause written next to your guess. That record, in your own
 words, is the most convincing evidence you will ever have that walls come down.
+
+## About that last line
+
+Both templates end the same way, and it's there on purpose. Chasing one question
+almost always turns up things you weren't looking for — a command you didn't know
+existed, a file you didn't know was there, a second mystery worth its own entry.
+That's not a distraction from the learning; over time it's most of it. One line per
+surprise is enough. Some of the best things you'll ever build start as a stray
+entry on that line.

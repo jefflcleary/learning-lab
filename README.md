@@ -11,6 +11,9 @@ A **module** is a set of lessons connected by a theme. Each module has a front p
 describing what you'll build and a recommended path through its lessons. Modules are
 independent — start with the one about a thing you care about.
 
+- **[Getting set up](modules/setup/README.md)** — a machine ready to build with: an
+  editor, a way to run code, version control, and enough terminal to move around.
+  Other modules assume this one.
 - **[Running a Minecraft server](modules/minecraft-server/README.md)** — from
   changing one settings file to writing bots, reading the world's raw data, speaking
   a network protocol byte by byte, and putting a live status page on the phones in

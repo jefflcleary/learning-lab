@@ -37,7 +37,7 @@ JavaScript and which were programming.
   several people have joined over time — `lessons/joining-over-lan/` — but one
   player's history still works.
 - A machine set up for coding: terminal, VS Code — established by
-  `lessons/dev-machine-setup/`.
+  `modules/setup/lessons/dev-machine-setup/`.
 
 ## Establishes
 

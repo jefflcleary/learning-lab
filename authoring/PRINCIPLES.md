@@ -154,11 +154,14 @@ the author helps.
 
 **The logbook.** The learner keeps a logbook — wherever they choose (paper, a notes
 app, a text file); explicitly not in this repo. Two things get recorded in it, and
-lessons prompt for both by name: **predictions** (one line before running something
-new) and **walls** (the four-line stuck template: what stopped me / what I guessed /
-what I tried / what it actually was). Months in, it becomes the learner's own data
-that stuck things come unstuck — the belief the whole lab exists to install. The
-learner-facing explanation lives on the "Your logbook" page.
+lessons prompt for both by name: **predictions** (what I expect / what actually
+happened / what else I ran into) and **walls** (what stopped me / what I guessed /
+what I tried / what it actually was / what else I ran into). Both templates end
+with the surprises line deliberately: side-discoveries made while chasing something
+else are most of the learning over time, and the logbook is where they get caught.
+Months in, it becomes the learner's own data that stuck things come unstuck — the
+belief the whole lab exists to install. The learner-facing explanation and both
+templates live on the "Your logbook" page.
 
 **Predict before you run.** Before executing anything, state what you expect — in the
 logbook. The point isn't accuracy, it's manufacturing surprise: without a prediction,

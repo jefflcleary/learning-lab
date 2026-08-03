@@ -218,7 +218,7 @@ is what every program that takes human input does. The terminal you've typed int
 since your first lesson does exactly this: reads your line, splits off the first
 word, finds what
 that word names, hands the rest over as arguments. That loop was described to you
-back in [Setting up a coding machine](../dev-machine-setup/guided.md); today you built one.
+back in [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md); today you built one.
 The server console you drove in [Talking to a running server](../console-commands/guided.md)
 — same shape. Chat app slash-commands, search boxes, every shell on every machine:
 read, split, decide, act.

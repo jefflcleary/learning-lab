@@ -39,7 +39,7 @@ You need:
 - **The sandbox reachable at `localhost`** — where
   [Running your own server](../running-your-own-server/guided.md) left things.
 - **Node and a `projects` folder**, from
-  [Setting up a coding machine](../dev-machine-setup/guided.md).
+  [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md).
 
 Quick checks that you're ready:
 

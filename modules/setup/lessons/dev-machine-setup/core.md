@@ -6,7 +6,7 @@ see authoring/WORKFLOWS.md.
 ## Meta
 
 - **Slug:** dev-machine-setup
-- **Part:** Part 0 — Setup
+- **Module / Part:** setup — general machine setup
 - **Scaffolding:** level 1 — first contact with the terminal; reasoning shown throughout
 - **Deliveries:** guided (learner doing it themselves, or learning what was done for
   them) + reference (adult executing the setup)
@@ -56,8 +56,8 @@ Other cores may cite: "a computer set up for coding — established by
 - The terminal opens in the **home directory** (`/Users/<name>`), shown as `~`.
 - Projects folder: `mkdir projects` in the home directory → `~/projects`. [macos]
   Deliberately *not* on Desktop or in Documents: those two folders are often synced to
-  iCloud, and cloud sync fights with programs that write files constantly (this
-  matters hard in `running-your-own-server`).
+  iCloud, and cloud sync fights with programs that write files constantly (server-like
+  projects in other modules depend on this fact).
 - Error shape: `zsh: command not found: <name>` — the shell searched its list of
   program folders and no program has that name. [windows] — everything above differs;
   Windows facts not yet gathered; a windows delivery needs WSL2 decisions first.
@@ -68,8 +68,8 @@ Other cores may cite: "a computer set up for coding — established by
 
 Three programs, each explained before anything is installed: an editor (code is plain
 text; a code editor is a text editor that understands it), Node (JavaScript grew up in
-browsers; Node lets it run directly on a computer — later lessons write bots as plain
-JavaScript files that Node runs), git (a save-history for files; also how this repo
+browsers; Node lets it run directly on a computer — other modules build on this with
+plain JavaScript files that Node runs), git (a save-history for files; also how this repo
 itself is delivered). The terminal explained as: a program for running other programs
 by typing their names — older than windows-and-mouse, still everywhere because it's
 faster to automate and every tool speaks it.

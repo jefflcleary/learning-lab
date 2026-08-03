@@ -30,7 +30,7 @@ everywhere, and today you'll draw the line yourself.
 You need:
 
 - **A computer set up for coding, with git installed.**
-  [Setting up a coding machine](../dev-machine-setup/guided.md) covered it. Quick check:
+  [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md) covered it. Quick check:
   `git --version` in a terminal prints a version number.
 - **A server folder with things you made in it.** At least one datapack of your own
   — [Your first datapack](../first-datapack/guided.md) gets you there — and a backup script,

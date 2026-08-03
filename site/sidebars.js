@@ -1,5 +1,5 @@
 // @ts-check
-// Hand-curated sidebar. Two top-level sections: Overview (the lab itself) and
+// Hand-curated sidebar. Two top-level sections: Welcome (the lab itself) and
 // Modules (one category per module, lessons in that module's PATH order). Lesson
 // labels come from each file's H1 title. Update this file when lessons or modules
 // are added (the delivery workflow's render-check will catch omissions).
@@ -9,7 +9,7 @@ const sidebars = {
   main: [
     {
       type: 'category',
-      label: 'Overview',
+      label: 'Welcome',
       collapsed: false,
       link: {type: 'doc', id: 'README'},
       items: ['HOW-TO-LEARN', 'logbook', 'about-this-repo'],
@@ -21,11 +21,24 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'Getting set up',
+          link: {type: 'doc', id: 'modules/setup/README'},
+          items: [
+            'modules/setup/PATH',
+            'modules/setup/lessons/dev-machine-setup/guided',
+            {
+              type: 'category',
+              label: 'Quick references',
+              items: ['modules/setup/lessons/dev-machine-setup/reference'],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Running a Minecraft server',
           link: {type: 'doc', id: 'modules/minecraft-server/README'},
           items: [
             'modules/minecraft-server/PATH',
-            'modules/minecraft-server/lessons/dev-machine-setup/guided',
             'modules/minecraft-server/lessons/running-your-own-server/guided',
             'modules/minecraft-server/lessons/server-settings/guided',
             'modules/minecraft-server/lessons/console-commands/guided',
@@ -56,7 +69,6 @@ const sidebars = {
               type: 'category',
               label: 'Quick references',
               items: [
-                'modules/minecraft-server/lessons/dev-machine-setup/reference',
                 'modules/minecraft-server/lessons/running-your-own-server/reference',
                 'modules/minecraft-server/lessons/joining-from-outside/reference',
                 'modules/minecraft-server/lessons/always-on/reference',

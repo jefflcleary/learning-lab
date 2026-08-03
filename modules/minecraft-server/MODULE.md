@@ -46,8 +46,10 @@ deliveries still matter: they're how the learner finds out what was installed an
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `dev-machine-setup` | VS Code, Node, git installed; terminal basics; a projects folder | core + guided + reference written |
 | `running-your-own-server` | A vanilla server the learner can start, stop, and join | core + guided + reference written |
+
+Machine setup (`dev-machine-setup`) moved to the theme-neutral `setup` module
+(`modules/setup/`); this module's PATH still points at it as step one.
 
 ### Part 1 — The server is yours to change
 

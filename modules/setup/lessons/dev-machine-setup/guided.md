@@ -69,7 +69,7 @@ unzip it, and drag `Visual Studio Code` into your `Applications` folder. It's fr
 **Node.js** is a program that runs JavaScript. JavaScript grew up inside web browsers,
 but Node lets it run directly on your computer, like any other program — which is what
 makes it possible to write a file of JavaScript and have it *do* things: talk over the
-network, read files, and eventually control a character on a Minecraft server. Install:
+network, read files, and drive other programs. Install:
 go to [nodejs.org](https://nodejs.org) and download the installer marked **LTS**, then
 run it. LTS stands for Long Term Support — it's the version chosen to be boring and
 dependable, which is exactly what you want.
@@ -174,8 +174,8 @@ terminal into it, and prove you're standing inside it.
 
 One thing to know first: the reason it's going in your home directory and *not* on the
 Desktop or in Documents is that Macs often sync those two folders to iCloud. Cloud
-sync and programs that write files constantly do not get along — this will matter a
-lot when a Minecraft server is writing your world to disk.
+sync and programs that write files constantly do not get along — and some of the
+programs you'll run from this folder write files constantly.
 
 <details>
 <summary>Stuck? Start here</summary>

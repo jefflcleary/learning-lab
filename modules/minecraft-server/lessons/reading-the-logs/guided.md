@@ -33,7 +33,7 @@ You need:
   interesting, but one player's history still works. Quick check: `ls logs`
   inside your server folder shows `latest.log` and at least a few other files.
 - **A machine set up for coding** — terminal and VS Code, from [Setting up a
-  coding machine](../dev-machine-setup/guided.md). Quick check: you can `cd` into your
+  coding machine](../../../setup/lessons/dev-machine-setup/guided.md). Quick check: you can `cd` into your
   server folder in the terminal and open that folder in VS Code.
 
 ---
@@ -387,7 +387,7 @@ problem — `FileNotFoundError` — and names a file that *definitely exists*:
 wherever you're currently standing, not a full address. Your script says "in the
 `logs` folder here", and standing in your home folder, there is no `logs` folder
 here. The terminal's current place — its working directory, the concept you met
-when [setting up this machine](../dev-machine-setup/guided.md) — just changed what your
+when [setting up this machine](../../../setup/lessons/dev-machine-setup/guided.md) — just changed what your
 program means. A path starting from `/`, spelling out the full route, is an
 **absolute path** and means the same thing from anywhere. `cd` back to the server
 folder and confirm the script works again. Nothing was damaged; the program just

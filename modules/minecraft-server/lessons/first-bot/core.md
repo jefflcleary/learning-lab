@@ -35,7 +35,7 @@ experiment rather than asserted.
 - The sandbox reachable at `localhost` — established by
   `lessons/running-your-own-server/`
 - Node installed and a `~/projects` folder — established by
-  `lessons/dev-machine-setup/`
+  `modules/setup/lessons/dev-machine-setup/`
 
 Self-checks for delivery: sandbox starts and its first lines print the version, which
 matches the learner's written note from choosing-a-version; the learner can join it

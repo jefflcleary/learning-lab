@@ -32,8 +32,8 @@ mkdir projects
 ```
 
 Home directory on purpose — **not** Desktop or Documents, which are commonly
-iCloud-synced. Cloud sync corrupts things that write files continuously (a Minecraft
-server, later, is exactly that).
+iCloud-synced. Cloud sync corrupts things that write files continuously, and some
+later projects are exactly that.
 
 ## What you have now
 

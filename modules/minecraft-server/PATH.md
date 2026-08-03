@@ -6,13 +6,15 @@ who'd rather be handed a sensible sequence than work one out.
 
 ## Getting set up
 
-1. **[Setting up a coding machine](lessons/dev-machine-setup/guided.md)** — a computer that can
-   write and run code: an editor, a JavaScript runtime, and version control. If an
-   adult is doing this part for you, there's a compressed version for them inside —
-   but read the main version anyway, so you know what's on your machine and why.
+1. **[Setting up a coding machine](../setup/lessons/dev-machine-setup/guided.md)** —
+   a computer that can write and run code: an editor, a JavaScript runtime, and
+   version control. This lesson lives in the [Getting set up](../setup/README.md)
+   module because it isn't Minecraft-specific, but it's step one here all the same.
+   If an adult is doing this part for you, there's a compressed version for them
+   inside; read the main version anyway, so you know what's on your machine and why.
 2. **[Running your own server](lessons/running-your-own-server/guided.md)** — a Minecraft server
    you can start, stop, join, and break without consequences. Everything else in this
-   repo touches this server one way or another.
+   module touches this server one way or another.
 
 ## The server is yours to change
 

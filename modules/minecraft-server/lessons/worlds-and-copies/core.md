@@ -30,7 +30,7 @@ This is the file-level mechanism under the production/development idea from
 
 - A server you can start and stop — established by `lessons/running-your-own-server/`
 - Terminal basics: knowing where you are (`pwd`), looking around (`ls`), moving
-  (`cd`) — established by `lessons/dev-machine-setup/`
+  (`cd`) — established by `modules/setup/lessons/dev-machine-setup/`
 - You've changed server settings and know how to make a change land (the
   restart-to-apply rule) — established by `lessons/server-settings/`
 

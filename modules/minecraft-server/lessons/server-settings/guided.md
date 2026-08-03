@@ -24,7 +24,7 @@ You need:
 - **A server you can start and stop.** [Running your own server](../running-your-own-server/guided.md)
   gets you there. Quick check: start your server, watch for the **Done** line, type
   `stop`, watch it save and exit.
-- **A code editor.** Set up in [Setting up a coding machine](../dev-machine-setup/guided.md).
+- **A code editor.** Set up in [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md).
   Quick check: you can open your server's folder in VS Code and see its files in the
   sidebar.
 

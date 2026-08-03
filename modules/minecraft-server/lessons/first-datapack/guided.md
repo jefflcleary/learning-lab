@@ -32,7 +32,7 @@ You need:
   can run `/gamerule doDaylightCycle` from in-game chat and get an answer instead of
   a refusal.
 - **A code editor.** Set up in
-  [Setting up a coding machine](../dev-machine-setup/guided.md). Quick check: you can open
+  [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md). Quick check: you can open
   your server's folder in VS Code and create files and folders from its sidebar.
 
 ---
