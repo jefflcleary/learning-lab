@@ -17,6 +17,10 @@ to your will.
 Install steps in this lesson are fine to copy and paste. The parts worth typing by
 hand are marked by being small.
 
+If you already know your way around a computer — or you're setting this up on a
+learner's behalf — there's a [compressed version of this lesson](reference.md)
+with just the commands and decisions.
+
 ---
 
 ## Before you start

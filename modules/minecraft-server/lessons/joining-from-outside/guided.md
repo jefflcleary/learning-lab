@@ -16,6 +16,10 @@ router — and by the end of the session, a friend who does not live with you wi
 be standing in your world. If you've built anything custom, this is the day it
 gets a real audience.
 
+If you already know your way around a computer — or you're setting this up on a
+learner's behalf — there's a [compressed version of this lesson](reference.md)
+with just the commands and decisions.
+
 ---
 
 ## Before you start

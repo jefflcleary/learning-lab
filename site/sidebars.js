@@ -26,11 +26,6 @@ const sidebars = {
           items: [
             'modules/setup/PATH',
             'modules/setup/lessons/dev-machine-setup/guided',
-            {
-              type: 'category',
-              label: 'Quick references',
-              items: ['modules/setup/lessons/dev-machine-setup/reference'],
-            },
           ],
         },
         {

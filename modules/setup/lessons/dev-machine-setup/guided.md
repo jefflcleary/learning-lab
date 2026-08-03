@@ -17,6 +17,10 @@ One note on copying: normally in these lessons you'll type things by hand. Insta
 steps are the exception — copying and pasting setup commands is fine, because there's
 nothing to learn inside them.
 
+If you already know your way around a computer — or you're setting this up on a
+learner's behalf — there's a [compressed version of this lesson](reference.md)
+with just the commands and decisions.
+
 ---
 
 ## Before you start
