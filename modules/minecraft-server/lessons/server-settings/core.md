@@ -26,7 +26,7 @@ none of them locked.
 
 - A server you can start and stop — established by
   `lessons/running-your-own-server/` (also assumes VS Code from
-  `modules/setup/lessons/dev-machine-setup/`)
+  `modules/dev-machine/lessons/dev-machine-setup/`)
 
 ## Establishes
 

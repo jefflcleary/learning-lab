@@ -48,8 +48,8 @@ deliveries still matter: they're how the learner finds out what was installed an
 |---|---|---|
 | `running-your-own-server` | A vanilla server the learner can start, stop, and join | core + guided + reference written |
 
-Machine setup (`dev-machine-setup`) moved to the theme-neutral `setup` module
-(`modules/setup/`); this module's PATH still points at it as step one.
+Machine setup (`dev-machine-setup`) moved to the theme-neutral `dev-machine` module
+(`modules/dev-machine/`); this module's PATH still points at it as step one.
 
 ### Part 1 — The server is yours to change
 

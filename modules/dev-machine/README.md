@@ -1,4 +1,4 @@
-# Getting set up
+# Setting up a dev machine
 
 Before you can build things, a computer has to be ready to build with: a proper
 editor, a way to run code, version control, and enough of the terminal to move

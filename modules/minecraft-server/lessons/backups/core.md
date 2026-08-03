@@ -71,7 +71,7 @@ recommended path, friends play on this server.
   with a permission error.
 - `./backup.sh` — run a script in the current folder. The `./` is required because
   the shell only searches its PATH folders for bare command names (PATH named in
-  `modules/setup/lessons/dev-machine-setup/`); `./` says "this one, right here."
+  `modules/dev-machine/lessons/dev-machine-setup/`); `./` says "this one, right here."
 - A script runs relative to the **runner's current directory**, not the script's
   own location. `cp -R world …` inside the script works only when run from the
   server folder. (Second break-it measures this.)

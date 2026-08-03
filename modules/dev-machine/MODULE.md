@@ -1,4 +1,4 @@
-# Module design — Getting set up
+# Module design — Setting up a dev machine
 
 General-purpose machine setup: lessons whose results other modules assume and cite.
 Nothing in this module is specific to any other module's theme — that's the reason
@@ -36,4 +36,4 @@ only this module.
 ## Cross-module condition
 
 Other modules cite this module's result as: "a computer set up for coding —
-established by `modules/setup/lessons/dev-machine-setup/`."
+established by `modules/dev-machine/lessons/dev-machine-setup/`."

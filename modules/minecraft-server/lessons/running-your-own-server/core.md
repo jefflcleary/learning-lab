@@ -22,7 +22,7 @@ reward.
 
 ## Prerequisites
 
-- A computer set up for coding — established by `modules/setup/lessons/dev-machine-setup/`
+- A computer set up for coding — established by `modules/dev-machine/lessons/dev-machine-setup/`
   (specifically: a terminal you can navigate, and a `~/projects` folder)
 - Minecraft (Java Edition) installed with an account that can play it
 

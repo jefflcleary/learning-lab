@@ -4,11 +4,11 @@ You don't have to follow this. Every lesson states its own requirements, and if 
 meet them you can do it, in whatever order you like. This page exists for the person
 who'd rather be handed a sensible sequence than work one out.
 
-## Getting set up
+## Setting up a dev machine
 
-1. **[Setting up a coding machine](../setup/lessons/dev-machine-setup/guided.md)** —
+1. **[Setting up a coding machine](../dev-machine/lessons/dev-machine-setup/guided.md)** —
    a computer that can write and run code: an editor, a JavaScript runtime, and
-   version control. This lesson lives in the [Getting set up](../setup/README.md)
+   version control. This lesson lives in the [Setting up a dev machine](../dev-machine/README.md)
    module because it isn't Minecraft-specific, but it's step one here all the same.
    If an adult is doing this part for you, there's a compressed version for them
    inside; read the main version anyway, so you know what's on your machine and why.

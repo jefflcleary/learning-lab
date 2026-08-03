@@ -31,7 +31,7 @@ JSON, framed as the second settings-file shape after `key=value`.
   `lessons/running-your-own-server/`
 - You can run console commands and are an operator in your own game — established by
   `lessons/console-commands/` (`/reload` and `/datapack` are op commands)
-- A code editor you can open folders in — established by `modules/setup/lessons/dev-machine-setup/`
+- A code editor you can open folders in — established by `modules/dev-machine/lessons/dev-machine-setup/`
 
 ## Establishes
 

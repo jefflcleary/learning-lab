@@ -28,7 +28,7 @@ with just the commands and decisions.
 You need:
 
 - **A computer set up for coding** — a terminal you can move around in, and a
-  `projects` folder. [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md) gets you
+  `projects` folder. [Setting up a coding machine](../../../dev-machine/lessons/dev-machine-setup/guided.md) gets you
   there. Quick check: open a terminal, run `cd ~/projects`, and if that works you're
   set.
 - **Minecraft: Java Edition installed**, with an account that can play it. Quick

@@ -31,7 +31,7 @@ plainly, not discovered.
 ## Prerequisites
 
 - A computer set up for coding, with git installed — established by
-  `modules/setup/lessons/dev-machine-setup/` (git was installed there and has been waiting since)
+  `modules/dev-machine/lessons/dev-machine-setup/` (git was installed there and has been waiting since)
 - A server folder containing things worth tracking: at least one datapack you made —
   established by `lessons/first-datapack/` — and a backup script — established by
   `lessons/backups/`

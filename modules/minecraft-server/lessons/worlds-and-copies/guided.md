@@ -28,7 +28,7 @@ You need:
   gets you there. Quick check: start your server, wait for the **Done** line, type
   `stop`, watch it save and exit.
 - **A terminal you can move around in.** Set up in
-  [Setting up a coding machine](../../../setup/lessons/dev-machine-setup/guided.md). Quick check: open a
+  [Setting up a coding machine](../../../dev-machine/lessons/dev-machine-setup/guided.md). Quick check: open a
   terminal, `cd ~/projects/mc-server`, and `ls` shows the server's files.
 - **You've changed server settings before** and know that edits land on the next
   start, not while the server runs. That's from
