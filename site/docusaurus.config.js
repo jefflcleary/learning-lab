@@ -59,7 +59,7 @@ const config = {
             'authoring/**',
             'CLAUDE.md',
             '**/core.md',
-            '**/CURRICULUM.md',
+            '**/MODULE.md',
             '**/node_modules/**',
           ],
         },

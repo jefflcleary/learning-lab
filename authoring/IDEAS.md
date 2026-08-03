@@ -1,7 +1,7 @@
 # Ideas
 
 Holding ground. Append raw ideas under a date heading; structure them later (or never).
-Nothing here is a commitment. When an idea graduates into the curriculum, move it there
+Nothing here is a commitment. When an idea graduates into the module, move it there
 and delete it here.
 
 ---
@@ -12,7 +12,7 @@ and delete it here.
   the loop on the project's origin story (a laggy hosted world). Natural home for
   `spark` (a real profiler — measuring instead of guessing) and for "the server is a
   program competing for CPU/RAM like any other."
-- **Curriculum: creating a brand new game mode in Minecraft.** Probably spans datapacks
+- **Module: creating a brand new game mode in Minecraft.** Probably spans datapacks
   → bots → maybe Skript; could be the worked example of a learner-driven arc.
 - **Side lesson: try downgrading an existing world to an older version.** The stated
   assumption is "the current world is on the newest version, so it can't move to a

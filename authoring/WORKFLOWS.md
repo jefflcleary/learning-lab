@@ -7,7 +7,7 @@ process. When they seem to conflict, `PRINCIPLES.md` wins.
 There are four workflows:
 
 1. [Capture an idea](#1-capture-an-idea)
-2. [Develop curriculum](#2-develop-curriculum)
+2. [Develop module](#2-develop-module)
 3. [Create or revise a lesson core](#3-create-or-revise-a-lesson-core)
 4. [Generate a delivery](#4-generate-a-delivery)
 
@@ -28,37 +28,37 @@ Trigger: someone has a raw idea — a topic, a tool, a "wouldn't it be cool if."
 
 ---
 
-## 2. Develop curriculum
+## 2. Develop module
 
-Trigger: a brand-new curriculum is requested ("a curriculum on learning JavaScript"),
+Trigger: a brand-new module is requested ("a module on learning JavaScript"),
 an existing one needs a new arc, or a lesson idea has no home.
 
-For a **new curriculum**:
+For a **new module**:
 
 1. Read `PRINCIPLES.md`. Settle with the user: the theme, the intended learner and
    learning style (this may mean new profiles — see `PROFILES.md`), the delivery
-   mechanism (what real system the learner acts on), and the curriculum's own
+   mechanism (what real system the learner acts on), and the module's own
    constraints (languages, platform scope, toolchain stance).
-2. Scaffold `curricula/<name>/` (kebab-case, no numbers) with three files:
+2. Scaffold `modules/<name>/` (kebab-case, no numbers) with three files:
    `README.md` (learner-facing front page), `PATH.md` (suggested order — links only
-   to lessons that exist, so it starts nearly empty), and `CURRICULUM.md` (authors'
+   to lessons that exist, so it starts nearly empty), and `MODULE.md` (authors'
    design doc: constraints, arcs, milestones, lesson status table).
-3. Register the curriculum in the top-level `README.md` curricula list.
+3. Register the module in the top-level `README.md` modules list.
 
-For **arcs and lessons within a curriculum**:
+For **arcs and lessons within a module**:
 
-1. Read `PRINCIPLES.md` and that curriculum's `CURRICULUM.md`.
+1. Read `PRINCIPLES.md` and that module's `MODULE.md`.
 2. Place the new material: extend an existing part, or add a new part/arc. For a new
    arc, define:
    - The **milestone** — the payoff the arc drives toward, socially visible where
-     the curriculum has an audience.
+     the module has an audience.
    - The rough lesson sequence as one-line stubs: working name, one-line goal,
      payoff, prerequisites as world-conditions.
    - Where it sits relative to existing parts in the recommended path (or that it's
      a standalone side-arc).
 3. Check each stub against the general constraints in `PRINCIPLES.md` and the
-   curriculum's own constraints in its `CURRICULUM.md`.
-4. Update the curriculum's `CURRICULUM.md`. Update its `PATH.md` only when lessons
+   module's own constraints in its `MODULE.md`.
+4. Update the module's `MODULE.md`. Update its `PATH.md` only when lessons
    actually exist to link to; the path document never links to lessons that aren't
    written.
 5. Stubs are not lessons. Creating the cores is workflow 3, on request.
@@ -70,17 +70,17 @@ For **arcs and lessons within a curriculum**:
 Trigger: a lesson stub is ready to become real, or an existing core needs changes.
 
 1. Read `PRINCIPLES.md` in full, especially the central rule and the failure modes.
-   Read the home curriculum's `CURRICULUM.md` (constraints included) and confirm the
+   Read the home module's `MODULE.md` (constraints included) and confirm the
    lesson has a home. If not, do workflow 2 first.
 2. Confirm every prerequisite is a condition established by a lesson that **exists**.
    If a prerequisite lesson is missing, stop and resolve that first (write it, or
    re-scope this lesson). Dangling references are a known failure mode.
 3. Choose the folder name: short, descriptive, kebab-case, **no numbers**.
-4. Write `curricula/<curriculum>/lessons/<name>/core.md` in the format below.
+4. Write `modules/<module>/lessons/<name>/core.md` in the format below.
 5. Verify the arc delivers something visible by the end, and that every fact a learner
    couldn't derive is in the facts section (orientation is never withheld).
-6. Update the curriculum's `CURRICULUM.md` status for this lesson. Add it to that
-   curriculum's `PATH.md` if it's in the recommended path.
+6. Update the module's `MODULE.md` status for this lesson. Add it to that
+   module's `PATH.md` if it's in the recommended path.
 7. On revision: after changing a core, regenerate every existing delivery of that
    lesson (workflow 4). A core and its deliveries are never allowed to disagree.
 
@@ -95,7 +95,7 @@ see authoring/WORKFLOWS.md.
 ## Meta
 
 - **Slug:** <folder name>
-- **Curriculum / Part:** <curriculum name> — <part in its CURRICULUM.md>
+- **Module / Part:** <module name> — <part in its MODULE.md>
 - **Scaffolding:** level 1 | 2 | 3, and which skill this is the Nth lesson of
 - **Deliveries:** which profiles get generated, and why
 - **Status:** draft | ready | needs-regeneration
@@ -109,9 +109,10 @@ What the learner can do/see at the end, and specifically what other people can s
 Conditions of the world, each with the lesson that establishes it:
 - <condition> — established by `lessons/<name>/`
 
-## Leaves behind
+## Establishes
 
 The world-state this lesson creates, phrased so other cores can cite it verbatim.
+(Renders in deliveries under the heading "What you have now".)
 
 ## Facts
 
@@ -161,6 +162,13 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] No volatile fact asserted — pointed at source, learner determines current answer.
 - [ ] No internal vocabulary (scaffolding, levels, profiles, core, delivery, rungs).
 - [ ] No time estimates. No exclamation marks. No assumed learner or journey position.
+- [ ] House style holds (PRINCIPLES.md "Voice and style"): no quips, asides, or a
+      second authorial voice; excitement only via concrete specifics.
+- [ ] Audience separation holds: pages referenced by title, never filename; no
+      mention of this project's files, folders, or machinery.
+- [ ] Learner work goes to the learner's logbook or their own projects — never into
+      this repo. Predict sections prompt the logbook by name.
+- [ ] Closing section is titled "What you have now".
 - [ ] Every pronoun has an unambiguous referent.
 - [ ] Every term defined at first use.
 - [ ] Ends with something observable, ideally visible to other people.

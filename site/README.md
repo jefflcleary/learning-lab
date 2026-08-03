@@ -24,11 +24,12 @@ useful as a whole-repo link check.
 
 - `docusaurus.config.js` points the docs plugin at the repo root (`path: '..'`).
   Learner-facing markdown renders; `authoring/`, `CLAUDE.md`, every `core.md`, and
-  every `CURRICULUM.md` are excluded from the site (they stay readable in the repo).
+  every `MODULE.md` are excluded from the site (they stay readable in the repo).
 - `.md` files are parsed as CommonMark (`markdown.format: 'detect'`), so the same
   files render identically here and on GitHub — HTML comments, `<details>` hint
   blocks, and plain markdown links all work in both. Don't introduce
   generator-specific syntax into content.
-- `sidebars.js` is hand-curated: lab files first, then each curriculum as a
-  category in its PATH.md order. Adding a lesson means adding its `guided` doc id
-  there (and `reference`, under Quick references, if one exists).
+- `sidebars.js` is hand-curated: an Overview section for the lab's own pages, then
+  a Modules section with one category per module, lessons in that module's PATH.md
+  order. Adding a lesson means adding its `guided` doc id there (and `reference`,
+  under Quick references, if one exists).

@@ -7,11 +7,11 @@ particular learner or any particular point in a course.
 
 ## What this lab is
 
-A general-purpose learning lab: curricula of self-contained lessons that teach
+A general-purpose learning lab: modules of self-contained lessons that teach
 computing — programming, networking, operating systems, engineering — by doing things
-to real systems. Each curriculum picks a delivery mechanism the learner already cares
+to real systems. Each module picks a delivery mechanism the learner already cares
 about (the first: a Minecraft server, which supplies both a living system and an
-audience of friends and family who see the results). Different curricula may serve
+audience of friends and family who see the results). Different modules may serve
 different learners and different learning styles; what they share is the method in
 this file.
 
@@ -110,8 +110,9 @@ explanation of what each error means in general and what causes it.
 **Go further** — Open-ended questions with no solutions provided. At least one that has
 no known answer.
 
-**What this leaves behind** — The state this puts the world in, so other lessons can name
-it as a condition.
+**What you have now** — The state this puts the world in, so other lessons can name
+it as a condition. (Always this heading — never "what this leaves behind" or similar;
+"leave behind" reads as loss.)
 
 ---
 
@@ -151,10 +152,18 @@ the author helps.
 
 ## Learning techniques to build in
 
-**Predict before you run.** Before executing anything, state what you expect. The point
-isn't accuracy, it's manufacturing surprise: without a prediction, an unexpected result
-is noise; with one, it's evidence that a specific belief is wrong. Nearly all durable
-learning enters this way.
+**The logbook.** The learner keeps a logbook — wherever they choose (paper, a notes
+app, a text file); explicitly not in this repo. Two things get recorded in it, and
+lessons prompt for both by name: **predictions** (one line before running something
+new) and **walls** (the four-line stuck template: what stopped me / what I guessed /
+what I tried / what it actually was). Months in, it becomes the learner's own data
+that stuck things come unstuck — the belief the whole lab exists to install. The
+learner-facing explanation lives on the "Your logbook" page.
+
+**Predict before you run.** Before executing anything, state what you expect — in the
+logbook. The point isn't accuracy, it's manufacturing surprise: without a prediction,
+an unexpected result is noise; with one, it's evidence that a specific belief is
+wrong. Nearly all durable learning enters this way.
 
 **Read the whole error.** Every error, out loud, completely, before changing anything.
 
@@ -216,34 +225,62 @@ description of it.
 
 ## Constraints
 
-General constraints, binding for every curriculum:
+General constraints, binding for every module:
 
 - **Something visible every session.** No lesson ends with nothing to show; where the
-  curriculum has a social audience, prefer results other people can see.
+  module has a social audience, prefer results other people can see.
 - **Just-in-time installation.** Nothing is installed before the moment it's needed,
   so the purpose of every tool is obvious.
-- **Experiments run where breaking things is free.** Every curriculum names its
+- **Experiments run where breaking things is free.** Every module names its
   expendable surface (a sandbox server, a scratch project, a copy) and keeps
   destructive exercises there.
 - **Course tooling is never lesson content.** The machinery that renders, publishes,
-  or organizes this lab stays out of every curriculum.
+  or organizes this lab stays out of every module.
 
-Curriculum-specific constraints — language choices, platform scope, toolchain stance,
-pacing — live in that curriculum's `CURRICULUM.md` and bind only its own lessons.
+Module-specific constraints — language choices, platform scope, toolchain stance,
+pacing — live in that module's `MODULE.md` and bind only its own lessons.
 
 ---
 
-## Tone
+## Voice and style
 
-Write like a good tutorial: clear, complete, unhurried. Explain generously. Assume
-intelligence and assume unfamiliarity — those are not in tension.
+One house style governs **all** learner-facing text — lesson deliveries, module front
+pages, path pages, and the lab's top-level pages alike. The only sanctioned deviations
+are delivery profiles, whose style differences are defined in `PROFILES.md` on
+purpose; within any one page or section, the style never wavers.
+
+The style: write like a good tutorial — clear, complete, unhurried, in plain
+sentences. Explain generously. Assume intelligence and assume unfamiliarity — those
+are not in tension. Vivid and concrete is welcome; clever is not.
 
 - No cheerleading, no exclamation marks, no manufactured enthusiasm.
+- No knowing asides, quips, winks, or self-referential jokes. Sentences like "That's
+  all it does," jokey sign-offs, and cute parentheticals are the failure mode: they
+  read as a second voice intruding. Say the thing plainly and stop.
+- Excitement is built with concrete specifics (what the learner will actually make
+  and who will see it), never with tone.
 - No time estimates anywhere. They create pressure and they're wrong.
 - No internal methodology vocabulary in learner-facing text.
 - No assumed shared context, no references to a conversation the reader wasn't in.
-- No knowing asides. Say the thing.
 - Define every term at first use, including ones that feel too basic to define.
+
+## Audience separation
+
+Learner-facing pages are written for a learner reading the rendered site. They
+describe **pages and sections, never files and folders**:
+
+- Refer to other pages by their titles, as links — "see [A recommended path]", never
+  "see PATH.md". Filenames, folder layout, the core/delivery mechanism, and anything
+  else about how this project is built are internals.
+- Exactly one page is exempt: the top-level "How this project is put together" page,
+  which exists to explain the repo itself (file layout, what a lesson folder
+  contains, how to read offline). All internals live there and nowhere else.
+- Lessons freely name files and paths in the **learner's own systems** — their
+  server folder, their scripts, their projects directory. The rule is about this
+  project's internals, not about files in general.
+- The learner's own work product (logbook, notes, decisions, code) lives in the
+  learner's own space — their projects folder, their notebook — never in this
+  repo. No lesson may ask the learner to edit or commit files in this project.
 
 ---
 
@@ -260,3 +297,9 @@ Observed in earlier drafts. Check against these before shipping any delivery.
 - Assuming a specific learner, a specific household, or a specific point in a journey.
 - Writing lessons before the arc they belong to exists.
 - Asserting a volatile fact instead of pointing at its source.
+- Referring to this project's files, folders, or generation machinery in learner
+  text (belongs only on the "How this project is put together" page).
+- Style drift: quips, knowing asides, or a second authorial voice appearing in any
+  learner-facing page.
+- Asking the learner to write into this repo instead of their own logbook or
+  projects.

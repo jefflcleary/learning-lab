@@ -1,4 +1,4 @@
-# How to learn from this repo
+# How to learn here
 
 Seven habits. None of them are hard, all of them feel slightly unnecessary, and
 together they're most of the difference between someone who gets stuck and stays stuck
@@ -6,9 +6,9 @@ and someone who gets stuck and gets through. The lessons assume you're using the
 
 ## 1. Predict before you run
 
-Before you run anything — a command, a program, a change to a setting — say what you
-expect to happen. Out loud or written down, but concretely: "the server will refuse and
-print an error naming the version."
+Before you run anything — a command, a program, a change to a setting — write one
+line in [your logbook](logbook.md) saying what you expect to happen. Concretely:
+"the server will refuse and print an error naming the version."
 
 This isn't about being right. It's that an unexpected result only teaches you something
 if you *notice* it's unexpected. Without a prediction, a weird result is just noise and
@@ -35,21 +35,16 @@ you build the habit of asking "what did I change?" while the answer is still obv
 You can do this beyond the lessons, too. Anything you know how to un-break, you're
 allowed to break.
 
-## 4. Keep the walls log
+## 4. Log the walls you hit
 
-Every time you get properly stuck, put four lines in [walls.md](walls.md):
+Every time you get properly stuck, put four lines in [your logbook](logbook.md):
+what stopped me, what I guessed, what I tried, what it actually was — filling in the
+last one whenever you finally get through.
 
-```
-What stopped me:
-What I guessed:
-What I tried:
-What it actually was:
-```
-
-This will feel pointless in the moment. Do it anyway. A few months from now that file
-will be a list of things that were impossible at the time — every one of which turned
-out to be temporary. There is no argument anyone can make to you that is as convincing
-as your own data.
+This will feel pointless in the moment. Do it anyway. A few months from now that
+record will be a list of things that were impossible at the time — every one of
+which turned out to be temporary. There is no argument anyone can make to you that
+is as convincing as your own data.
 
 ## 5. Type it, don't paste it
 
@@ -63,7 +58,7 @@ every character is how the shape of a language gets into your head.
 After you build something, explain what happened to another person — at dinner, over a
 game, whoever will listen. Explaining forces you to actually have the story straight,
 and you'll find the gaps in your understanding exactly where the explanation gets
-vague. It's also allowed to be fun that you made a thing.
+vague.
 
 Each time you re-explain something, try to be slightly more accurate than last time.
 "My code told the bot to talk" is a fine first version. Later it becomes a story about

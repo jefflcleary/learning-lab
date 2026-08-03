@@ -7,6 +7,11 @@ same thing.
 Profile names are internal vocabulary and never appear inside learner-facing text (the
 filename is the only place a learner sees them).
 
+Profiles are also the **only** sanctioned mechanism for style variation. The house
+style in `PRINCIPLES.md` ("Voice and style") governs everything; a profile may define
+deliberate deviations (the `reference` profile's terseness is one), and any such
+deviation is written down here, not improvised per page.
+
 ---
 
 ## Dimensions
@@ -15,16 +20,16 @@ Every delivery is the product of two dimensions:
 
 - **Style** — who is reading and how much support they want. Defined below.
 - **Platform** — which operating system the instructions assume, where it matters.
-  Each curriculum's `CURRICULUM.md` states its current platform scope (the
-  minecraft-server curriculum: macOS only, for now). Lesson cores tag
+  Each module's `MODULE.md` states its current platform scope (the
+  minecraft-server module: macOS only, for now). Lesson cores tag
   platform-specific facts (`[macos]`, `[windows]`) so other platforms can be
   generated later without re-research. When a second platform is generated, the
   naming convention will be decided then (likely `guided.windows.md`); do not
   invent one ad hoc.
 
-Profiles are lab-wide definitions, but curricula choose which they use — and a new
-curriculum aimed at a different student or learning style may define new profiles
-here (per the curriculum workflow in `WORKFLOWS.md`) rather than bending `guided`
+Profiles are lab-wide definitions, but modules choose which they use — and a new
+module aimed at a different student or learning style may define new profiles
+here (per the module workflow in `WORKFLOWS.md`) rather than bending `guided`
 to fit.
 
 ---
@@ -65,7 +70,7 @@ paths, decisions, and gotchas. Does not want pedagogy.
 - Still states *what* each step does in a line — terse is not cryptic.
 - Includes every gotcha and safety fact from the core (the reference reader hits the
   same landmines).
-- Includes the "what this leaves behind" list, so the state matches what other lessons
+- Includes the "What you have now" list, so the state matches what other lessons
   expect regardless of which delivery was followed.
 - Volatile facts: same rule as everywhere — point at the source.
 
