@@ -1,0 +1,6 @@
+.llm/
+.claude/
+.DS_Store
+site/node_modules/
+site/build/
+site/.docusaurus/
