@@ -155,7 +155,9 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 
 ### Delivery checklist
 
-- [ ] Orientation complete: every tool named, explained, install stated plainly.
+- [ ] Orientation complete: every tool named, explained, install stated plainly —
+      and stated exactly once (in New tools normally; in The work when installing
+      is the work, with New tools deferring explicitly; never both).
 - [ ] Nothing withheld except problem-solving; nothing given except orientation.
 - [ ] Every link resolves to a file that exists in this repo, or to a stable external
       source.

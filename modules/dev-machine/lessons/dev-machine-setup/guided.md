@@ -68,17 +68,17 @@ A few commands you'll meet today, so none of them are a surprise:
 **VS Code** is a text editor built for code. Code is plain text — no fonts, no
 formatting, just characters in files — and a code editor is a text editor that
 understands what the text means: it colors the parts of a program differently, spots
-some mistakes as you type, and holds a whole folder of files at once. Install: go to
-[code.visualstudio.com](https://code.visualstudio.com), download the Mac version,
-unzip it, and drag `Visual Studio Code` into your `Applications` folder. It's free.
+some mistakes as you type, and holds a whole folder of files at once. It's free, and
+it comes from [code.visualstudio.com](https://code.visualstudio.com) — installing it
+is part of the work below.
 
 **Node.js** is a program that runs JavaScript. JavaScript grew up inside web browsers,
 but Node lets it run directly on your computer, like any other program — which is what
 makes it possible to write a file of JavaScript and have it *do* things: talk over the
-network, read files, and drive other programs. Install:
-go to [nodejs.org](https://nodejs.org) and download the installer marked **LTS**, then
-run it. LTS stands for Long Term Support — it's the version chosen to be boring and
-dependable, which is exactly what you want.
+network, read files, and drive other programs. It comes from
+[nodejs.org](https://nodejs.org), and the version to take is the one marked **LTS** —
+Long Term Support, the version chosen to be boring and dependable, which is exactly
+what you want. Installing it is part of the work below.
 
 **git** records the history of your files: every version of everything, forever, so
 any change can be undone and any old state recovered. It's also the tool this module

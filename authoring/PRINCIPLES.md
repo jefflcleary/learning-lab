@@ -97,7 +97,12 @@ stuck-pointer sentence (see "Reference pages").
 Observable, and where possible visible to other people.
 
 **New tools** — Anything unfamiliar named and explained plainly: what it is, what it
-does, how to install it. Never withheld. Never behind a hint.
+does, where its real documentation lives, how to install it. Never withheld. Never
+behind a hint. Everything is said exactly once: install steps normally live here,
+but when installing is itself part of The work (setup-flavored lessons), New tools
+gives the what/why/where-it-comes-from and defers the steps with a plain pointer
+("installing it is part of the work below") — orientation and work never repeat
+each other.
 
 **Predict** — Specific questions to answer before running anything.
 

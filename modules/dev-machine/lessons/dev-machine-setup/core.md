@@ -145,6 +145,11 @@ are two different listeners.
 
 ## Delivery notes
 
+- **Install steps render exactly once, in The work.** Installing is this lesson's
+  work, so the New tools entries orient only (what it is, why, where it comes
+  from) and defer with "installing it is part of the work below" — per the
+  once-only rule in PRINCIPLES' New tools spec. Do not also put steps in New
+  tools when regenerating.
 - **reference:** downloads, the three verify commands, `mkdir ~/projects`, the iCloud
   warning, done. Include "leaves behind" so state matches guided.
 - **guided:** the tone risk is condescension in the terminal sections — an audience
