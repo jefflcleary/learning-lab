@@ -31,6 +31,39 @@ Your own work. Your logbook, your notes, your decisions, and everything you buil
 belong in your own space — a folder on your machine, your own repository, paper.
 Lessons never ask you to change files in this project.
 
+## Working on the material locally
+
+To see changes rendered as you edit (first time only, run the `npm install`):
+
+```
+cd site
+npm install
+npm start -- --port 3002
+```
+
+That starts a live-reload preview at `http://localhost:3002` — save any markdown
+file and the page updates. Pick a different port if that one is busy.
+
+Before calling a change done, run the full build, which fails on any broken link:
+
+```
+cd site
+npm run build
+```
+
+## Publishing changes
+
+```
+git add -A
+git commit -m "describe the change"
+git push
+```
+
+The push triggers the site's deploy workflow on GitHub automatically; the public
+site updates a couple of minutes later (the Actions tab shows progress, or
+`gh run watch` from a terminal). GitHub's own rendering of the markdown updates
+instantly on push.
+
 ## Contributing
 
 New lessons and modules are written against the rules in `authoring/` — start with

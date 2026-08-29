@@ -10,9 +10,13 @@ Order here is recommended, never enforced. Every lesson must stand alone when re
 
 ## Module-specific constraints
 
-- **No Java.** The edit-compile-restart-rejoin plugin cycle costs minutes per
-  iteration, which is fatal for a beginner. JavaScript on Node, datapacks, and
-  Python only.
+- **No Java as a first language.** The edit-compile-restart-rejoin cycle costs
+  minutes per iteration, which is fatal for a beginner. JavaScript on Node,
+  datapacks, and Python carry the module. The one deliberate exception:
+  `creating-a-fabric-mod`, a late lesson where Java is met as an additional
+  language after real programming fluency exists — because mods are the one thing
+  on this server that can be built no other way, and the lesson names the slow
+  loop honestly as the reason it waited.
 - **Zero toolchain.** No bundler, no type system, no linter, no build step — the
   file that gets edited is the file that runs. Tools arrive later, one at a time,
   each because a concrete problem demanded it. (Example: Homebrew arrives the first
@@ -97,6 +101,24 @@ fades across the arc and within each merged lesson (per-section levels in cores)
 | `writing-your-first-bot` | npm/dependencies; bot joins and speaks; events + state; naive following and its limits | merged from first-bot + bot-follows |
 | `bot-commands-and-building` | Dispatcher and payload commands; events-list read; loops build towers/walls/rooms | merged from bot-chat-commands + bot-builds |
 | `bot-games-and-pathfinding` | mineflayer-pathfinder settles the follow debt; the bot referees hide-and-seek | merged from bot-runs-a-game + bot-pathfinding |
+
+### Part 4.5 — Modding the server
+
+Mods are the community's deepest change surface: not new rules for the existing
+game (datapacks) or programs talking to the server (bots), but new code loaded
+*into* the server itself. Fabric is this module's loader: lightweight, quick to
+track new Minecraft versions, and its server-side-only mods keep vanilla clients —
+the friends already joining — compatible.
+
+| Lesson | Goal | Status |
+|---|---|---|
+| `fabric-modded-server` | A second, Fabric-loaded server; installing server-side mods; version/loader matching; crash-log reading | core + guided + reference written |
+| `creating-a-fabric-mod` | Java met deliberately as an additional language: template mod, Gradle build, a custom command friends can use; the slow loop felt and named | core + guided written |
+
+Path placement: `fabric-modded-server` right after `choosing-a-version` (it spends
+that lesson's version-matching skill); `creating-a-fabric-mod` after the bot arc
+AND the Python lessons, so Java lands as a third language on real fluency — its
+guided delivery leans on that framing.
 
 ### Part 5 — Data
 

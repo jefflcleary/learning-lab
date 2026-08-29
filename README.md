@@ -69,5 +69,6 @@ before you need it.
 
 ## About this project
 
-Curious how this material is made, or want to read it offline? See
-[How this project is put together](about-this-repo.md).
+Curious how this material is made, want to read it offline, or working on the
+material yourself? [How this project is put together](about-this-repo.md) covers
+the layout, previewing changes locally, and publishing them.

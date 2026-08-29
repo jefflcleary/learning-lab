@@ -43,11 +43,13 @@ const sidebars = {
             'modules/minecraft-server/lessons/always-on/guided',
             'modules/minecraft-server/lessons/git-for-your-server/guided',
             'modules/minecraft-server/lessons/choosing-a-version/guided',
+            'modules/minecraft-server/lessons/fabric-modded-server/guided',
             'modules/minecraft-server/lessons/writing-your-first-bot/guided',
             'modules/minecraft-server/lessons/bot-commands-and-building/guided',
             'modules/minecraft-server/lessons/bot-games-and-pathfinding/guided',
             'modules/minecraft-server/lessons/python-logs-and-rcon/guided',
             'modules/minecraft-server/lessons/world-data-and-protocol/guided',
+            'modules/minecraft-server/lessons/creating-a-fabric-mod/guided',
             'modules/minecraft-server/lessons/discord-and-web/guided',
             {
               type: 'category',
@@ -55,6 +57,7 @@ const sidebars = {
               items: [
                 'modules/minecraft-server/lessons/running-your-own-server/reference',
                 'modules/minecraft-server/lessons/letting-friends-join/reference',
+                'modules/minecraft-server/lessons/fabric-modded-server/reference',
                 'modules/minecraft-server/lessons/always-on/reference',
               ],
             },

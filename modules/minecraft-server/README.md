@@ -14,6 +14,8 @@ can play on it, and everything you learn shows up in front of them:
 - You'll type one sentence in chat and watch a bot you programmed build a tower
   through the clouds — then referee a full game of hide-and-seek for your friends,
   start to finish, with no human in charge.
+- You'll run a modded server that friends join with the unmodified game they
+  already have — and later write a mod of your own, with a command you invented.
 - You'll read the world's raw bytes and produce a map of everywhere anyone has ever
   walked.
 - You'll speak the Minecraft network protocol yourself, one byte at a time, and use
@@ -23,6 +25,7 @@ can play on it, and everything you learn shows up in front of them:
 
 Along the way you'll have learned: the terminal, configuration, JSON, networking
 from your wifi out to the internet, backups and version control, JavaScript, Python,
+a deliberate first taste of Java,
 binary file formats, network protocols, and how to read documentation for tools
 nobody taught you. Those aren't Minecraft skills. They're the same ones that run
 everything else.

@@ -44,33 +44,47 @@ who'd rather be handed a sensible sequence than work one out.
 ## Before the bots
 
 9. **[Choosing a Minecraft version](lessons/choosing-a-version/guided.md)** —
-   readable any time, but it matters right here: the next three lessons depend on
-   the decision it walks you through.
+   readable any time, but it matters right here: everything from now on depends
+   on the decision it walks you through.
+
+## Modding the server
+
+10. **[Running a modded server with Fabric](lessons/fabric-modded-server/guided.md)**
+    — a second server that loads community mods, chosen and vetted by you — and
+    friends join it with the unmodified game they already have. Its sequel,
+    writing a mod of your own, comes after the programming lessons below.
 
 ## First programs
 
-10. **[Writing your first bot](lessons/writing-your-first-bot/guided.md)** — your
+11. **[Writing your first bot](lessons/writing-your-first-bot/guided.md)** — your
     first program: a bot joins your sandbox server, speaks, reacts to events, and
     follows players around.
-11. **[Bot chat commands and building with loops](lessons/bot-commands-and-building/guided.md)**
+12. **[Bot chat commands and building with loops](lessons/bot-commands-and-building/guided.md)**
     — a command language anyone in chat can use, then loops that build towers too
     big to build by hand.
-12. **[Bots that referee games and navigate](lessons/bot-games-and-pathfinding/guided.md)**
+13. **[Bots that referee games and navigate](lessons/bot-games-and-pathfinding/guided.md)**
     — real pathfinding across terrain, and a full game of hide-and-seek refereed
     by your code.
 
 ## Reading the data
 
-13. **[Reading logs and sending commands with Python](lessons/python-logs-and-rcon/guided.md)**
+14. **[Reading logs and sending commands with Python](lessons/python-logs-and-rcon/guided.md)**
     — a second language: a leaderboard mined from the logs, and scripts that send
     commands to the running server.
-14. **[Reading world data and speaking the protocol](lessons/world-data-and-protocol/guided.md)**
+15. **[Reading world data and speaking the protocol](lessons/world-data-and-protocol/guided.md)**
     — binary world files give up their secrets, and you speak the Minecraft
     network protocol byte by byte.
 
+## Writing your own mod
+
+16. **[Creating your own Fabric mod](lessons/creating-a-fabric-mod/guided.md)** —
+    your code running inside the server itself: a template mod, a real build
+    step, and a custom command your friends can use. Java appears here, third
+    and on purpose.
+
 ## Beyond the game
 
-15. **[Bridging to Discord and building a status page](lessons/discord-and-web/guided.md)**
+17. **[Bridging to Discord and building a status page](lessons/discord-and-web/guided.md)**
     — Discord and the server become one room, and a live who's-online page lands
     on the phones in your house.
 
