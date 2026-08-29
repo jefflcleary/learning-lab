@@ -32,7 +32,7 @@ You need:
 - **A server that has been played on.** [Running your own
   server](../running-your-own-server/guided.md) gets you the server; the more it's
   been played, the better the data. If several people have joined over time —
-  [Letting friends join](../letting-friends-join/guided.md) — the results get much
+  [Letting friends join your server](../letting-friends-join/guided.md) — the results get much
   more interesting, but one player's history still works. Quick check:
   `ls logs` inside your server folder shows `latest.log` and at least a few
   other files.
@@ -464,7 +464,7 @@ Your goal: an RCON library installed and importable.
 
 First, choose one. Go to [pypi.org](https://pypi.org) and search for Minecraft
 RCON libraries. Several exist. Evaluate them the way you learned to size up
-any community tool in [Choosing a version](../choosing-a-version/guided.md): when
+any community tool in [Choosing a Minecraft version](../choosing-a-version/guided.md): when
 was the most recent release, does the README actually show Minecraft usage,
 does the project look tended or abandoned. Pick the one the evidence favors.
 

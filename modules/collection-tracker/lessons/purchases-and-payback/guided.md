@@ -37,7 +37,7 @@ You need:
 
 - **A Collection tab that answers what the collection is worth, readable at a
   glance** — formulas, totals, currency columns, and a Gain column that colors
-  itself. [Building the ledger](../building-the-ledger/guided.md) gets it all
+  itself. [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md) gets it all
   in place. Quick check: open Collection Tracker, change one card's Value, and
   watch Total Value and Total Gain move on their own; then set it back.
 - **The habits from that session** — totals built with SUM, fill-down by

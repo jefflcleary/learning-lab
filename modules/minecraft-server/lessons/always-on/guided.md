@@ -32,7 +32,7 @@ with just the commands and decisions.
 You need:
 
 - **A server people connect to from outside your home.**
-  [Letting friends in from anywhere](../letting-friends-join/guided.md) gets you there. Quick
+  [Letting friends join your server](../letting-friends-join/guided.md) gets you there. Quick
   check: someone outside your wifi has joined your server, or you can join it
   yourself over the outside route.
 - **A server you can start, stop, and join.**

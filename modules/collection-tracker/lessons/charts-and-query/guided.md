@@ -37,7 +37,7 @@ You need:
   move; click a Type cell on Purchases and a dropdown appears; and you can
   write a SUMIF that totals one category without looking one up.
 - **A Collection tab with a Cost and a Value for each card** — begun in
-  [Building the ledger](../building-the-ledger/guided.md). Quick check: every
+  [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md). Quick check: every
   card row has both numbers filled in.
 - **A Purchases tab recording every buy** — built in
   [Tracking purchases and money owed](../purchases-and-payback/guided.md). Quick

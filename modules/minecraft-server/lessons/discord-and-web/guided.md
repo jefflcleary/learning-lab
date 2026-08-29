@@ -39,12 +39,12 @@ You need:
   Python script, you keep the RCON password in a file your code reads rather than
   in the code, and you can open `latest.log`, pick out the lines that matter, and
   think about how a program keeps up with a file that's still growing.
-  [Reading the logs and scripting the server with Python](../python-logs-and-rcon/guided.md)
+  [Reading logs and sending commands with Python](../python-logs-and-rcon/guided.md)
   established all of it. Quick checks: run your RCON script and make something
   happen in the game; run a script that prints every chat line from today's log.
 - **The self-triggering bug, already survived once.** You've written a bot that
   reacts to chat and seen what happens when a bot can hear itself.
-  [Bot commands and building](../bot-commands-and-building/guided.md) established
+  [Bot chat commands and building with loops](../bot-commands-and-building/guided.md) established
   this.
 - **A way to ask your server who's online, from Python.** The Server List Ping
   script from
@@ -59,7 +59,7 @@ You need:
   add a bot to it: either the server is yours, or you do this part together with
   the person who runs it.
 - **Version control with a `.gitignore`.**
-  [Git for your server](../git-for-your-server/guided.md) established this. Quick
+  [Tracking your server files with git](../git-for-your-server/guided.md) established this. Quick
   check: `git status` in your project folder runs clean.
 - **A phone or any second device on the home wifi**, and the ability to find your
   Mac's local address on demand — from
@@ -492,7 +492,7 @@ and who called.
 
 - The log holds more than chat — deaths and advancements have their own line
   shapes, some of which you found in
-  [Reading the logs and scripting the server with Python](../python-logs-and-rcon/guided.md).
+  [Reading logs and sending commands with Python](../python-logs-and-rcon/guided.md).
   Bridge them, formatted so a Discord reader instantly knows a death from a chat
   line. Which events are worth the noise, and who gets tired of them first?
 - Rebuild the game→Discord direction using a webhook instead of the bot connection

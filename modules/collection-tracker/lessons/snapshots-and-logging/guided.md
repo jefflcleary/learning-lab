@@ -41,7 +41,7 @@ completely.
 You need:
 
 - **A Collection tab whose Value column is roughly current** — begun in
-  [Building the ledger](../building-the-ledger/guided.md) and kept up since.
+  [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md) and kept up since.
   Quick check: you could defend each card's Value as "about right this week."
 - **Live totals on Stats and a validated Type column** — built in
   [Stats with SUMIF and keeping data clean](../stats-and-clean-data/guided.md).

@@ -47,7 +47,7 @@ You need:
   [Tracking purchases and money owed](../purchases-and-payback/guided.md).
   Quick check: you can point at several pack purchases with costs filled in.
 - **A Collection with values.** Cards and their current worth, begun in
-  [Building the ledger](../building-the-ledger/guided.md). Quick check: the
+  [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md). Quick check: the
   Value column is filled in and reasonably current, and you can point at the
   card you'd most plausibly sell.
 - **Stats skills.** You've written SUMIF and COUNTIF formulas with criteria,

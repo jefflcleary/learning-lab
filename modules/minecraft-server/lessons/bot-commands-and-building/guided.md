@@ -467,7 +467,7 @@ fatigue. Nothing malfunctioned. That's what "exactly what you said" means, and
 every programmer carries this feeling around ever after.
 
 Now the cleanup, which is a small lesson of its own. Either restore a clean copy
-of the world, if you've done [Worlds and backups](../worlds-and-backups/guided.md) — or
+of the world, if you've done [Copying and backing up worlds](../worlds-and-backups/guided.md) — or
 go back to the wiki's commands list and find a command that fills an entire
 *region* with something. Filling a region with `air` is erasure. Finding that
 command is your job, and it's a keeper.

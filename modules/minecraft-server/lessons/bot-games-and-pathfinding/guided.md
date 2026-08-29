@@ -36,10 +36,10 @@ You need:
   folder with a `package.json` and a dependency already in it.
 - **A bot that takes chat commands and builds on command** — parsing, loops, and
   operator powers all proven, from
-  [Bot commands and building](../bot-commands-and-building/guided.md). Quick check:
+  [Bot chat commands and building with loops](../bot-commands-and-building/guided.md). Quick check:
   start the sandbox server and the bot, type `tower 5` in chat, watch it build.
 - **At least one other person who can join your sandbox server**, for the payoff
-  round. [Letting friends join](../letting-friends-join/guided.md) covers getting
+  round. [Letting friends join your server](../letting-friends-join/guided.md) covers getting
   someone in. Two other people make it a real game; one is enough to test every
   phase.
 
@@ -187,7 +187,7 @@ Now settle the debt. Replace the naive follow inside your `come` handling with
 the library's way of staying near a moving player.
 
 One line of housekeeping first: keep the old version. If your bot folder is
-under git ([Git for your server](../git-for-your-server/guided.md)), commit before
+under git ([Tracking your server files with git](../git-for-your-server/guided.md)), commit before
 you start; if not, copy the file. The old code is the before photo.
 
 Success looks like: take the bot to the exact spot where the old follow failed —

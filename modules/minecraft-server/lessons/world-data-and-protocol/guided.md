@@ -40,11 +40,11 @@ You need:
 
 - **Python scripts you can write and run, with the virtual-environment routine** — and
   you've talked to a server program from Python before. Established in
-  [Reading the logs and scripting the server with Python](../python-logs-and-rcon/guided.md).
+  [Reading logs and sending commands with Python](../python-logs-and-rcon/guided.md).
   Quick check: you can create a venv, activate it, and `pip install` something into it
   without looking up how.
 - **The copies habit.** You never poke a live world's files; you work on copies taken with
-  the server stopped. Established in [Worlds and backups](../worlds-and-backups/guided.md).
+  the server stopped. Established in [Copying and backing up worlds](../worlds-and-backups/guided.md).
   Quick check: you can say, without hesitating, why the copy is made with the server
   stopped.
 - **A server of your own that you can start and stop, with a world that has actually been
@@ -57,7 +57,7 @@ You need:
   check: you can run a command in the server console and read its reply.
 - **The protocol-version idea** — clients announce a protocol version, and a mismatched
   join is refused before anything else happens. Established in
-  [Choosing a version](../choosing-a-version/guided.md). Quick check: you can say in one
+  [Choosing a Minecraft version](../choosing-a-version/guided.md). Quick check: you can say in one
   sentence why community tools lag behind new Minecraft releases.
 
 If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.
@@ -106,7 +106,7 @@ reports what the file actually is, by reading its signature bytes.
 **An NBT library from PyPI.** The leading candidate is called **nbtlib** — but libraries
 change hands and go quiet, so part of this session is checking its current state yourself
 before installing, exactly the way you evaluated a library in
-[Choosing a version](../choosing-a-version/guided.md): README, issue tracker, recent
+[Choosing a Minecraft version](../choosing-a-version/guided.md): README, issue tracker, recent
 releases. The installing itself is the pip routine you already know.
 
 **matplotlib** is the standard Python plotting library — it turns lists of numbers into
@@ -239,7 +239,7 @@ them.
 <summary>If the evaluation feels unfamiliar</summary>
 
 You've run this exact loop before, on mineflayer, in
-[Choosing a version](../choosing-a-version/guided.md): README for the claim, issues for
+[Choosing a Minecraft version](../choosing-a-version/guided.md): README for the claim, issues for
 the truth, releases for the pulse. Recent releases and answered issues beat popularity
 numbers. The only difference today is that you're picking the winner yourself.
 
@@ -533,7 +533,7 @@ units.
 **Lie about the protocol version.** In the handshake, claim something absurd — a protocol
 version no client has ever had. Send the status request as usual. Does the reply still
 come? You watched the server refuse mismatched *joins* instantly in
-[Choosing a version](../choosing-a-version/guided.md) — if status behaves differently,
+[Choosing a Minecraft version](../choosing-a-version/guided.md) — if status behaves differently,
 articulate why it would have to. (Consider what the status reply is *for*, and who has to
 be able to ask for it.) Put the real version back after.
 

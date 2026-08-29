@@ -36,7 +36,7 @@ You need:
   has real rows, and you can read a reference like `Purchases!D2` and say which
   cell it means.
 - **A Collection tab with cards, sets, costs, and values.**
-  [Building the ledger](../building-the-ledger/guided.md) builds it. Quick
+  [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md) builds it. Quick
   check: the Set column has a set name on every row.
 
 If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit.
