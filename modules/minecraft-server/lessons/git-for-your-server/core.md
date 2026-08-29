@@ -1,4 +1,4 @@
-# A history for everything you've built
+# Tracking your server files with git
 
 Internal lesson core. Not learner-facing. Deliveries are generated from this file —
 see authoring/WORKFLOWS.md.
@@ -33,8 +33,8 @@ plainly, not discovered.
 - A computer set up for coding, with git installed — established by
   `modules/dev-machine/lessons/dev-machine-setup/` (git was installed there and has been waiting since)
 - A server folder containing things worth tracking: at least one datapack you made —
-  established by `lessons/first-datapack/` — and a backup script — established by
-  `lessons/backups/`
+  established by `lessons/building-datapacks/` — and a backup script — established by
+  `lessons/worlds-and-backups/`
 
 ## Establishes
 
@@ -75,7 +75,7 @@ plainly, not discovered.
   with hints; core records the answer):
   - World data: huge, binary (not human-readable text), and changing constantly
     while the server runs. Exactly the wrong shape for git — and already covered by
-    `backup.sh` (../backups/). Code in git, data in backups.
+    `backup.sh` (../worlds-and-backups/). Code in git, data in backups.
   - `logs/` — the server rewrites these continuously; they're output, not decisions.
   - `libraries/`, `versions/` — folders the modern vanilla server unpacks next to
     itself [verify presence varies by server version — deliveries: drive the list
@@ -85,7 +85,7 @@ plainly, not discovered.
   - Rule of thumb, stated plainly: **you wrote it → git; the server generated it or
     it's world data → not git.**
 - The datapack wrinkle (centerpiece of the .gitignore work): datapacks live in
-  `world/datapacks/` (../first-datapack/) — *inside* the ignored world.
+  `world/datapacks/` (../building-datapacks/) — *inside* the ignored world.
   gitignore fact: ignoring a directory itself (`world/`) stops git from ever looking
   inside it, so no later pattern can rescue a subfolder. Ignore the directory's
   *contents* instead, then re-include with a `!` pattern:
@@ -105,7 +105,7 @@ plainly, not discovered.
   ```
 
   (Trailing patterns only as they exist in the learner's folder.) `!` means "except
-  this." Multiple world folders (../worlds-and-copies/) generalize with wildcards
+  this." Multiple world folders (../worlds-and-backups/) generalize with wildcards
   (`world*/*`, `!world*/datapacks/`) — noted as a pointer, `man gitignore` /
   gitignore docs for pattern rules.
 - The working loop, all stable core git:

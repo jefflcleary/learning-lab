@@ -62,7 +62,7 @@ reward.
   License Agreement, linked in the file).
 - Second run generates the world; ready when the log prints a `Done (…s)!` line.
 - Files created: `eula.txt`, `server.properties` (settings — covered by
-  `lessons/server-settings/`), `logs/` (`latest.log` is the current one), `world/`
+  `lessons/server-settings-and-console/`), `logs/` (`latest.log` is the current one), `world/`
   (the world itself), plus libraries/version bookkeeping.
 - Join from the same machine: Multiplayer → Add Server → address `localhost`.
   `localhost` = the standard name every computer has for itself.

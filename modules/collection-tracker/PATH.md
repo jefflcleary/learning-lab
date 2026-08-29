@@ -4,57 +4,29 @@ This module is more sequential than most: each lesson builds on the tracker the
 one before it left behind. You can still jump around — every lesson states its own
 requirements — but the order below is the order the tracker grows in.
 
-## The ledger
-
-1. **[What is it all worth?](lessons/first-ledger/guided.md)** — one sheet, your
-   best cards, and a total that recalculates itself.
-2. **[Making it readable](lessons/making-it-readable/guided.md)** — currency,
-   frozen headers, and green-or-red at a glance.
-3. **[Every pack you open](lessons/every-pack-you-open/guided.md)** — a purchases
-   tab: what you bought, what it cost, and who paid.
-
-## Money owed
-
-4. **[The payback ledger](lessons/the-payback-ledger/guided.md)** — what was
-   fronted for you, what you've paid back, and the live balance in between.
-
-## Questions the data can answer
-
-5. **[Questions your data can answer](lessons/questions-your-data-can-answer/guided.md)**
-   — spend by month, value by set, best pulls: a stats tab.
-6. **[Keeping the data clean](lessons/keeping-data-clean/guided.md)** — dropdowns
-   and matching categories, after you've felt why they matter.
-7. **[Charting the collection](lessons/charting-the-collection/guided.md)** — the
-   numbers become pictures.
-8. **[Asking in QUERY](lessons/asking-in-query/guided.md)** — one-line questions
-   against the whole tracker.
-
-## Time and flow
-
-9. **[Price snapshots](lessons/price-snapshots/guided.md)** — the value-over-time
-   chart begins, one manual snapshot at a time.
-10. **[Log it from your phone](lessons/log-it-from-your-phone/guided.md)** — a
-    form that makes recording a purchase a ten-second job.
-
-## The honest numbers
-
-11. **[Packs or singles?](lessons/packs-or-singles/guided.md)** — your own pull
-    history answers the oldest question in collecting.
-12. **[The cost of selling](lessons/the-cost-of-selling/guided.md)** — fees,
-    shipping, materials, and what a sale really earned.
-
-## It runs itself
-
-13. **[Your first script](lessons/first-script/guided.md)** — a menu button that
-    does your snapshot chore in one click.
-14. **[On a schedule](lessons/on-a-schedule/guided.md)** — the tracker snapshots
-    itself weekly and emails a report.
-
-## The outside world
-
-15. **[Fetching real prices](lessons/fetching-real-prices/guided.md)** — an
-    expedition: can live market prices flow into the tracker on their own? Nobody
-    knows the current answer — finding out is the lesson.
+1. **[Building the ledger: cards, formulas, formatting](lessons/building-the-ledger/guided.md)**
+   — one sheet, your best cards, a total that recalculates itself, and formatting
+   that makes it readable at a glance.
+2. **[Tracking purchases and money owed](lessons/purchases-and-payback/guided.md)** —
+   every buy recorded with who paid, and a payback ledger with a live balance both
+   sides trust.
+3. **[Stats with SUMIF and keeping data clean](lessons/stats-and-clean-data/guided.md)**
+   — spend by month, value by set, best pulls — and the dropdowns and matching
+   categories that keep those numbers honest.
+4. **[Charts and the QUERY function](lessons/charts-and-query/guided.md)** — the
+   numbers become pictures, and one-line questions run against the whole tracker.
+5. **[Value snapshots and logging from your phone](lessons/snapshots-and-logging/guided.md)**
+   — the value-over-time chart begins, and recording a purchase becomes a
+   ten-second job.
+6. **[Pack value and the cost of selling](lessons/pack-value-and-selling/guided.md)**
+   — your own pull history answers packs-versus-singles, and a sales ledger shows
+   what a sale really earned.
+7. **[Automating the tracker with Apps Script](lessons/apps-script-automation/guided.md)**
+   — the snapshot chore becomes one click, then no clicks: scheduled runs and a
+   weekly emailed report.
+8. **[Fetching real prices](lessons/fetching-real-prices/guided.md)** — an
+   expedition: can live market prices flow into the tracker on their own? Nobody
+   knows the current answer — finding out is the lesson.
 
 ## After that
 

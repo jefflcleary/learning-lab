@@ -1,4 +1,4 @@
-# A server that's there at seven in the morning — reference
+# Keeping the server always on — reference
 
 <!-- Generated from core.md. Substantive fixes belong in core.md; regenerate rather than fork. -->
 

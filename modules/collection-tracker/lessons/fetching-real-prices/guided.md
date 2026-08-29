@@ -32,12 +32,12 @@ You need:
 
 - **A tracker that runs scripts on triggers.** You write functions, run them,
   read the executions log, and schedule them — built in
-  [Your first script](../first-script/guided.md) and
-  [On a schedule](../on-a-schedule/guided.md). Quick check: you can open the
+  [Automating the tracker with Apps Script](../apps-script-automation/guided.md) and
+  [Automating the tracker with Apps Script](../apps-script-automation/guided.md). Quick check: you can open the
   script editor, name the functions in it, and find last week's runs in the
   executions log.
 - **A Collection tab with Card, Set, and Value columns.** There since
-  [What is it all worth?](../first-ledger/guided.md). Quick check: pick one card
+  [Building the ledger: cards, formulas, formatting](../building-the-ledger/guided.md). Quick check: pick one card
   you'd most want live prices for — you'll use it today.
 
 If you get stuck beyond what the hints cover, [When you're stuck](../../../../reference/when-youre-stuck.md) is the toolkit. This lesson leans on real documentation — [Finding the real documentation](../../../../reference/finding-the-docs.md) helps when searching turns up noise.

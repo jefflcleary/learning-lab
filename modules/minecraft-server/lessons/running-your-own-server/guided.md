@@ -168,7 +168,7 @@ window) and count what appeared. Three things are worth recognizing today: `worl
 is the world itself, `logs/` is everything the server has said, and
 `server.properties` is its settings — which we are deliberately not opening today,
 because reading that file and changing what it says is
-[the entire next lesson](../server-settings/guided.md).
+[the entire next lesson](../server-settings-and-console/guided.md).
 
 ### Join your own server
 

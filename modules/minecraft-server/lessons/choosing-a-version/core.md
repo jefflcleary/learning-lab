@@ -1,4 +1,4 @@
-# Choosing which Minecraft version your server runs
+# Choosing a Minecraft version
 
 Internal lesson core. Not learner-facing. Deliveries are generated from this file —
 see authoring/WORKFLOWS.md.

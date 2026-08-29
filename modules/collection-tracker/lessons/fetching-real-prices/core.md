@@ -39,10 +39,10 @@ changes.
 ## Prerequisites
 
 - Scripts and triggers: the learner writes functions, runs them, reads the
-  executions log, and schedules them — established by `lessons/first-script/` and
-  `lessons/on-a-schedule/`
+  executions log, and schedules them — established by `lessons/apps-script-automation/` and
+  `lessons/apps-script-automation/`
 - A Collection tab with Card, Set, and Value columns — established by
-  `lessons/first-ledger/`
+  `lessons/building-the-ledger/`
 - The research habit of reading a project's own documentation — reference page
   `reference/finding-the-docs.md`, surfaced via the stuck-sentence clause
 

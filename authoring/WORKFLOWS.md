@@ -176,6 +176,8 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
       this repo. Predict sections prompt the logbook by name.
 - [ ] Closing section is titled "What you have now".
 - [ ] Every pronoun has an unambiguous referent.
+- [ ] The title is descriptive: it names the lesson's contents plainly enough to
+      predict them from a scanned list (PRINCIPLES "Titles and granularity").
 - [ ] Every term defined at first use.
 - [ ] Ends with something observable, ideally visible to other people.
 - [ ] Hint ladders collapsed, ordered, and consistent with the scaffolding level.

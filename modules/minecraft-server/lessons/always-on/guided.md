@@ -1,4 +1,4 @@
-# A server that's there at seven in the morning
+# Keeping the server always on
 
 <!-- Generated from core.md. Substantive fixes belong in core.md; regenerate rather than fork. -->
 
@@ -32,13 +32,13 @@ with just the commands and decisions.
 You need:
 
 - **A server people connect to from outside your home.**
-  [Letting friends in from anywhere](../joining-from-outside/guided.md) gets you there. Quick
+  [Letting friends in from anywhere](../letting-friends-join/guided.md) gets you there. Quick
   check: someone outside your wifi has joined your server, or you can join it
   yourself over the outside route.
 - **A server you can start, stop, and join.**
   [Running your own server](../running-your-own-server/guided.md) covers it. Quick check:
   start it, watch for the **Done** line, type `stop`, watch it save and exit.
-- **A backup you've actually restored from.** [Backups](../backups/guided.md) covers it.
+- **A backup you've actually restored from.** [Copying and backing up worlds](../worlds-and-backups/guided.md) covers it.
   Quick check: your backup script runs, and you have at least once taken a backup,
   broken something, and brought it back. The last part of this session cuts the
   power to a running machine, and you only do that with a proven safety net.

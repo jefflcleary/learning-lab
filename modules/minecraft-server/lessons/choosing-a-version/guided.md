@@ -1,4 +1,4 @@
-# Choosing which Minecraft version your server runs
+# Choosing a Minecraft version
 
 <!-- Generated from core.md. Substantive fixes belong in core.md; regenerate rather than fork. -->
 

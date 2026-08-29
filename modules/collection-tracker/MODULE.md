@@ -33,64 +33,50 @@ cards, own money, own questions. General method and format rules live in
 
 ## Parts
 
-### Part 1 — The ledger
+### Part 1 — The ledger and the money
 
-Milestone: the tracker answers "what's it worth?" and "what have I spent?" and
-people ask to see it.
-
-| Lesson | Goal | Status |
-|---|---|---|
-| `first-ledger` | One sheet of the good cards; first formulas; a live total | core + guided written |
-| `making-it-readable` | Currency, frozen headers, green/red conditional format, sorting | core + guided written |
-| `every-pack-you-open` | Purchases tab: every buy, cost, and who paid; cross-tab totals | core + guided written |
-
-### Part 2 — Money owed
-
-Milestone: a payback balance both sides trust, watched down to zero.
+Milestone: the tracker answers "what's it worth?", "what have I spent?", and "what
+do I owe?" — and people ask to see it.
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `the-payback-ledger` | Borrowed amounts, payments, running balance; debt concepts lived | core + guided written |
+| `building-the-ledger` | Collection tab, first formulas, live recalculation; currency, conditional format, safe sorting | merged from first-ledger + making-it-readable |
+| `purchases-and-payback` | Purchases with who-paid; the payback ledger's running balance both sides trust | merged from every-pack-you-open + the-payback-ledger |
 
-### Part 3 — Questions the data can answer
+### Part 2 — Questions the data can answer
 
 Milestone: a dashboard worth showing around.
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `questions-your-data-can-answer` | SUMIF/COUNTIF stats: spend by month, value by set, best pulls | core + guided written |
-| `keeping-data-clean` | Validation dropdowns; why categories must match (felt first) | core + guided written |
-| `charting-the-collection` | Spend and value as charts on the dashboard | core + guided written |
-| `asking-in-query` | The QUERY function: select/where/group-by in one line | core + guided written |
+| `stats-and-clean-data` | SUMIF/COUNTIF stats; the category-mismatch wound and the validation cure, one arc | merged from questions-your-data-can-answer + keeping-data-clean |
+| `charts-and-query` | Charts as derived views; QUERY as a question grammar; SQL named at last | merged from charting-the-collection + asking-in-query |
 
-### Part 4 — Time and flow
+### Part 3 — A tracker that stays alive
 
 Milestone: the growth curve exists, and logging takes ten seconds from a phone.
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `price-snapshots` | Manual value snapshots; the value-over-time chart; the tedium noted | core + guided written |
-| `log-it-from-your-phone` | A Google Form feeding the purchases data | core + guided written |
+| `snapshots-and-logging` | Manual value snapshots (tedium by design) + a Google Form for phone logging | merged from price-snapshots + log-it-from-your-phone |
 
-### Part 5 — The honest numbers
+### Part 4 — The honest numbers
 
 Milestone: buying and selling decisions made from data.
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `packs-or-singles` | Expected value of a pack from own pull history vs buying singles | core + guided written |
-| `the-cost-of-selling` | Sales ledger: fees, shipping, materials; real profit; paper vs realized value | core + guided written |
+| `pack-value-and-selling` | Expected value from own pulls; sales ledger with fees/shipping/materials; paper vs realized | merged from packs-or-singles + the-cost-of-selling |
 
-### Part 6 — It runs itself
+### Part 5 — It runs itself
 
 Milestone: the tracker does chores without a human.
 
 | Lesson | Goal | Status |
 |---|---|---|
-| `first-script` | Apps Script: a custom menu that takes a snapshot on click | core + guided written |
-| `on-a-schedule` | Time-driven trigger: weekly auto-snapshot and an emailed report | core + guided written |
+| `apps-script-automation` | snapshotToday() behind a menu; time-driven trigger; the duplicate guard; weekly email | merged from first-script + on-a-schedule |
 
-### Part 7 — The outside world
+### Part 6 — The outside world
 
 Milestone: found out what's currently possible — whichever way it goes.
 
@@ -98,7 +84,7 @@ Milestone: found out what's currently possible — whichever way it goes.
 |---|---|---|
 | `fetching-real-prices` | Exploration: can market prices flow in automatically? UrlFetchApp; the pricing-data ecosystem as found | core + guided written |
 
-### Part 8 — Open
+### Part 7 — Open
 
 The learner's own extension. No lesson file; deliberately no card. (Candidates
 they may invent: grading tracking, want-lists, trade ledgers, a shared family
@@ -106,10 +92,12 @@ dashboard.)
 
 ## Design notes
 
-- The snapshot chore in Part 4 is deliberately manual so Part 6's automation is
-  felt as relief, not decoration — same pattern as any earn-the-tool arc.
-- `questions-your-data-can-answer` deliberately hits the inconsistent-category
-  failure so `keeping-data-clean` lands as the cure.
+- The snapshot chore in `snapshots-and-logging` is deliberately manual so
+  `apps-script-automation` is felt as relief, not decoration — same pattern as any
+  earn-the-tool arc.
+- `stats-and-clean-data` deliberately hits the inconsistent-category failure in
+  its first half so the validation half lands as the cure — the wound-then-cure
+  pair is now one continuous arc inside one lesson.
 - Criteria arguments (SUMIF) and QUERY are this module's query-language thread;
   cores may note the SQL foreshadow, learner text never says SQL until QUERY
   makes it real.

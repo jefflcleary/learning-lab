@@ -1,4 +1,4 @@
-# A history for everything you've built
+# Tracking your server files with git
 
 <!-- Generated from core.md. Substantive fixes belong in core.md; regenerate rather than fork. -->
 
@@ -33,8 +33,8 @@ You need:
   [Setting up a coding machine](../../../dev-machine/lessons/dev-machine-setup/guided.md) covered it. Quick check:
   `git --version` in a terminal prints a version number.
 - **A server folder with things you made in it.** At least one datapack of your own
-  — [Your first datapack](../first-datapack/guided.md) gets you there — and a backup script,
-  from [Backups](../backups/guided.md). Quick check: `ls world/datapacks` in your server
+  — [Building datapacks: custom recipes and functions](../building-datapacks/guided.md) gets you there — and a backup script,
+  from [Copying and backing up worlds](../worlds-and-backups/guided.md). Quick check: `ls world/datapacks` in your server
   folder shows a datapack you built, and your backup script exists (for most people
   that's `backup.sh` in the server folder).
 

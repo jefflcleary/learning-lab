@@ -79,6 +79,23 @@ changed command is changed in one place. The format of `core.md` is specified in
 
 ---
 
+## Titles and granularity
+
+**Titles are descriptive.** A lesson title plainly names what the lesson covers, so
+someone scanning a list of titles can find what they're looking for and predict a
+lesson's contents from its name alone. No teaser titles, no metaphors, no
+blog-post styling — "Letting friends join your server," never "The first visitor."
+The intrigue belongs in the opening paragraphs, not the name.
+
+**Lessons are substantial.** A lesson covers a coherent capability — usually several
+related goals building on each other — and may take more than one sitting. Prefer
+fewer, meatier lessons over many small ones: when adjacent lessons share their
+prerequisites and audience and their payoffs compose into one arc, they are
+probably one lesson. Split only where the world-state or the audience genuinely
+diverges.
+
+---
+
 ## Learner-facing lesson structure
 
 The `guided` delivery uses these sections, in this order, with these plain-language
@@ -343,6 +360,8 @@ Observed in earlier drafts. Check against these before shipping any delivery.
 - Assuming a specific learner, a specific household, or a specific point in a journey.
 - Writing lessons before the arc they belong to exists.
 - Asserting a volatile fact instead of pointing at its source.
+- Teaser or metaphor titles that don't say what the lesson contains.
+- Micro-lessons: splitting one coherent capability across several thin lessons.
 - Referring to this project's files, folders, or generation machinery in learner
   text (belongs only on the "How this project is put together" page).
 - Style drift: quips, knowing asides, or a second authorial voice appearing in any

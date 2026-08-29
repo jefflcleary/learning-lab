@@ -1,4 +1,4 @@
-# A server that's there at seven in the morning
+# Keeping the server always on
 
 Internal lesson core. Not learner-facing. Deliveries are generated from this file —
 see authoring/WORKFLOWS.md.
@@ -28,10 +28,10 @@ file shape (XML), same idea as the first two.
 ## Prerequisites
 
 - People connect to your server from outside your home — established by
-  `lessons/joining-from-outside/` (this is the moment availability starts to matter)
+  `lessons/letting-friends-join/` (this is the moment availability starts to matter)
 - A server you can start, stop, and join — established by
   `lessons/running-your-own-server/`
-- A backup you have actually restored from — established by `lessons/backups/`
+- A backup you have actually restored from — established by `lessons/worlds-and-backups/`
   (required for the power-cut drill at the end)
 
 ## Establishes
@@ -151,7 +151,7 @@ file shape (XML), same idea as the first two.
 - The stop-cleanly tension, stated plainly: an auto-started server plus a machine
   losing power is a hard kill mid-write — exactly what the never-close-the-window
   rule protects against. At minimum the learner must *know* this; the mitigation is
-  backups (../backups/), and the drill is run on the expendable setup with a fresh
+  backups (../worlds-and-backups/), and the drill is run on the expendable setup with a fresh
   backup taken first. Whether launchd can be told to stop a program gracefully at
   shutdown is left as go-further.
 
