@@ -190,19 +190,22 @@ from. It ends at a fixed point, and everything after it is the same everywhere:
 > **You have a machine running Ubuntu LTS, you know its public address, and you can
 > open a terminal on your Mac and get a command prompt on that machine.**
 
-This session uses **Hetzner**, chosen mostly on price. **DigitalOcean** is the
-main alternative and is a little easier to sign up with; if your Hetzner signup
-stalls, switch without hesitating, because nothing after this section changes.
+This session uses **DigitalOcean**, which has the simplest signup and documentation
+worth reading. **Hetzner** is the main alternative and is worth pricing if the people
+who will play are in Europe, where it includes far more traffic for less money. Either
+way, nothing after this section changes.
 
-Create the account first. Signing up needs an email address, and may also need an
-identity check — a photo of an identity document, or a small verification payment.
-Whether you get asked depends on the account, and when you do get asked it can take
-anywhere from an hour to a couple of working days. This is why it is worth doing
-several days before you plan to do the rest.
+Create the account first. Signing up needs an email address and a payment method.
+DigitalOcean's is usually immediate; some providers, Hetzner among them, additionally
+ask for an identity check — a photo of an identity document, or a small verification
+payment — which can take anywhere from an hour to a couple of working days. That
+possibility is why the account is worth creating several days before you plan to do the
+rest, whichever one you use.
 
-Then create the machine. The provider's own documentation walks the screens, and it
-is the right place to look because console layouts change; search their docs for
-creating a cloud server. What matters is the decisions, which are yours:
+Then create the machine — DigitalOcean calls it a Droplet, other companies call it a
+server or an instance; it's the same thing. The provider's own documentation walks the
+screens, and it's the right place to look because console layouts change. What matters
+is the decisions, which are yours:
 
 - **Location.** Data centres exist in several countries. Pick the one closest to the
   people who will actually play. Distance costs time, every packet, forever, and
@@ -211,16 +214,19 @@ creating a cloud server. What matters is the decisions, which are yours:
   Support, meaning a release that keeps getting security updates for years, which is
   what a machine that runs unattended wants. Ubuntu's own releases page says which
   version is current.
-- **Size.** Memory is the constraint that matters here, not the number of processors.
-  A small vanilla world for a handful of players is comfortable in about 4 GB of
-  machine memory; larger groups or heavy mods want 8 GB. Work from the number of
-  people who will really play, not the largest number you can picture.
-- **Processor type.** You will see cheaper machines described as ARM, alongside more
-  familiar Intel and AMD ones. For this, the cheap ones are fine, and it is worth
-  knowing why: a Minecraft server is a Java program, and Java programs are not written
-  for a particular processor design. The Java runtime you install on the machine
-  bridges that gap. This is the kind of decision that looks like it should be blocking
-  and isn't.
+- **Size.** Memory is the constraint that decides which machine you need. A small
+  vanilla world for a handful of players is comfortable in about 4 GB; larger groups or
+  heavy mods want 8 GB. Work from the number of people who will really play, not the
+  largest number you can picture.
+- **Processor type.** At the same amount of memory you'll usually be offered a cheaper
+  and a slightly dearer option — "regular" and "premium", or Intel against AMD against
+  ARM. Two things worth knowing. First, the type barely matters for compatibility: a
+  Minecraft server is a Java program, and Java programs aren't written for a particular
+  processor design, because the Java runtime you install bridges that gap. Second, the
+  *speed* does matter, and not in the way you'd guess — Minecraft runs its world on a
+  single processor at a time, so how fast one of them is counts for far more than how
+  many there are. If a premium option costs a few dollars more for newer, faster cores,
+  that is the one worth having, and adding processors is not.
 - **The SSH key.** Paste in the contents of the `.pub` file from the last step. This
   is the moment the machine learns to let you in.
 

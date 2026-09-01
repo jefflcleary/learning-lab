@@ -34,25 +34,29 @@ ls -a ~/.ssh
 
 ## Rent the machine
 
-Default provider: Hetzner, on price. Alternative: DigitalOcean, easier signup.
-Everything after this section is provider-independent.
+Default provider: DigitalOcean — simplest signup, flat pricing, good docs. Alternative:
+Hetzner, worth pricing if the players are in Europe (far more included traffic, less
+money); in US locations it costs more for less traffic. Everything after this section is
+provider-independent.
 
 Exit condition for this section, and the reason it can be done by anyone in advance:
 
 > Ubuntu LTS running, public address known, `ssh` from the Mac reaches a prompt.
 
-- **Signup** needs an email, and may need an identity check (ID document, or a small
-  verification payment). Risk-based — sometimes instant, sometimes a couple of working
-  days. Hetzner is a European company; European business hours apply.
-- **Payment** by card, PayPal, or European bank transfer; billed in euros, so a
-  non-euro card may add a foreign-transaction fee.
+- **Signup** needs an email and a payment method. DigitalOcean's is usually immediate.
+  Hetzner may add an identity check (ID document, or a small verification payment) —
+  risk-based, sometimes instant, sometimes a couple of working days, European business
+  hours. Either way, do it days ahead.
+- **Payment** — DigitalOcean bills in US dollars; Hetzner in euros, so a non-euro card
+  may add a foreign-transaction fee.
 - **Location** — nearest to the players. Cannot be fixed later.
 - **Image** — Ubuntu LTS. Current release from Ubuntu's own releases page.
 - **Size** — memory is the constraint. ~4 GB for a small vanilla world and a handful
   of players; 8 GB for larger groups or mods.
-- **Processor** — ARM machines are cheapest and are fine. A Minecraft server is a Java
-  program; the runtime bridges the processor difference. (Software with
-  processor-specific parts exists; vanilla has none.)
+- **Processor** — type barely matters for compatibility (Java bridges it; vanilla has
+  no processor-specific parts). Speed does: Minecraft runs the world on one thread, so
+  single-core speed beats core count. Take the premium tier over the cheapest at the
+  same memory; don't pay for extra cores.
 - **SSH key** — paste the `.pub` contents at creation.
 - Console layouts change: use the provider's own docs for the screens, and their
   pricing page for the price. Note the public address when the machine exists.
@@ -223,8 +227,9 @@ Prove this **before** touching the firewall, not after.
 
 - The provider's console includes a browser window acting as screen and keyboard for
   the machine, working even when its network settings are broken.
-- Logging in that way needs something other than the SSH key — on Hetzner, resetting
-  the root password from the panel. Their docs cover the current wording.
+- Logging in that way needs something other than the SSH key — on both providers,
+  resetting the root password from the panel. DigitalOcean calls the browser terminal
+  the Droplet Console. Their docs cover the current wording.
 - Log in through it once and look around. A rescue path that has never been used is a
   rumour.
 

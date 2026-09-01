@@ -96,19 +96,36 @@ question a reader has about it is identical.
   real computer in a data centre, rented by the hour. It arrives with an operating
   system installed and nothing else on it. It has a public address on the internet from
   the moment it exists.
-- This lesson's default provider is **Hetzner** (hetzner.com; the cloud product is at
-  console.hetzner.cloud). Chosen for price: roughly a fifth of the better-known
-  alternatives for the same specification. [volatile as of 2026-09]
-- Named alternative, for anyone whose signup stalls or who wants a larger tutorial
-  library to wander through: **DigitalOcean**. Everything in this lesson after the
-  machine exists is identical on any provider. [volatile as of 2026-09]
-- [volatile as of 2026-09] Hetzner plan families: CX (Intel/AMD), CPX (AMD), CAX (ARM,
-  cheapest). A CAX-class machine with 2 processors and 4 GB of memory costs roughly
-  €4/month. Deliveries: point at Hetzner's pricing page; never print a price.
-- [volatile as of 2026-09] Hetzner locations include sites in Germany, Finland, the
-  United States, and Singapore. The one decision that matters: pick the location
-  closest to the people who will play, because distance costs time and nothing fixes it
-  later.
+- This lesson's default provider is **DigitalOcean** (digitalocean.com). Chosen for the
+  simplest signup, flat and predictable pricing, and documentation that is a genuine
+  asset to point a learner at. [volatile as of 2026-09]
+- Named alternative, worth pricing if the players are in Europe: **Hetzner**
+  (hetzner.com; the cloud product is at console.hetzner.cloud). Everything in this
+  lesson after the machine exists is identical on any provider. [volatile as of 2026-09]
+- **Price check performed 2026-09-01, and it reversed this lesson's original default.**
+  An earlier draft chose Hetzner on the claim that it cost roughly a fifth of the
+  alternatives. That was true of an older Hetzner lineup and is no longer true of any
+  of them. Measured on the pricing pages that day, for 4 GB of memory:
+  - DigitalOcean Basic, 2 vCPU / 4 GB / 80 GiB / 4,000 GiB transfer — $24/month
+    Regular, $28/month for the Premium Intel or Premium AMD variant (newer cores, NVMe).
+  - Hetzner CPX22, 2 vCPU / 4 GB / 80 GB — €19.99/month, but **EU locations only**,
+    with 20 TB of traffic.
+  - Hetzner CPX21, 3 vCPU / 4 GB / 80 GB — **€32.49/month** in both US locations, with
+    2 TB of traffic.
+  So for a US-located server Hetzner costs meaningfully more for less included traffic,
+  and its signup identity check remains a risk the other provider does not have. For an
+  EU-located server the comparison flips and Hetzner's cost-optimised line (CX and the
+  Arm CAX plans, which exist in EU locations only) is cheaper still.
+  Deliveries: point at both pricing pages, never print a price.
+- **Recommended size, and the reason:** the Premium variant rather than the cheapest
+  one at the same memory. Minecraft's world runs on a single thread, so single-core
+  speed is what moves tick times; the premium tiers are newer, faster cores for a few
+  dollars more. This reasoning is available to the learner as orientation but the
+  decision stays theirs.
+- [volatile as of 2026-09] DigitalOcean locations include sites in the United States,
+  Canada, Europe, India, Singapore, and Australia. The one decision that matters: pick
+  the location closest to the people who will play, because distance costs time and
+  nothing fixes it later.
 - **ARM versus Intel does not matter here.** A Minecraft server is a Java program, and
   Java programs are not written for a particular processor design — the Java runtime
   installed on the machine bridges the gap. This is why the cheapest (ARM) machines are
@@ -120,29 +137,35 @@ question a reader has about it is identical.
   modded or larger groups want 8 GB. Deliveries: have the learner reason from the
   number of people who will actually play, not from the largest number they can
   imagine.
-- [volatile as of 2026-09] Signup requires an email address, and may additionally
-  require an identity check — a photo of an identity document, or a small verification
-  payment. It is risk-based: many accounts are approved instantly, some take hours or a
-  couple of working days. Hetzner is a European company, so weekends and European
-  business hours affect the wait. Deliveries: say plainly that this can block, and
-  that it is why the account is worth creating days before the rest of the lesson.
-- [volatile as of 2026-09] Payment by card, PayPal, or European bank transfer. Billing
-  is in euros, so a card issued elsewhere may add a foreign-transaction fee.
+- [volatile as of 2026-09] DigitalOcean signup requires an email address and a payment
+  method, and is usually immediate. Hetzner's may additionally require an identity check
+  — a photo of an identity document, or a small verification payment — which is
+  risk-based and can take anywhere from an hour to a couple of working days, with
+  European business hours applying. Deliveries: say plainly that account creation can
+  block, and that this is why the account is worth creating days before the rest of the
+  lesson, whichever provider is used.
+- [volatile as of 2026-09] DigitalOcean bills in US dollars by card or PayPal. Hetzner
+  bills in euros, so a card issued elsewhere may add a foreign-transaction fee — worth
+  naming if that alternative is taken.
 - [volatile as of 2026-09] Billing is **hourly, capped at a monthly maximum**. A machine
   that exists is costing money whether or not anyone is playing. Deleting the machine
   stops the meter; powering it off does not necessarily stop it. Deliveries: have the
   learner find their provider's own statement of this rather than trusting a number
   here.
-- [volatile as of 2026-09] Creating the machine in Hetzner's console: choose location,
-  image (Ubuntu LTS), machine type, and an SSH key, then create. The console shows the
-  new machine's public address. Deliveries: walk the *decisions*, point at Hetzner's own
-  documentation for the exact screens, and use no screenshots — console layouts change
-  and screenshots rot faster than anything else in a lesson.
+- [volatile as of 2026-09] Creating the machine: choose location, image (Ubuntu LTS),
+  machine size, and an SSH key, then create. The console shows the new machine's public
+  address. DigitalOcean calls the machine a Droplet; Hetzner calls it a Server. The
+  steps are the same shape on both. Deliveries: walk the *decisions*, point at the
+  provider's own documentation for the exact screens, and use no screenshots — console
+  layouts change and screenshots rot faster than anything else in a lesson.
 - **The provider's web console** is a back door: a keyboard and screen for the machine,
   in a browser, that works even when the network configuration on the machine is
   broken. It exists because the provider owns the hardware. Reaching it needs a way to
-  log in that isn't the SSH key — on Hetzner, resetting the root password from the
-  panel. [verify current wording and location as of 2026-09] This is the rescue path
+  log in that isn't the SSH key — on both providers, resetting the root password from
+  the panel. DigitalOcean calls its browser terminal the Droplet Console and offers a
+  password reset alongside it; Hetzner's equivalent sits in the server's own panel.
+  [verify current wording and location on the chosen provider as of 2026-09] This is the
+  rescue path
   for the firewall exercise below, and it must be found and tested *before* it is
   needed.
 
@@ -409,7 +432,7 @@ command prompt. Real decisions to reason through rather than click past:
 - Image: Ubuntu LTS, current release found on Ubuntu's own page.
 - The SSH key: pasted from the `.pub` file made in step 1.
 
-Deliveries point at Hetzner's documentation for the screens. The section closes by
+Deliveries point at the provider's documentation for the screens. The section closes by
 restating the exit condition, so it is obvious whether it has been met.
 
 **3. Get in, and read what you rented.** *(level 1)* Goal: `ssh root@<address>`, answer
@@ -532,11 +555,11 @@ it on.
 - **Find the back door before you need it.** Not a failure — a rehearsal, and it comes
   first because the next exercise needs it. In the provider's panel, find the browser
   console that acts as a screen and keyboard for the machine, arrange a way to log in
-  through it (on Hetzner, resetting the root password from the panel), and actually log
+  through it (on both providers, resetting the root password from the panel), and actually log
   in that way once. Teaches the general lesson that a rescue path is only real if it has
   been used, and the specific one that the provider can always reach the hardware
-  because the provider owns it. [verify Hetzner's current wording and location as of
-  2026-09]
+  because the provider owns it. [verify the chosen provider's current wording and
+  location as of 2026-09]
 - **Lock yourself out with the firewall.** Now that the rescue path is proved: disable
   the firewall, then re-enable it *without* allowing SSH first. The session in progress
   survives; the next connection does not. Reconnect through the browser console, allow
