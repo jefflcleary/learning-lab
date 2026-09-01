@@ -1,8 +1,8 @@
 # A recommended path
 
-Four lessons, and this time the order really is the order — each one leaves the machine
-in the state the next one expects. Every lesson still states its own conditions, so you
-can check rather than trust.
+These four lessons are meant to be done in order: each one leaves the machine in the
+state the next one expects. Every lesson states its own conditions at the top, so you can
+check where you stand rather than take it on trust.
 
 1. **[Renting a machine and getting into it](lessons/renting-a-machine/guided.md)** —
    make a key pair, rent an Ubuntu machine, and get a command prompt on a computer you
