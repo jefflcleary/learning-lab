@@ -384,9 +384,9 @@ looks like when it's well.
   just seems to.
 - Genuinely open: a friend's frame rate is bad and you can't see their computer. What
   could you ask them to measure that would tell you *which part* of their machine is
-  the limit — the graphics, the processor, the memory, something else entirely? Nobody
-  writing this session knows the best set of questions. Work out yours, try it on a
-  real person, and write down what you'd ask differently next time.
+  the limit — the graphics, the processor, the memory, something else entirely? There is
+  no settled set of questions to ask. Work out yours, try it on a real person, and write
+  down what you'd ask differently next time.
 - Also genuinely open: everything here measures the server as it is right now. What
   would you have to record, and how often, to be able to answer "was it slow last
   Tuesday evening?" There's an answer later in this module, but it doesn't have to be

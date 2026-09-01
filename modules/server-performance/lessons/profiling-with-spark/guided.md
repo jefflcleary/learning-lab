@@ -292,8 +292,8 @@ permission to remove it.
 - Genuinely open: profiles get captured by a person who happens to be watching, and
   almost every real problem happens when nobody is. What would a setup look like that
   captured a profile automatically whenever the server had a bad minute? What could go
-  wrong with leaving something like that running? Nobody writing this session knows the
-  best design.
+  wrong with leaving something like that running? There is no settled best design for
+  this.
 
 ---
 

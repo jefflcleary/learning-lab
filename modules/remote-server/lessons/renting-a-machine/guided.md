@@ -343,8 +343,8 @@ it's where the next session starts.
   happens in a connection was invisible until you asked?
 - Genuinely open: you're renting this by the month. What would it take to run a server
   that exists only when somebody wants to play, and costs nothing the rest of the time?
-  People do build this. Nobody writing this session knows the best way — and the hard
-  part is the obvious one: how would a player start a machine that isn't running?
+  People do build this, and there is no settled best way to do it — the hard part is the
+  obvious one: how would a player start a machine that isn't running?
 
 ---
 

@@ -302,8 +302,8 @@ like.
   you were right. Being wrong here is the useful outcome.
 - Genuinely open: your table describes your server, on your machine, with your mods. How
   much of it would still hold on a machine twice as fast? On a server with thirty players
-  instead of four? Some of these signatures scale and some of them invert, and nobody
-  writing this session knows which is which for your setup.
+  instead of four? Some of these signatures scale and some of them invert, and which is
+  which for your setup is not something anyone can tell you in advance.
 
 ---
 

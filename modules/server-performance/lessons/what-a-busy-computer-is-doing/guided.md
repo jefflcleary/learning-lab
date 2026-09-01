@@ -309,9 +309,8 @@ things running, on this disk, today.
   the four numbers would move?
 - Genuinely open: your server's tick rate is fine, every resource on both machines
   looks healthy, and one player still complains constantly. What would you measure
-  next? Nobody writing this session knows the best answer — and notice that the honest
-  first move might be to measure something on *their* machine rather than either of
-  yours.
+  next? There is no settled answer — and notice that the honest first move might be to
+  measure something on *their* machine rather than either of yours.
 
 ---
 

@@ -313,7 +313,7 @@ activity from guessing, even though from the outside they can look similar.
 - Genuinely open: your server's tick time is fine on average, fine at the 95th
   percentile, and every player insists it feels bad at the same time each evening.
   Nothing you've measured would catch that. What would you record, and how often, to
-  find it? Nobody writing this session knows the best answer.
+  find it? There is no settled answer to this one.
 
 ---
 

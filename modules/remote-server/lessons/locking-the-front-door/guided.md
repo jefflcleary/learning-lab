@@ -356,7 +356,7 @@ you have never used is a rumour.** That applies to backups, to fire escapes, and
 - Genuinely open: your key lives on exactly one Mac. What happens if that Mac is lost,
   stolen, or dropped in a bath? Work out what you'd do, then decide whether to set it up
   now rather than later. There are several answers and they trade off against each other
-  differently; nobody writing this session knows which is right for you.
+  differently, and which one is right depends on things only you know.
 
 ---
 

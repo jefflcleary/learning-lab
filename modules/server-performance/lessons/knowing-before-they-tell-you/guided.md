@@ -305,9 +305,9 @@ learned and becomes something you simply expect to find on any machine you're ha
 - Graph a whole week instead of a day. Is there a pattern you could have predicted? Is
   there one you couldn't?
 - Genuinely open: alerts wake people up. What belongs in a message that arrives at three
-  in the morning, and what would make it worth being woken for? Nobody writing this
-  session knows the right answer, and every organisation that runs systems for a living
-  has a different one and argues about it constantly.
+  in the morning, and what would make it worth being woken for? There is no settled
+  answer — every organisation that runs systems for a living has a different one, and
+  they argue about it constantly.
 - Also genuinely open: your server will get slower as the world grows — gradually,
   permanently, and without ever crossing a threshold on any particular day. A threshold
   catches sudden problems and is blind to slow drift. What would detect the drift? And
