@@ -159,6 +159,43 @@ while preserving the thinking that matters.
 
 ---
 
+## Where-to-run labels
+
+Most lessons run every command in one place, and say so once. Some lessons don't —
+the learner types on their own machine, then on a second machine, and back again —
+and in those, "where do I type this?" becomes a real and recurring question that the
+surrounding prose answers less well than it seems to.
+
+The rule:
+
+- **A lesson whose commands run in more than one place labels every command block
+  with where it runs.** Including the blocks on the learner's own machine — those are
+  exactly the ones that get assumed.
+- **A lesson whose commands all run in one place labels nothing.** It says where,
+  once, in prose.
+- **It is all-or-nothing within a lesson.** A lesson labels every block or none, so a
+  missing label never has to be interpreted. Partial labelling is worse than none: it
+  makes the unlabelled blocks ambiguous.
+
+The label names the place in the same words the lesson already uses for it — "On your
+Mac", "On the rented machine" — never an abbreviation, a symbol, or a hostname the
+reader has to resolve. A block that creates a *file* rather than running a command
+takes a label too; the question it answers is the same one.
+
+Labels come in two colours, and the colour tracks exactly one distinction: **the
+machine the reader is sitting at, versus any other machine.** Not the place-name,
+which varies from lesson to lesson — the distinction, which doesn't. A reader who has
+learned to read the colours in one lesson can read them in the next without being
+told. Colour is reinforcement and never the message: the label always says where in
+words, because the colour is gone the moment the page is read anywhere but the site.
+
+Existing lessons that run everything in one place are not retrofitted. The labels
+appear where they earn their place.
+
+The syntax is in `WORKFLOWS.md`, with the rest of the delivery format.
+
+---
+
 ## Scaffolding levels
 
 Internal planning vocabulary. **Never appears in learner-facing text.**

@@ -28,3 +28,63 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* ---------------------------------------------------------------------------
+ * Where-to-run labels.
+ *
+ * Authored in markdown as a span on its own line directly above a code block:
+ *
+ *   <span className="run-where run-where-local">On your Mac</span>
+ *   <span className="run-where run-where-remote">On the rented machine</span>
+ *
+ * Rendered here as a small coloured badge. The colour tracks one distinction only:
+ * `local` is the machine the reader is sitting at, `remote` is any other machine.
+ * The place-name itself is the lesson's own wording and varies; the colour does not,
+ * so a reader who has seen one lesson can read the next at a glance.
+ *
+ * Colour is reinforcement, never the message — the label always says where in words.
+ * GitHub's renderer strips both classes and shows those words as ordinary text.
+ * ------------------------------------------------------------------------ */
+
+.run-where {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+}
+
+/* Pull the badge down onto the block it labels. Browsers without :has simply
+   leave the normal paragraph spacing, which is harmless. */
+p:has(> .run-where:only-child) {
+  margin-bottom: 0.4rem;
+}
+
+/* The reader's own machine. */
+.run-where-local {
+  border-color: #33925d;
+  background-color: #d8f2e3;
+  color: #10331d;
+}
+
+/* Any other machine. */
+.run-where-remote {
+  border-color: #3578e5;
+  background-color: #dfeafc;
+  color: #10305f;
+}
+
+[data-theme='dark'] .run-where-local {
+  border-color: #25c2a0;
+  background-color: rgba(37, 194, 160, 0.16);
+  color: #7fe3cd;
+}
+
+[data-theme='dark'] .run-where-remote {
+  border-color: #4a90d9;
+  background-color: rgba(74, 144, 217, 0.18);
+  color: #a9cbf5;
+}

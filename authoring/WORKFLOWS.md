@@ -121,6 +121,11 @@ Everything simply true: commands, paths, names, settings, URLs. Tag lines with
 `[macos]` / `[windows]` where platform-specific and `[volatile as of <date>]` where
 it changes without warning (deliveries point at the source instead of asserting).
 
+If the lesson's commands run in more than one place, name those places here in the
+exact words the deliveries will use, and record which place each command belongs to.
+Deliveries carry where-to-run labels (see PRINCIPLES.md); the core is where the
+answer lives, so a regenerated delivery doesn't lose it.
+
 ## Arc
 
 ### Orientation — given plainly
@@ -150,8 +155,20 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 3. Put this comment on the line directly below the H1 title (not above it — the
    site extracts page titles from the H1, which must be the file's first line):
    `<!-- Generated from core.md. Substantive fixes belong in core.md; regenerate rather than fork. -->`
-4. Run the checklist below. Fix in the core, regenerate, re-check.
-5. Set the core's status to `ready`.
+4. If the lesson's commands run in more than one place, label every code block with
+   where it runs — a span on its own line directly above the block:
+
+   ```
+   <span className="run-where run-where-local">On your Mac</span>
+   <span className="run-where run-where-remote">On the rented machine</span>
+   ```
+
+   `run-where-local` is the machine the reader is sitting at; `run-where-remote` is
+   any other machine. The site renders these as coloured badges; GitHub strips both
+   classes and shows the words as ordinary text, so the label is always a readable
+   phrase. All-or-nothing per lesson, per the rule in `PRINCIPLES.md`.
+5. Run the checklist below. Fix in the core, regenerate, re-check.
+6. Set the core's status to `ready`.
 
 ### Delivery checklist
 
@@ -175,6 +192,9 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] Learner work goes to the learner's logbook or their own projects — never into
       this repo. Predict sections prompt the logbook by name.
 - [ ] Closing section is titled "What you have now".
+- [ ] Where-to-run labels: if the lesson's commands run in more than one place,
+      every code block carries one and the wording matches the core. If they all run
+      in one place, there are none.
 - [ ] Every pronoun has an unambiguous referent.
 - [ ] The title is descriptive: it names the lesson's contents plainly enough to
       predict them from a scanned list (PRINCIPLES "Titles and granularity").
