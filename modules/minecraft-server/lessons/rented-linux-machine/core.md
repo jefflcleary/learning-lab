@@ -96,62 +96,73 @@ question a reader has about it is identical.
   real computer in a data centre, rented by the hour. It arrives with an operating
   system installed and nothing else on it. It has a public address on the internet from
   the moment it exists.
-- This lesson's default provider is **DigitalOcean** (digitalocean.com). Chosen for the
-  simplest signup, flat and predictable pricing, and documentation that is a genuine
-  asset to point a learner at. [volatile as of 2026-09]
-- Named alternative, worth pricing if the players are in Europe: **Hetzner**
-  (hetzner.com; the cloud product is at console.hetzner.cloud). Everything in this
-  lesson after the machine exists is identical on any provider. [volatile as of 2026-09]
-- **Price check performed 2026-09-01, and it reversed this lesson's original default.**
-  An earlier draft chose Hetzner on the claim that it cost roughly a fifth of the
-  alternatives. That was true of an older Hetzner lineup and is no longer true of any
-  of them. Measured on the pricing pages that day, for 4 GB of memory:
-  - DigitalOcean Basic, 2 vCPU / 4 GB / 80 GiB / 4,000 GiB transfer — $24/month
-    Regular, $28/month for the Premium Intel or Premium AMD variant (newer cores, NVMe).
-  - Hetzner CPX22, 2 vCPU / 4 GB / 80 GB — €19.99/month, but **EU locations only**,
-    with 20 TB of traffic.
-  - Hetzner CPX21, 3 vCPU / 4 GB / 80 GB — **€32.49/month** in both US locations, with
-    2 TB of traffic.
-  So for a US-located server Hetzner costs meaningfully more for less included traffic,
-  and its signup identity check remains a risk the other provider does not have. For an
-  EU-located server the comparison flips and Hetzner's cost-optimised line (CX and the
-  Arm CAX plans, which exist in EU locations only) is cheaper still.
-  Deliveries: point at both pricing pages, never print a price.
-- **Recommended size, and the reason:** the Premium variant rather than the cheapest
-  one at the same memory. Minecraft's world runs on a single thread, so single-core
-  speed is what moves tick times; the premium tiers are newer, faster cores for a few
-  dollars more. This reasoning is available to the learner as orientation but the
-  decision stays theirs.
-- [volatile as of 2026-09] DigitalOcean locations include sites in the United States,
-  Canada, Europe, India, Singapore, and Australia. The one decision that matters: pick
-  the location closest to the people who will play, because distance costs time and
-  nothing fixes it later.
-- **ARM versus Intel does not matter here.** A Minecraft server is a Java program, and
-  Java programs are not written for a particular processor design — the Java runtime
-  installed on the machine bridges the gap. This is why the cheapest (ARM) machines are
-  a legitimate choice, and it is worth naming, because "which processor" looks like it
-  should be a blocking decision and isn't. (Software containing parts written for a
-  specific processor does exist, and some mods contain such parts; vanilla does not.)
-- **Sizing.** Memory is the constraint that matters, not processor count. A small
-  vanilla world for a handful of players is comfortable in 4 GB of machine memory;
-  modded or larger groups want 8 GB. Deliveries: have the learner reason from the
-  number of people who will actually play, not from the largest number they can
-  imagine.
-- [volatile as of 2026-09] DigitalOcean signup requires an email address and a payment
-  method, and is usually immediate. Hetzner's may additionally require an identity check
-  — a photo of an identity document, or a small verification payment — which is
-  risk-based and can take anywhere from an hour to a couple of working days, with
-  European business hours applying. Deliveries: say plainly that account creation can
-  block, and that this is why the account is worth creating days before the rest of the
-  lesson, whichever provider is used.
-- [volatile as of 2026-09] DigitalOcean bills in US dollars by card or PayPal. Hetzner
-  bills in euros, so a card issued elsewhere may add a foreign-transaction fee — worth
-  naming if that alternative is taken.
-- [volatile as of 2026-09] Billing is **hourly, capped at a monthly maximum**. A machine
-  that exists is costing money whether or not anyone is playing. Deleting the machine
-  stops the meter; powering it off does not necessarily stop it. Deliveries: have the
-  learner find their provider's own statement of this rather than trusting a number
-  here.
+- This lesson's default provider is **OVHcloud** (us.ovhcloud.com). Chosen on price,
+  which is not close: a 4 GB machine costs roughly a fifth of the equivalent elsewhere,
+  with unlimited traffic rather than a transfer cap. [volatile as of 2026-09]
+- Named alternative, for anyone who wants per-second billing or a larger tutorial
+  library to wander through: **DigitalOcean**. Everything in this lesson after the
+  machine exists is identical on any provider. [volatile as of 2026-09]
+- **Price check performed 2026-09-01. It moved this lesson's default twice, and the
+  record is kept so the next author can see the reasoning rather than guess at it.**
+  An early draft chose Hetzner on the claim that it cost roughly a fifth of the
+  alternatives — true of an older Hetzner lineup, false of the current one. Measured on
+  the providers' own pages that day:
+  - **OVHcloud VPS-1** — 2 vCore / 4 GB / 40 GB NVMe / unlimited traffic —
+    **$5.35/month with no commitment**, $4.54 on a 12-month term.
+  - **OVHcloud VPS-2** — 4 vCore / 8 GB / 75 GB / unlimited traffic — **$10.00/month
+    with no commitment**, $8.50 on a 12-month term.
+  - DigitalOcean Basic — 2 vCPU / 4 GB / 80 GiB / 4,000 GiB transfer — $24/month, or
+    $28 for the Premium Intel or AMD variant. 8 GB is $48.
+  - Hetzner CPX21 — 3 vCPU / 4 GB / 80 GB — €32.49/month in US locations, 2 TB traffic.
+    CPX22 at €19.99 is EU-only.
+  Deliveries: point at the pricing pages, never print a price.
+- **The billing model differs from the other two and the lesson must say so.** OVHcloud
+  VPS is a **monthly subscription that auto-renews**, not per-second billing. A machine
+  created and deleted the same afternoon still costs a month. Two consequences: the
+  lesson cannot claim an experiment machine costs pennies, and knowing where the cancel
+  control lives matters *more* here, not less — a forgotten hourly machine is a slow
+  leak, a forgotten subscription renews on its own until somebody stops it.
+- [volatile as of 2026-09] OVHcloud commitment discounts: 5% for six months, 15% for
+  twelve. Advertised "starting at" prices are the twelve-month figures, which is why a
+  configurator set to no commitment shows a higher number than the product page. Worth
+  knowing because it looks like a bait-and-switch and isn't.
+- **The Local Zones trap [verify as of 2026-09].** OVHcloud markets lower-latency
+  "Local Zone" locations — attractive here precisely because latency to players is the
+  location decision this lesson cares about. Its own feature table marks several
+  inclusions as excluding Local Zones, daily automatic backup and anti-DDoS among them.
+  Deliveries: have the learner check what is included at the location they choose,
+  rather than for the product in general.
+- **Recommended size, and the reason:** at a given price, prefer faster cores over more
+  of them. Minecraft's world runs on a single thread, so single-core speed is what moves
+  tick times and core count barely matters. This is orientation; the decision stays the
+  learner's.
+- **Open question, honestly unresolved [verify].** Budget providers reach these prices
+  partly through oversubscription — more virtual machines per physical core — and
+  single-core speed under contention is exactly the metric a Minecraft server lives on.
+  OVHcloud is an established provider rather than a bargain-bin one, and unlike some
+  competitors does not describe its cheap tiers as being for workloads where processor
+  speed does not matter. But this has not been measured. It is measurable, by the
+  learner, with the tools in `modules/server-performance/`, and a delivery may say so.
+- [volatile as of 2026-09] OVHcloud locations include sites in the United States,
+  Canada, Europe, and Asia-Pacific. The one decision that matters: pick the location
+  closest to the people who will play, because distance costs time and nothing fixes it
+  later.
+- [volatile as of 2026-09] Signup requires an email address and a payment method, and
+  on OVHcloud and DigitalOcean is usually immediate. Some providers — Hetzner among them
+  — additionally run a risk-based identity check, which can take anywhere from an hour to
+  a couple of working days. Deliveries: say plainly that account creation can block, and
+  that this is why the account is worth creating days before the rest of the lesson.
+- [volatile as of 2026-09] OVHcloud's US site and DigitalOcean both bill in US dollars.
+  Hetzner bills in euros, so a card issued elsewhere may add a foreign-transaction fee.
+  Sales tax is added at checkout in some jurisdictions. Deliveries: mention tax once, in
+  passing — on these amounts it is a rounding error, and dwelling on it next to a
+  five-fold price difference misleads about what matters.
+- [volatile as of 2026-09] Billing model varies and the learner must find out which one
+  they are on: a **monthly subscription that auto-renews** (OVHcloud) or **per-second
+  billing capped at a monthly maximum** (DigitalOcean). Either way a machine that exists
+  is costing money whether or not anyone is playing, and powering it off does not
+  necessarily stop that — only cancelling or deleting does. Deliveries: have the learner
+  find their provider's own statement rather than trusting a description here.
 - [volatile as of 2026-09] Creating the machine: choose location, image (Ubuntu LTS),
   machine size, and an SSH key, then create. The console shows the new machine's public
   address. DigitalOcean calls the machine a Droplet; Hetzner calls it a Server. The
@@ -661,7 +672,7 @@ the monthly charge buys is a machine that simply is.
   the provisioning exit condition verbatim, because it is what keeps the rest of the
   lesson provider-independent — and what will let a physical machine be substituted
   later without a rewrite.
-- Money is content, not fine print: what it costs, that it accrues hourly, and where the
+- Money is content, not fine print: what it costs, which billing model it is on, and where the
   off switch is. Step 11 is not optional and must not be trimmed for length.
 - The account-holder is not assumed to be the learner and is never called a parent, a
   household, or anything else. "Someone able to open an account" is the phrasing.

@@ -190,26 +190,42 @@ from. It ends at a fixed point, and everything after it is the same everywhere:
 > **You have a machine running Ubuntu LTS, you know its public address, and you can
 > open a terminal on your Mac and get a command prompt on that machine.**
 
-This session uses **DigitalOcean**, which has the simplest signup and documentation
-worth reading. **Hetzner** is the main alternative and is worth pricing if the people
-who will play are in Europe, where it includes far more traffic for less money. Either
-way, nothing after this section changes.
+This session uses **OVHcloud**, chosen on price, which isn't close: a 4 GB machine
+there costs roughly a fifth of what the better-known providers charge for the same
+memory, and it comes with unlimited traffic instead of a monthly transfer allowance.
+**DigitalOcean** is the main alternative — several times the price, but it bills by the
+second rather than by the month and has a much larger library of tutorials to wander
+through. Either way, nothing after this section changes.
 
-Create the account first. Signing up needs an email address and a payment method.
-DigitalOcean's is usually immediate; some providers, Hetzner among them, additionally
-ask for an identity check — a photo of an identity document, or a small verification
-payment — which can take anywhere from an hour to a couple of working days. That
-possibility is why the account is worth creating several days before you plan to do the
-rest, whichever one you use.
+One thing about OVHcloud's prices that looks like a trick and isn't: the price on the
+product page is the twelve-month rate. Choose "no commitment" in the configurator and
+the figure goes up — a six-month term saves 5%, twelve months saves 15%, and the
+advertised number assumes you took the twelve. Starting with no commitment costs you
+under a dollar a month for the freedom to walk away, which is worth it while you're
+finding out whether you like it.
 
-Then create the machine — DigitalOcean calls it a Droplet, other companies call it a
-server or an instance; it's the same thing. The provider's own documentation walks the
-screens, and it's the right place to look because console layouts change. What matters
-is the decisions, which are yours:
+Create the account first. Signing up needs an email address and a payment method, and
+is usually immediate. Some providers additionally run an identity check — a photo of an
+identity document, or a small verification payment — which can take anywhere from an
+hour to a couple of working days. That possibility is why the account is worth creating
+several days before you plan to do the rest.
+
+Then create the machine. Different companies call it different things — a VPS, a
+Droplet, an instance, a server — and it's the same product. The provider's own
+documentation walks the screens, and it's the right place to look because console
+layouts change. What matters is the decisions, which are yours:
 
 - **Location.** Data centres exist in several countries. Pick the one closest to the
   people who will actually play. Distance costs time, every packet, forever, and
   nothing you do later fixes it. Name the people first, then pick.
+
+  One thing to check while you're here, because it's aimed squarely at the decision
+  you're making: some providers offer extra-low-latency locations that don't include
+  everything the ordinary ones do. OVHcloud's are called Local Zones, and its own
+  feature list marks several inclusions — automatic daily backups among them — as not
+  applying there. The location that's best for latency may quietly be the one that
+  drops a feature you wanted. Read what's included **at the location you pick**, not
+  for the product in general.
 - **Image.** Ubuntu LTS. Ubuntu is a flavour of Linux; LTS stands for Long Term
   Support, meaning a release that keeps getting security updates for years, which is
   what a machine that runs unattended wants. Ubuntu's own releases page says which
@@ -586,12 +602,22 @@ That is the session, performed.
 
 ### Know what it costs and how to stop it
 
-Find the billing page in your provider's console. Find the running total for this
-month. Find the screen where a machine gets deleted, and read what the provider says
-about when charges stop — switching a machine off and deleting it are not the same
-thing, and only one of them stops the meter.
+Find the billing page in your provider's console. Find what you're being charged and
+when. Find the screen where the machine gets cancelled or deleted, and read what the
+provider says about when charges actually stop — switching a machine off and getting
+rid of it are not the same thing, and only one of them stops the money.
 
-Do not delete anything. Just be able to point at all three.
+Find out which of two billing models you're on, because they fail differently:
+
+- **A monthly subscription that renews by itself** — OVHcloud works this way. A machine
+  you created for an afternoon still costs a month, and if you forget about it, it
+  quietly renews until somebody stops it.
+- **Per-second or hourly billing, capped at a monthly maximum** — DigitalOcean works
+  this way. A machine that exists for an afternoon costs pennies, and one you forget
+  about bills continuously.
+
+Do not delete anything. Just be able to point at all three things above and say which
+model you're on.
 
 Then answer this out loud: what happens if this machine is forgotten about for a year?
 A rented machine is a subscription with a command line attached, and knowing where the

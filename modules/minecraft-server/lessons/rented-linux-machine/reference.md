@@ -34,21 +34,26 @@ ls -a ~/.ssh
 
 ## Rent the machine
 
-Default provider: DigitalOcean — simplest signup, flat pricing, good docs. Alternative:
-Hetzner, worth pricing if the players are in Europe (far more included traffic, less
-money); in US locations it costs more for less traffic. Everything after this section is
+Default provider: OVHcloud — roughly a fifth the price of the better-known providers at
+the same memory, unlimited traffic. Alternative: DigitalOcean, several times dearer but
+billed per second and with a bigger tutorial library. Everything after this section is
 provider-independent.
+
+Two OVHcloud specifics: advertised prices are the 12-month rate (no commitment costs
+more; 6 months saves 5%, 12 saves 15%), and Local Zone locations exclude some
+inclusions — automatic daily backup among them — so check what's included at the
+location you pick.
 
 Exit condition for this section, and the reason it can be done by anyone in advance:
 
 > Ubuntu LTS running, public address known, `ssh` from the Mac reaches a prompt.
 
-- **Signup** needs an email and a payment method. DigitalOcean's is usually immediate.
-  Hetzner may add an identity check (ID document, or a small verification payment) —
-  risk-based, sometimes instant, sometimes a couple of working days, European business
-  hours. Either way, do it days ahead.
-- **Payment** — DigitalOcean bills in US dollars; Hetzner in euros, so a non-euro card
-  may add a foreign-transaction fee.
+- **Signup** needs an email and a payment method; usually immediate on OVHcloud and
+  DigitalOcean. Some providers (Hetzner) add a risk-based identity check that can take a
+  couple of working days. Do it days ahead regardless.
+- **Payment** — OVHcloud US and DigitalOcean bill in US dollars; Hetzner in euros, so a
+  non-euro card may add a foreign-transaction fee. Sales tax is added at checkout in
+  some jurisdictions.
 - **Location** — nearest to the players. Cannot be fixed later.
 - **Image** — Ubuntu LTS. Current release from Ubuntu's own releases page.
 - **Size** — memory is the constraint. ~4 GB for a small vanilla world and a handful
@@ -235,11 +240,14 @@ Prove this **before** touching the firewall, not after.
 
 ## Billing
 
-- Charged hourly up to a monthly cap, for as long as the machine exists.
-- **Powering a machine off does not necessarily stop the charge; deleting it does.**
-  Read the provider's own statement rather than trusting any number here.
-- Find, before committing: the billing page, the current running total, and the screen
-  where a machine is deleted.
+- Two models, and they fail differently. **Monthly subscription, auto-renewing**
+  (OVHcloud): an afternoon's machine still costs a month, and a forgotten one renews
+  itself. **Per-second, capped monthly** (DigitalOcean): an afternoon costs pennies, a
+  forgotten one bills continuously.
+- **Powering a machine off does not necessarily stop the charge; cancelling or deleting
+  it does.** Read the provider's own statement rather than trusting any number here.
+- Find, before committing: the billing page, what is being charged and when, and the
+  screen where a machine is cancelled or deleted.
 
 ## What you have now
 
