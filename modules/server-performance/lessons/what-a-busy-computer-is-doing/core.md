@@ -40,7 +40,7 @@ measurement describes a whole system, not a program.
   number this lesson watches while it interferes with the machine.
 - For the second half only: a Linux machine you can log into that runs the server for
   other people — established by
-  `modules/minecraft-server/lessons/rented-linux-machine/`. The first half works
+  `modules/remote-server/lessons/keeping-it-running/`. The first half works
   entirely on the learner's own computer, and a learner without a second machine can
   do everything except the comparison.
 

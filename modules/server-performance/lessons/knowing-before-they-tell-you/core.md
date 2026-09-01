@@ -47,7 +47,7 @@ systems of any kind.
 - A Discord bridge, or another place messages already land where people look —
   established by `modules/minecraft-server/lessons/discord-and-web/`
 - A machine that stays on, where a scheduled job can run — established by
-  `modules/minecraft-server/lessons/rented-linux-machine/`. A recorder that only runs
+  `modules/remote-server/lessons/keeping-it-running/`. A recorder that only runs
   while a laptop is open records exactly the hours when nothing was wrong.
 
 ## Establishes

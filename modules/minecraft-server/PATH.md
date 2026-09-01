@@ -43,10 +43,11 @@ who'd rather be handed a sensible sequence than work one out.
 
 ## A machine of its own
 
-9. **[Moving your server to a rented Linux machine](lessons/rented-linux-machine/guided.md)**
-   — the server leaves your computer for one you rent by the month: a Linux machine
-   with no screen that you administer over the network, which keeps running after you
-   shut your laptop and walk away with it.
+9. **[Running your server on a rented machine](../remote-server/README.md)** — a module
+   of its own, four lessons long: rent a Linux machine, lock it down, move your world
+   onto it, and teach it to start the server by itself. It lives outside this module
+   because it grew too big to sit inside one, and it ends with you shutting your laptop
+   and walking away while your friends keep playing.
 
 ## Before the bots
 

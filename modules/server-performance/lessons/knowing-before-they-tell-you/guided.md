@@ -41,7 +41,7 @@ You need:
   [Bridging to Discord and building a status page](../../../minecraft-server/lessons/discord-and-web/guided.md)
   covers it.
 - **A machine that stays on.**
-  [Moving your server to a rented Linux machine](../../../minecraft-server/lessons/rented-linux-machine/guided.md)
+  [Keeping it running](../../../remote-server/lessons/keeping-it-running/guided.md)
   covers it. A recorder that only runs while your laptop is open records precisely the
   hours when nothing was wrong.
 

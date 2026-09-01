@@ -88,24 +88,13 @@ have built things in it. Same content, completely different motivation.
 | `worlds-and-backups` | Worlds as folders; copies; cold backups + restore drill; hot backups at the console | merged from worlds-and-copies + backups + backups-without-stopping |
 | `always-on` | Sleep prevention, `caffeinate`, launchd plist; server survives a reboot | core + guided + reference written |
 | `git-for-your-server` | git properly: init, .gitignore, the status/diff/commit loop, restore | core + guided written |
-| `rented-linux-machine` | A rented Linux machine administered over SSH; keys, users, sudo, firewall; the server moved across and run by systemd; friends cut over | core + guided + reference written |
 
-`rented-linux-machine` is where the module's two-machine claim stops being notional:
-production leaves the learner's own computer for a machine nobody sits at. It answers
-`always-on`'s closing open question ("what would it take to run this on a machine you
-never see and never log into?") without depending on that lesson. Its provider-specific
-section ends at a stated exit condition — Ubuntu LTS, a public address, a command
-prompt — so a different provider, or one day a physical machine on a shelf, can be
-substituted without touching the rest.
-
-Planned follow-up, not yet written: a lesson on how changes travel between the two
-machines now that both exist. The up-flow (things the learner authored) and the
-down-flow (the world, which exists in one place only) as separate sections; a copy of
-production run locally to rehearse a change that cannot be undone — a version upgrade
-is the intended example; and a rollback drill. That lesson is where git gains a second
-machine, and where the course would need a git remote it does not yet have — an open
-decision, since `git-for-your-server` is deliberately local-only and puts GitHub in its
-Go further section.
+Moving the server onto a machine of its own started as a lesson here and outgrew the
+format: one delivery reached 766 lines and introduced roughly ten new concepts. It is now
+`modules/remote-server/`, four lessons long, and this module's `PATH.md` points at it the
+way it already points at `modules/dev-machine/`. It stays Minecraft-flavoured — the social
+payoff is the motivational engine and a generic version would have traded it for nothing —
+and it answers `always-on`'s closing open question without depending on that lesson.
 
 ### Part 4 — First programs
 

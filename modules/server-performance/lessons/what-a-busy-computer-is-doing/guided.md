@@ -38,7 +38,7 @@ You need:
   look to find out.
 - **For the second half only: a Linux machine you can log into that runs your server
   for other people.**
-  [Moving your server to a rented Linux machine](../../../minecraft-server/lessons/rented-linux-machine/guided.md)
+  [Keeping it running](../../../remote-server/lessons/keeping-it-running/guided.md)
   gets you one. The first half works entirely on your own computer, so if you don't
   have a second machine yet you can do everything here except the comparison.
 
