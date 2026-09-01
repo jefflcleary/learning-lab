@@ -67,6 +67,21 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Finding out why a server is slow',
+          link: {type: 'doc', id: 'modules/server-performance/README'},
+          items: [
+            'modules/server-performance/PATH',
+            'modules/server-performance/lessons/three-kinds-of-slow/guided',
+            'modules/server-performance/lessons/what-a-busy-computer-is-doing/guided',
+            'modules/server-performance/lessons/the-tick-and-its-budget/guided',
+            'modules/server-performance/lessons/profiling-with-spark/guided',
+            'modules/server-performance/lessons/making-it-slow-on-purpose/guided',
+            'modules/server-performance/lessons/changes-that-help/guided',
+            'modules/server-performance/lessons/knowing-before-they-tell-you/guided',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Building a collection tracker',
           link: {type: 'doc', id: 'modules/collection-tracker/README'},
           items: [

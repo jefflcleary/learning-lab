@@ -8,10 +8,6 @@ and delete it here.
 
 ## 2026-07-31
 
-- **Standalone lesson: how to diagnose and mitigate lag in multiplayer games.** Closes
-  the loop on the project's origin story (a laggy hosted world). Natural home for
-  `spark` (a real profiler — measuring instead of guessing) and for "the server is a
-  program competing for CPU/RAM like any other."
 - **Module: creating a brand new game mode in Minecraft.** Probably spans datapacks
   → bots → maybe Skript; could be the worked example of a learner-driven arc.
 - **Side lesson: try downgrading an existing world to an older version.** The stated
@@ -53,7 +49,6 @@ encryption engage — ten minutes and networking becomes visible).
 - **BlueMap / squaremap** — live browser map of the world
 - **Velocity** — multiple worlds behind one address
 - **Chunky** — pregenerate terrain
-- **spark** — profiler; see also the lag-diagnosis lesson idea above
 
 Open questions parked here so they aren't lost:
 

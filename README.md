@@ -22,6 +22,10 @@ independent — start with the one about a thing you care about.
   a blank Google Sheet to a trading-card tracker that knows what your collection is
   worth, what you owe, and whether packs beat singles — and eventually updates
   itself.
+- **[Finding out why a server is slow](modules/server-performance/README.md)** —
+  what "laggy" actually means, how to measure it, and how to find the cause: break a
+  server on purpose six ways and identify each one from the numbers, then make it
+  faster and prove you did.
 
 ## How lessons work
 
