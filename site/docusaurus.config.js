@@ -44,6 +44,24 @@ const config = {
     }),
   ],
 
+  themes: [
+    [
+      // Offline search. Builds a static index at build time and runs entirely in the
+      // browser — no account, no crawler, nothing external to keep alive, and it works
+      // on GitHub Pages unchanged. Note it only functions in a production build
+      // (`npm run build && npm run serve`); `npm start` has no index to search.
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // The docs plugin serves the repo root at the site root, so the search index
+        // has to be told that rather than assuming the default `/docs`.
+        docsRouteBasePath: '/',
+        indexBlog: false,
+        hashed: true,
+        language: ['en'],
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
