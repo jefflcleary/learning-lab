@@ -64,7 +64,9 @@ By the end of this session you will have:
 **`cron`** is the traditional Unix scheduler: a table of "run this command at these
 times". `crontab -e` edits it and `crontab -l` prints it. Its time format is five fields
 — minute, hour, day of month, month, day of week — and it's famously easy to get wrong.
-`man 5 crontab` is the authority.
+`man 5 crontab` on the machine is the authority; Ubuntu's
+[cron how-to](https://help.ubuntu.com/community/CronHowto) is a gentler introduction to
+the same thing.
 
 Everything else you already have: `rsync`, your backup script, and the server console.
 

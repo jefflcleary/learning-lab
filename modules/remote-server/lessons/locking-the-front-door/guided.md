@@ -55,14 +55,22 @@ By the end of this session you will have:
 ## New tools
 
 **`adduser` and `usermod`** create a user account on Linux and add it to a group.
-Ubuntu's own documentation covers both; `man adduser` is on the machine.
+[Ubuntu's server documentation](https://documentation.ubuntu.com/server/) covers user
+management, and `man adduser` is on the machine itself.
 
 **`sudo`** runs a single command with administrative power, then hands it straight back.
 It's the convention on every Linux machine in the world, and `man sudo` explains it.
 
 **`ufw`** is a firewall — a program that decides which ports on a machine will accept
 connections from outside. The name is short for "uncomplicated firewall", which is fair.
-It's already installed; `man ufw` is the reference.
+It's already installed; `man ufw` is the reference on the machine, and
+[Ubuntu's UFW guide](https://help.ubuntu.com/community/UFW) is the longer version.
+
+**`rsync`** copies files and folders, and you'll use it once here to move a file into
+another user's home directory with the right ownership. It ships with macOS and is
+already on the rented machine. `man rsync` is the reference, and the
+[project's own documentation](https://rsync.samba.org/documentation.html) is the same
+material on the web. The next session uses it properly, to move your whole server across.
 
 **`journalctl`** reads the log that the system keeps of what its programs have been
 doing. You'll use it to read the login attempts, and you'll use it again in a later

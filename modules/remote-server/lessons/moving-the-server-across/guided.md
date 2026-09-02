@@ -60,7 +60,8 @@ By the end of this session you will have:
 
 ## New tools
 
-**`apt`** is Ubuntu's package manager. It installs software from Ubuntu's own catalogue,
+**[`apt`](https://documentation.ubuntu.com/server/how-to/software/package-management/)**
+is Ubuntu's package manager. It installs software from Ubuntu's own catalogue,
 which is exactly the job Homebrew does on your Mac — a different operating system doing
 the same thing. `sudo apt update` refreshes the catalogue and `sudo apt install <name>`
 installs something from it. `man apt` is on the machine.
@@ -71,7 +72,9 @@ software means asking the catalogue.
 
 **`rsync`** copies files and whole folders, either on one machine or between two machines
 over the network. It ships with macOS. `man rsync` is a long page and worth skimming once,
-because it has more useful options than almost anything else you'll meet.
+because it has more useful options than almost anything else you'll meet; the
+[project's own documentation](https://rsync.samba.org/documentation.html) is the same
+material on the web.
 
 ---
 
@@ -107,8 +110,10 @@ java -version
 
 Two things to work out before you run that.
 
-**Which version.** Minecraft's own server requirements state which Java version the
-current server needs, and that's the source to check rather than any page describing it.
+**Which version.**
+[Minecraft's own server documentation](https://minecraft.wiki/w/Tutorial:Setting_up_a_Java_Edition_server)
+states which Java version the current server needs, and that's the source to check rather
+than any page describing it.
 If you get it wrong, the server's own error message will name what it wanted — which is
 a perfectly respectable way to find out.
 

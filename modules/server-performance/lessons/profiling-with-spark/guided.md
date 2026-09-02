@@ -63,8 +63,10 @@ By the end of this session you will have:
 ## New tools
 
 **spark** is a profiler for Minecraft servers, written by lucko. It works on Fabric,
-Forge, and Paper, and its documentation lives at **spark.lucko.me/docs** — which is
-where this session will send you rather than quoting commands, because they change.
+Forge, and Paper, and its documentation lives at
+**[spark.lucko.me/docs](https://spark.lucko.me/docs)** — which is where this session will
+send you rather than quoting commands, because they change. The mod itself is on
+[Modrinth](https://modrinth.com/mod/spark).
 
 One piece of history worth having, because it will save you an hour: for years the
 standard tool was a built-in feature of Paper called timings, and a great deal of

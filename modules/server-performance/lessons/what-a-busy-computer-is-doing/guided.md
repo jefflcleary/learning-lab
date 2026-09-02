@@ -74,8 +74,8 @@ worth knowing now because it's the first time in this module the same command be
 differently on two machines. `man top` on each machine is the authority for that
 machine. `q` quits.
 
-**`htop`** is `top` with colour, a bar per core, and arrow keys that work. It's not
-installed by default; installing it is part of the work below.
+**[`htop`](https://htop.dev)** is `top` with colour, a bar per core, and arrow keys that
+work. It's not installed by default; installing it is part of the work below.
 
 **`free -h`**, **`df -h`**, and **`uptime`** are three small Linux commands that report
 memory, disk space, and how busy the machine has been. All three are already there.

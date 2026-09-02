@@ -68,7 +68,8 @@ By the end of this session you will have:
 **`cron`** is the traditional Unix scheduler: a table of "run this command at these
 times". You edit it with `crontab -e` and print it with `crontab -l`. Its time format is
 five fields — minute, hour, day of month, month, day of week — and it is famously easy to
-get wrong. `man 5 crontab` is the authority.
+get wrong. `man 5 crontab` on the machine is the authority; Ubuntu's
+[cron how-to](https://help.ubuntu.com/community/CronHowto) is a gentler introduction.
 
 This is your third scheduler. launchd starts things on your Mac, systemd starts things on
 your Linux machine, and now cron runs things on a timetable. Same idea, third costume,

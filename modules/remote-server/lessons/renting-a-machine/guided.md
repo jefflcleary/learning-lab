@@ -59,13 +59,14 @@ By the end of this session you will have:
 
 ## New tools
 
-**ssh** gives you a command line on another computer over the network. Everything you
+**[ssh](https://man.openbsd.org/ssh)** gives you a command line on another computer over
+the network. Everything you
 type and everything that comes back is encrypted along the way. It ships with macOS, and
 it's how nearly every server on the internet is administered — not a simplified version
 of that, the actual thing. `man ssh` is its manual.
 
-**ssh-keygen** makes key pairs, which are how you'll prove who you are to the rented
-machine. It ships alongside `ssh`. `man ssh-keygen` covers it, and you'll run it in the
+**[ssh-keygen](https://man.openbsd.org/ssh-keygen)** makes key pairs, which are how
+you'll prove who you are to the rented machine. It ships alongside `ssh`. `man ssh-keygen` covers it, and you'll run it in the
 first step below.
 
 Everything else in this session happens in a web browser, on your provider's site.
@@ -139,10 +140,10 @@ that follow — is the same everywhere:
 > **You have a machine running Ubuntu LTS, you know its public address, and you can open
 > a terminal on your Mac and get a command prompt on that machine.**
 
-This module uses **OVHcloud**, chosen on price, which isn't close: a 4 GB machine there
+This module uses **[OVHcloud](https://us.ovhcloud.com/vps/)**, chosen on price, which isn't close: a 4 GB machine there
 costs roughly a fifth of what the better-known providers charge for the same memory, and
-it comes with unlimited traffic instead of a monthly transfer allowance. **DigitalOcean**
-is the main alternative — several times the price, but billed by the second rather than
+it comes with unlimited traffic instead of a monthly transfer allowance. **[DigitalOcean](https://www.digitalocean.com/pricing/droplets)** is the main
+alternative — several times the price, but billed by the second rather than
 by the month, with a much larger library of tutorials to wander through.
 
 Two things that will otherwise cost you an hour:
@@ -177,7 +178,9 @@ layouts change. What matters is the decisions, which are yours:
   first, then pick.
 - **Image.** Ubuntu LTS. Ubuntu is a flavour of Linux; LTS stands for Long Term Support,
   meaning a release that keeps getting security updates for years, which is what a
-  machine running unattended wants. Ubuntu's own releases page says which is current.
+  machine running unattended wants.
+  [Ubuntu's release cycle page](https://ubuntu.com/about/release-cycle) says which is
+  current.
 - **Size.** Memory decides this. A small vanilla world for a handful of players is
   comfortable in about 4 GB; larger groups or heavy mods want 8 GB. Work from the number
   of people who'll really play, not the largest number you can picture.

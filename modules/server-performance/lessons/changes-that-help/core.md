@@ -94,15 +94,21 @@ exactly the cargo-culting this lesson exists to prevent. All are server-side and
 compatible with each other. [volatile as of 2026-09 — deliveries point at each mod's own
 page for current versions and claims]
 
-- **Lithium** — general optimisation of the game's own logic, explicitly without
-  changing behaviour. The broadest win and the usual first thing to try.
-- **FerriteCore** — reduces memory use, substantially in some worlds. Helps most where
-  memory is the constraint, which the learner can now check rather than assume.
-- **Krypton** — optimises the networking stack and the entity tracker. Helps most where
-  bandwidth or many entities are involved.
-- **C2ME** — chunk generation, loading, and saving, spread across multiple cores. Helps
-  most with the exploration signature from the previous lesson, and is the one case where
-  extra cores genuinely help.
+- **Lithium** (https://modrinth.com/mod/lithium) — general optimisation of the game's own
+  logic, explicitly without changing behaviour. The broadest win and the usual first
+  thing to try.
+- **FerriteCore** (https://modrinth.com/mod/ferrite-core) — reduces memory use,
+  substantially in some worlds. Helps most where memory is the constraint, which the
+  learner can now check rather than assume.
+- **Krypton** (https://modrinth.com/mod/krypton) — optimises the networking stack and the
+  entity tracker. Helps most where bandwidth or many entities are involved.
+- **C2ME** (https://modrinth.com/mod/c2me-fabric) — chunk generation, loading, and
+  saving, spread across multiple cores. Helps most with the exploration signature from
+  the previous lesson, and is the one case where extra cores genuinely help.
+
+All five are installed as ordinary Fabric mods and deliveries must say so rather than
+implying it: jar matching the server's Minecraft version into `mods`, restart. Every URL
+above is linked in deliveries, not merely named.
 
 The point deliveries must make: each of these targets a *different* one of the causes
 the learner has already caused deliberately. Which of them helps depends on which
@@ -110,9 +116,17 @@ problem this server actually has, and the learner is now the only person who kno
 
 ### Chunky, and pregeneration
 
-- **Chunky** is a mod that generates terrain in advance, in bulk, while nobody is
-  playing — so that the expensive work of creating land has already happened before a
-  player walks into it. [volatile as of 2026-09]
+- **Chunky** (https://modrinth.com/mod/chunky) is a Fabric mod that generates terrain in
+  advance, in bulk, while nobody is playing — so that the expensive work of creating land
+  has already happened before a player walks into it. [volatile as of 2026-09]
+- **Chunky needs full orientation and an earlier draft did not give it any.** It was
+  named in New tools and then the work said "run Chunky for a radius you choose", with no
+  statement that it is a mod, no installation, and no commands. That is the central rule
+  violated outright. Deliveries must say: it is an ordinary Fabric mod installed like any
+  other (jar matching the Minecraft version into `mods`, restart); it is run rather than
+  left running; its commands are typed at the console or in chat; and the command list is
+  on its own page, which is linked rather than alluded to. The radius is a deliberate
+  decision because it determines how much larger the world folder becomes.
 - It directly removes the exploration signature: spiky tick times with a healthy
   average.
 - Costs: it takes a long time, it works the machine hard while it runs, and it makes the

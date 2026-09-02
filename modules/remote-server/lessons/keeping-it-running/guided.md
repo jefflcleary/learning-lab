@@ -56,8 +56,9 @@ everything else and keeps it running. Every background program on a modern Linux
 was started by it, and it's been running on yours since before you ever logged in.
 
 You tell it what to run by writing a small text file called a **unit**. Units for services
-live in `/etc/systemd/system/`, and `man systemd.service` lists everything one can
-contain.
+live in `/etc/systemd/system/`. `man systemd.service` lists everything one can contain, and
+[systemd's own documentation](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html)
+is the same page on the web.
 
 **`systemctl`** is the command you use to talk to systemd — start something, stop it, mark
 it to run at boot, ask how it's doing. `man systemctl` is the authority.

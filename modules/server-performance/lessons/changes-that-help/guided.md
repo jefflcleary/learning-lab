@@ -68,27 +68,39 @@ By the end of this session you will have:
 is the point, because "install these four" is exactly the cargo-culting this session
 exists to prevent.
 
-- **Lithium** optimises the game's own logic without changing how anything behaves. The
-  broadest win, and usually the first thing to try.
-- **FerriteCore** reduces memory use, substantially in some worlds. Helps most when
-  memory is your constraint — which you can now check rather than assume.
-- **Krypton** optimises networking and entity tracking. Helps most where bandwidth or
-  large numbers of entities are involved.
-- **C2ME** speeds up chunk generation, loading, and saving by spreading them across
-  several cores. This is the one place where extra cores genuinely help.
+- **[Lithium](https://modrinth.com/mod/lithium)** optimises the game's own logic without
+  changing how anything behaves. The broadest win, and usually the first thing to try.
+- **[FerriteCore](https://modrinth.com/mod/ferrite-core)** reduces memory use,
+  substantially in some worlds. Helps most when memory is your constraint — which you
+  can now check rather than assume.
+- **[Krypton](https://modrinth.com/mod/krypton)** optimises networking and entity
+  tracking. Helps most where bandwidth or large numbers of entities are involved.
+- **[C2ME](https://modrinth.com/mod/c2me-fabric)** speeds up chunk generation, loading,
+  and saving by spreading them across several cores. This is the one place where extra
+  cores genuinely help.
 
 Notice that each targets a different one of the problems you caused deliberately last
 session. Which one helps *you* depends on which problem your server actually has, and
 you're currently the only person who knows that.
 
-Each has its own page with installation instructions and version requirements — the same
-version-matching rule as any Fabric mod.
+All four are ordinary Fabric mods: download the build matching your server's Minecraft
+version, drop the jar in the server's `mods` folder, restart. Same procedure and the same
+version-matching rule as any mod you've installed before. Each page above carries its own
+version requirements and notes.
 
-**Chunky** generates terrain in advance, in bulk, while nobody is playing, so the
-expensive work of creating land has already happened before somebody walks into it. It
-removes the exploration signature entirely. It costs time, works the machine hard while
-it runs, and makes your world folder considerably larger on disk. Its own documentation
-covers its commands.
+**[Chunky](https://modrinth.com/mod/chunky)** generates terrain in advance, in bulk,
+while nobody is playing — so the expensive work of creating land has already happened
+before somebody walks into it. It removes the exploration signature entirely.
+
+It's also a Fabric mod, installed exactly like the four above. Unlike them it isn't
+something you leave running quietly in the background: you install it, tell it what area
+to generate, start it, and it works through that area while you wait. Its commands are
+typed into the server console or chat, and they're listed on its page — read them there
+rather than guessing, because there are more of them than you'd expect and a couple are
+worth knowing (pausing it, and checking how far along it is).
+
+It costs three things worth knowing before you start it: a long time, a hard-working
+machine while it runs, and a considerably larger world folder on disk.
 
 ---
 
@@ -180,9 +192,20 @@ than two milliseconds do.
 
 ### Pregenerate
 
-Back up first. Check you have the disk space — this makes the world folder much bigger.
+Back up first. Check you have the disk space — this makes the world folder much bigger,
+and running out part-way through is a bad afternoon.
 
-Then run Chunky for a radius you choose, and let it finish.
+Install Chunky the way you installed the others: the jar matching your Minecraft version,
+into the `mods` folder, restart the server.
+
+Then open its documentation and find the commands. You want to set the area to generate —
+a radius, in blocks, centred on your world's spawn — and then start it. Pick a radius
+deliberately rather than the largest number you can think of: everything inside it gets
+generated and stored, so this is the setting that decides how much bigger your world
+folder gets.
+
+Start it, and let it finish. It will take a while, and it will tell you how far along it
+is if you ask.
 
 Now the clearest before-and-after in this whole module: re-run the exploration experiment
 from last session. Send the bot flying out into that radius and watch the tick

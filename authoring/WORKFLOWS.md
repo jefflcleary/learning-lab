@@ -186,7 +186,12 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
       second authorial voice; excitement only via concrete specifics.
 - [ ] "Before you start" ends with the standard stuck-pointer sentence (plus at
       most one lesson-specific reference-page clause).
-- [ ] Every "New tools" entry names where that tool's real documentation lives.
+- [ ] Every "New tools" entry links to that tool's real documentation, or names the
+      manual page where that is the authority. Naming a site in prose without linking
+      it does not count.
+- [ ] Anything a lesson tells the learner to run has been introduced: what it is, how
+      it gets installed, and where its commands are documented. "Then run X" with no
+      prior mention of installing X is the failure this catches.
 - [ ] Audience separation holds: pages referenced by title, never filename; no
       mention of this project's files, folders, or machinery.
 - [ ] Learner work goes to the learner's logbook or their own projects — never into

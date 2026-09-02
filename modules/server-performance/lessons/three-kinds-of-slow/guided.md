@@ -73,13 +73,15 @@ Nothing to install. These are things you already have and probably haven't looke
 
 **The debug screen** is built into Minecraft. It's the wall of text that appears over
 your view when you press a function key, and it shows what the game knows about itself
-right now — including your frame rate. Minecraft's own wiki documents every line of
-it, and it's worth knowing that page exists, because there is a lot on that screen.
+right now — including your frame rate.
+[Minecraft's wiki documents every line of it](https://minecraft.wiki/w/Debug_screen),
+which is worth knowing because there is a great deal on that screen.
 
 **`/tick query`** is a command you type into Minecraft's chat box. It reports how fast
 the server is meant to be running and how long its work is actually taking. It's part
-of the game, not an add-on. Minecraft's command documentation is where its exact
-behaviour lives, and it arrived in a particular version — so if your server is older,
+of the game, not an add-on.
+[The wiki's page for the `/tick` command](https://minecraft.wiki/w/Commands/tick) is where
+its exact behaviour lives, and it arrived in a particular version — so if your server is older,
 it will tell you it doesn't recognise it, and that's a fine outcome rather than a
 problem.
 
@@ -87,7 +89,7 @@ problem.
 specific complaint it makes when it is falling behind. You already know where it is:
 it's the same file you've read whenever the server had something to say.
 
-**`ping`** is a small program that ships with macOS. It sends a message to another
+**[`ping`](https://man.openbsd.org/ping)** is a small program that ships with macOS. It sends a message to another
 computer and times how long the reply takes, over and over. It has nothing to do with
 Minecraft, which is exactly what makes it useful here: it measures the network on its
 own, with the game taken out of the picture. `man ping` is its manual.

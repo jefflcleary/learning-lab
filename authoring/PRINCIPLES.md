@@ -114,8 +114,14 @@ stuck-pointer sentence (see "Reference pages").
 Observable, and where possible visible to other people.
 
 **New tools** — Anything unfamiliar named and explained plainly: what it is, what it
-does, where its real documentation lives, how to install it. Never withheld. Never
-behind a hint. Everything is said exactly once: install steps normally live here,
+does, **where its real documentation lives as a link**, how to install it. Never
+withheld. Never behind a hint.
+
+Link the authoritative source, don't just name it. "Its own documentation covers the
+commands" sends nobody anywhere; a link does. Where the authority is a manual page on
+the learner's own machine (`man rsync`) or a program's own `--help`, name that instead —
+it is the authority, and it cannot rot. Where it is a website, link it. Prefer the
+project's own site or repository over anybody's summary of it. Everything is said exactly once: install steps normally live here,
 but when installing is itself part of The work (setup-flavored lessons), New tools
 gives the what/why/where-it-comes-from and defers the steps with a plain pointer
 ("installing it is part of the work below") — orientation and work never repeat
@@ -274,9 +280,9 @@ How lessons surface them, deliberately minimal:
   pointing at the "When you're stuck" page — plus, at most, one brief clause
   naming a specific reference page when the lesson's territory makes it unusually
   relevant. Never more than that; a resources dump is the failure mode.
-- Every entry in a lesson's "New tools" section names where that tool's real
-  documentation lives. This is how lessons carry their first-principles resources
-  without a separate list.
+- Every entry in a lesson's "New tools" section links to where that tool's real
+  documentation lives (or names the manual page, where that is the authority). This is
+  how lessons carry their first-principles resources without a separate list.
 
 Reference pages stay few and short. A new one must earn its place the way a
 profile does: a real recurring need, not a speculative topic.
@@ -300,7 +306,8 @@ material supports this.
 
 Anything that changes without warning — which Minecraft versions a community tool
 supports, what the current release is — should not be asserted in a delivery. Point the
-learner at the authoritative source and have them determine the current answer.
+learner at the authoritative source — as a link, where one exists — and have them
+determine the current answer.
 
 In lesson cores, volatile facts *are* recorded (authors need them), but always tagged
 `[volatile]` with an as-of date, and the delivery instruction is "point, don't assert."

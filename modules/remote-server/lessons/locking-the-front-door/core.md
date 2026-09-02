@@ -86,6 +86,14 @@ state with a known exit, which is the thing this whole lab exists to install.
   anything** — discovering a setting is already correct is a better outcome than
   switching off something that was never on.
 
+### rsync, used here before it is taught
+
+The key-copying step uses `rsync`, which this module introduces properly in
+`lessons/moving-the-server-across/` — the *next* lesson. Deliveries must therefore give it
+a short New tools entry here: what it does, that it is already present on both machines,
+and where its documentation is. A lesson may not tell a learner to run something it has
+not introduced, even when a later lesson covers it in full.
+
 ### The lockout rule
 
 Non-negotiable, stated as a standing rule before the first command that could trigger
