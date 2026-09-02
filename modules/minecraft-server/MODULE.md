@@ -2,8 +2,8 @@
 
 The arcs, their milestones, the status of every lesson, and this module's own
 constraints. This is the authors' map; the learner-facing rendering of the
-recommended order is `PATH.md` (this folder), which only ever links to lessons that
-exist. General method and format rules live in `authoring/PRINCIPLES.md`; this file
+recommended order is the lesson list on `README.md` (this folder), which only ever links
+to lessons that exist. General method and format rules live in `authoring/PRINCIPLES.md`; this file
 binds only this module.
 
 Order here is recommended, never enforced. Every lesson must stand alone when read cold.
@@ -91,7 +91,7 @@ have built things in it. Same content, completely different motivation.
 
 Moving the server onto a machine of its own started as a lesson here and outgrew the
 format: one delivery reached 766 lines and introduced roughly ten new concepts. It is now
-`modules/remote-server/`, four lessons long, and this module's `PATH.md` points at it the
+`modules/remote-server/`, five lessons long, and this module's front page points at it the
 way it already points at `modules/dev-machine/`. It stays Minecraft-flavoured — the social
 payoff is the motivational engine and a generic version would have traded it for nothing —
 and it answers `always-on`'s closing open question without depending on that lesson.

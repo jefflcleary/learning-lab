@@ -18,8 +18,7 @@ before producing or changing any content.
 |---|---|---|
 | `README.md`, `HOW-TO-LEARN.md`, `logbook.md`, `about-this-repo.md` | Lab-wide top-level files | Learner |
 | `reference/<name>.md` | Reference pages: transferable craft (debugging, docs habits); theme-neutral, not lessons | Learner |
-| `modules/<name>/README.md` | The module's front page | Learner |
-| `modules/<name>/PATH.md` | That module's suggested order | Learner |
+| `modules/<name>/README.md` | The module's front page, including its suggested lesson order | Learner |
 | `modules/<name>/MODULE.md` | That module's design: arcs, milestones, lesson status, module-specific constraints | Authors |
 | `modules/<name>/lessons/<slug>/core.md` | Lesson core: all substance + internal notes | Authors |
 | `modules/<name>/lessons/<slug>/guided.md`, `reference.md`, … | Deliveries generated from the core | Learner |

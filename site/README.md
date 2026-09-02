@@ -30,6 +30,6 @@ useful as a whole-repo link check.
   blocks, and plain markdown links all work in both. Don't introduce
   generator-specific syntax into content.
 - `sidebars.js` is hand-curated: a Welcome section for the lab's own pages, then
-  a Modules section with one category per module, lessons in that module's PATH.md
+  a Modules section with one category per module, lessons in that module's README
   order. Adding a lesson means adding its `guided` doc id there (and `reference`,
   under that module's Quick references, if one exists).

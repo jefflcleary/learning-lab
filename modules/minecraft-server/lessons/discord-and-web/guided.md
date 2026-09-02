@@ -519,7 +519,7 @@ and who called.
   Design it on paper — uptime, deaths today, the map, last backup, who talked most,
   whatever you'd actually look at — then rank every idea by effort versus joy.
   Build nothing yet. The ranking is the skill; the building is
-  [the open part of the module](../../PATH.md).
+  [the open part of the module](../../README.md).
 
 ---
 

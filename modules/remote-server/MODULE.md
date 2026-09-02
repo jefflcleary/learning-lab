@@ -2,7 +2,7 @@
 
 The arcs, their milestones, the status of every lesson, and this module's own
 constraints. This is the authors' map; the learner-facing rendering of the recommended
-order is `PATH.md` (this folder). General method and format rules live in
+order is the lesson list on `README.md` (this folder). General method and format rules live in
 `authoring/PRINCIPLES.md`; this file binds only this module.
 
 Order here is recommended, never enforced. Every lesson must stand alone when read cold.

@@ -25,7 +25,6 @@ const sidebars = {
           label: 'Setting up a dev machine',
           link: {type: 'doc', id: 'modules/dev-machine/README'},
           items: [
-            'modules/dev-machine/PATH',
             'modules/dev-machine/lessons/dev-machine-setup/guided',
           ],
         },
@@ -34,7 +33,6 @@ const sidebars = {
           label: 'Running a Minecraft server',
           link: {type: 'doc', id: 'modules/minecraft-server/README'},
           items: [
-            'modules/minecraft-server/PATH',
             'modules/minecraft-server/lessons/running-your-own-server/guided',
             'modules/minecraft-server/lessons/server-settings-and-console/guided',
             'modules/minecraft-server/lessons/building-datapacks/guided',
@@ -68,7 +66,6 @@ const sidebars = {
           label: 'Running your server on a rented machine',
           link: {type: 'doc', id: 'modules/remote-server/README'},
           items: [
-            'modules/remote-server/PATH',
             'modules/remote-server/lessons/renting-a-machine/guided',
             'modules/remote-server/lessons/locking-the-front-door/guided',
             'modules/remote-server/lessons/moving-the-server-across/guided',
@@ -92,7 +89,6 @@ const sidebars = {
           label: 'Finding out why a server is slow',
           link: {type: 'doc', id: 'modules/server-performance/README'},
           items: [
-            'modules/server-performance/PATH',
             'modules/server-performance/lessons/three-kinds-of-slow/guided',
             'modules/server-performance/lessons/what-a-busy-computer-is-doing/guided',
             'modules/server-performance/lessons/the-tick-and-its-budget/guided',
@@ -107,7 +103,6 @@ const sidebars = {
           label: 'Building a collection tracker',
           link: {type: 'doc', id: 'modules/collection-tracker/README'},
           items: [
-            'modules/collection-tracker/PATH',
             'modules/collection-tracker/lessons/building-the-ledger/guided',
             'modules/collection-tracker/lessons/purchases-and-payback/guided',
             'modules/collection-tracker/lessons/stats-and-clean-data/guided',

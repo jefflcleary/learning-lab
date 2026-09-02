@@ -14,7 +14,7 @@ The layout, briefly:
 
 - The top-level files are the pages in the Welcome section of this site.
 - `modules/<name>/` holds one module: its front page (`README.md`), its recommended
-  order (`PATH.md`), a design document for the people writing it (`MODULE.md`), and
+  order, a design document for the people writing it (`MODULE.md`), and
   a `lessons/` folder.
 - Each lesson is a folder. `guided.md` is the main teaching version. `reference.md`,
   where it exists, is the compressed commands-and-decisions version. `core.md` is

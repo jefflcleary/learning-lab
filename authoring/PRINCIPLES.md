@@ -297,7 +297,9 @@ material supports this.
 - Prerequisites are conditions of the world, each with a link to where it's established.
 - No numbers in filenames. Numbering encodes an order into the file system, which then
   fights every insertion and reordering.
-- The recommended sequence lives in a single path document that anyone can ignore.
+- The recommended sequence lives on the module's own front page, under a "The lessons"
+  heading, where somebody arriving at the module meets it without a second click — and
+  it says plainly that it can be ignored.
 - Every lesson opens with enough orientation to be read cold.
 
 ---
@@ -394,7 +396,7 @@ Learner-facing pages are written for a learner reading the rendered site. They
 describe **pages and sections, never files and folders**:
 
 - Refer to other pages by their titles, as links — "see [A recommended path]", never
-  "see PATH.md". Filenames, folder layout, the core/delivery mechanism, and anything
+  "see [A recommended path]". Filenames, folder layout, the core/delivery mechanism, and anything
   else about how this project is built are internals.
 - Exactly one page is exempt: the top-level "How this project is put together" page,
   which exists to explain the repo itself (file layout, what a lesson folder

@@ -36,8 +36,8 @@ Lessons don't have numbers, and you don't have to do them in order. Each one sta
 by telling you what it assumes — not as "finish lesson three first" but as facts
 about your setup, like "you need a server you can start and stop," with a link to
 the lesson that gets you there. If those facts hold, you can do the lesson, whatever
-route you took. Each module's [recommended path](modules/minecraft-server/PATH.md)
-is there for anyone who'd rather be handed a sensible order.
+route you took. Each module's front page lists its lessons in a
+recommended order, for anyone who'd rather be handed a sensible sequence.
 
 Some lessons come in two versions: the main version, which teaches, and a compressed
 version with just the commands and decisions. Compressed versions are collected under

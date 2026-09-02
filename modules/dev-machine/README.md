@@ -9,7 +9,13 @@ Whatever you go on to build — a game server, a website, a robot — starts fro
 same place: a machine you've set up and understand. Other modules assume this one's
 result and link back here when they need it.
 
+## The lessons
+
 There's one lesson today, for macOS.
 
-Start with the [recommended path](PATH.md), or go straight to
-[Setting up a coding machine](lessons/dev-machine-setup/guided.md).
+1. **[Setting up a coding machine](lessons/dev-machine-setup/guided.md)** — an
+   editor, a JavaScript runtime, version control, and terminal basics, on a Mac.
+   Ends with real code running.
+
+When more general-purpose setup lessons exist — other operating systems, other
+recurring tools — they'll appear here.

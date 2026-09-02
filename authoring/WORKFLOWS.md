@@ -41,9 +41,10 @@ For a **new module**:
    mechanism (what real system the learner acts on), and the module's own
    constraints (languages, platform scope, toolchain stance).
 2. Scaffold `modules/<name>/` (kebab-case, no numbers) with three files:
-   `README.md` (learner-facing front page), `PATH.md` (suggested order — links only
-   to lessons that exist, so it starts nearly empty), and `MODULE.md` (authors'
-   design doc: constraints, arcs, milestones, lesson status table).
+   `README.md` (learner-facing front page, which also carries the recommended order
+   under a "The lessons" heading — linking only to lessons that exist, so it starts
+   with none) and `MODULE.md` (authors' design doc: constraints, arcs, milestones,
+   lesson status table).
 3. Register the module in the top-level `README.md` modules list.
 
 For **arcs and lessons within a module**:
@@ -59,9 +60,9 @@ For **arcs and lessons within a module**:
      a standalone side-arc).
 3. Check each stub against the general constraints in `PRINCIPLES.md` and the
    module's own constraints in its `MODULE.md`.
-4. Update the module's `MODULE.md`. Update its `PATH.md` only when lessons
-   actually exist to link to; the path document never links to lessons that aren't
-   written.
+4. Update the module's `MODULE.md`. Add lessons to the order in its `README.md` only
+   when they actually exist to link to; a module front page never links to lessons
+   that aren't written.
 5. Stubs are not lessons. Creating the cores is workflow 3, on request.
 
 ---
@@ -80,8 +81,8 @@ Trigger: a lesson stub is ready to become real, or an existing core needs change
 4. Write `modules/<module>/lessons/<name>/core.md` in the format below.
 5. Verify the arc delivers something visible by the end, and that every fact a learner
    couldn't derive is in the facts section (orientation is never withheld).
-6. Update the module's `MODULE.md` status for this lesson. Add it to that
-   module's `PATH.md` if it's in the recommended path.
+6. Update the module's `MODULE.md` status for this lesson. Add it to the lesson order
+   in that module's `README.md` if it's in the recommended path.
 7. On revision: after changing a core, regenerate every existing delivery of that
    lesson (workflow 4). A core and its deliveries are never allowed to disagree.
 
@@ -240,7 +241,7 @@ method) keeps coming up across lessons and has no home.
   substantive goes into the core in the same sitting.
 - `.llm/` is historical reference from early design sessions and is gitignored. Where
   it disagrees with `authoring/`, `authoring/` wins.
-- Learner-facing top-level files (`README.md`, `HOW-TO-LEARN.md`, `PATH.md`) follow the
-  same tone rules and checklist spirit as deliveries.
+- Learner-facing top-level files (`README.md`, `HOW-TO-LEARN.md`) and module front pages
+  follow the same tone rules and checklist spirit as deliveries.
 - When `PRINCIPLES.md` or `PROFILES.md` changes, list the deliveries the change touches
   and regenerate them before ending the session.
