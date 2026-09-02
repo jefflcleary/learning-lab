@@ -175,6 +175,12 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] Orientation complete: every tool named, explained, install stated plainly —
       and stated exactly once (in New tools normally; in The work when installing
       is the work, with New tools deferring explicitly; never both).
+      **Check this in both directions.** Forward, from New tools: does each entry say
+      what it is, how it is installed, and where its documentation is? Backward, from
+      The work: take every command the learner is told to run and confirm each one was
+      introduced. The backward pass is the one that catches a tool which is described
+      but never installed — it reads as covered going forward, because it is on the
+      list. It is also the only one of the two that a script can do.
 - [ ] Nothing withheld except problem-solving; nothing given except orientation.
 - [ ] Every link resolves to a file that exists in this repo, or to a stable external
       source.
@@ -189,9 +195,6 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] Every "New tools" entry links to that tool's real documentation, or names the
       manual page where that is the authority. Naming a site in prose without linking
       it does not count.
-- [ ] Anything a lesson tells the learner to run has been introduced: what it is, how
-      it gets installed, and where its commands are documented. "Then run X" with no
-      prior mention of installing X is the failure this catches.
 - [ ] Audience separation holds: pages referenced by title, never filename; no
       mention of this project's files, folders, or machinery.
 - [ ] Learner work goes to the learner's logbook or their own projects — never into
