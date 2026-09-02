@@ -20,9 +20,6 @@ suspects.
 Friends come next session too. This one ends with you standing in your own world, on a
 computer in another building.
 
-If you already know your way around a computer — or you're setting this up on a learner's
-behalf — there's a [compressed version of this lesson](reference.md).
-
 ---
 
 ## Before you start

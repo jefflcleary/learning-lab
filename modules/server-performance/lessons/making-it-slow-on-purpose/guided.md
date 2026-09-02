@@ -250,7 +250,7 @@ a wrong conclusion about a real problem in three months.
 settles. Then take another two minutes later.
 
 They may be very different — chunks were still loading, the collector had just run,
-somebody moved. A single measurement is a rumour.
+somebody moved. One reading is a sample, not a finding.
 
 ---
 

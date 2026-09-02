@@ -52,8 +52,8 @@ what changed is what is behind it.
   when its networking is broken.
 - Logging in that way needs something other than the SSH key — usually resetting the root
   password from the panel. Their docs carry the current wording.
-- **Log in through it once before touching the firewall.** A rescue path that has never
-  been used is a rumour.
+- **Log in through it once before touching the firewall.** An untested rescue path is a
+  claim, not a capability.
 
 ## Firewall
 

@@ -192,6 +192,8 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
 - [ ] Learner work goes to the learner's logbook or their own projects — never into
       this repo. Predict sections prompt the logbook by name.
 - [ ] Closing section is titled "What you have now".
+- [ ] The guided delivery does not link or refer to the reference version anywhere,
+      including its opening paragraphs (PROFILES.md, `reference` profile).
 - [ ] Where-to-run labels: if the lesson's commands run in more than one place,
       every code block carries one and the wording matches the core. If they all run
       in one place, there are none.

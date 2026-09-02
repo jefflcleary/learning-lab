@@ -17,10 +17,6 @@ gets a guest list: a whitelist you turn on, load, and watch refuse someone.
 By the end, friends in other houses are playing in a world you run, through a
 route you built and can explain, past a lock you have proven works.
 
-If you already know your way around a computer — or you're setting this up on a
-learner's behalf — there's a [compressed version of this lesson](reference.md)
-with just the commands and decisions.
-
 ---
 
 ## Before you start

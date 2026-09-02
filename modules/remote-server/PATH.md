@@ -18,7 +18,5 @@ check where you stand rather than take it on trust.
    start the server itself, prove it by restarting a computer nobody is logged into,
    hand the new address to your friends, and then shut your laptop and walk away.
 
-Each lesson also has a compressed version with just the commands, decisions, and
-hazards — useful if you already know your way around a computer, or for an adult
-setting things up on a learner's behalf. Lesson one in particular is worth doing days
-ahead, because opening an account can take longer than you expect.
+Lesson one is worth doing days ahead of the rest, because opening an account can take
+longer than you expect.

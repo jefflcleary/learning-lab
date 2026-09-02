@@ -25,10 +25,6 @@ opening the account needs a payment method, so it may not be something you can d
 yourself — that part can be done days ahead by whoever holds it, and doing it early is a
 good idea for reasons you'll see below.
 
-If you already know your way around a computer — or you're setting this up on a
-learner's behalf — there's a [compressed version of this lesson](reference.md) with just
-the commands, decisions, and hazards.
-
 ---
 
 ## Before you start

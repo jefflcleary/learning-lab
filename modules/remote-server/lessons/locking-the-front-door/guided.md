@@ -21,10 +21,6 @@ And you'll lock yourself out of a machine you're paying for, on purpose, and get
 That's not a stunt. It's the last thing in this session, it happens only after you've
 proved the way back works, and it's the part you'll still remember in a year.
 
-If you already know your way around a computer — or you're setting this up on a learner's
-behalf — there's a [compressed version of this lesson](reference.md) with just the
-commands and hazards.
-
 ---
 
 ## Before you start
@@ -252,8 +248,9 @@ means resetting the root password from the panel; their documentation covers it.
 actually log in through it once, and look around.
 
 Do this now, while nothing is wrong. The next step needs it, and there's a general
-principle here worth more than the firewall: **a rescue path you have never used is a
-rumour.**
+principle here worth more than the firewall: **until you have used a way back in, you
+don't know that it works.** You have somebody's word for it, which is a different thing
+from evidence.
 
 ### Put up the firewall
 
@@ -338,9 +335,10 @@ before you needed it. Most people meet that situation for the first time during 
 emergency, discover the rescue path exists while panicking, and remember mostly the
 panic. You have it the other way round.
 
-The general form is worth keeping, because it's much bigger than this: **a recovery path
-you have never used is a rumour.** That applies to backups, to fire escapes, and to every
-"don't worry, we can always restore from…" that anybody will ever tell you.
+The general form is worth keeping, because it's much bigger than this: **a recovery
+path nobody has tested is a claim, not a capability.** It might work. You don't know, and
+you won't find out at a convenient moment. That applies to backups, to fire escapes, and
+to every "don't worry, we can always restore from…" that anybody will ever tell you.
 
 ---
 

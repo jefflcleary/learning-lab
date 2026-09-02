@@ -40,9 +40,11 @@ route you took. Each module's [recommended path](modules/minecraft-server/PATH.m
 is there for anyone who'd rather be handed a sensible order.
 
 Some lessons come in two versions: the main version, which teaches, and a compressed
-version with just the commands and decisions — useful if you already know your way
-around a computer, or for an adult setting things up on a learner's behalf. Where a
-compressed version exists, the lesson links to it.
+version with just the commands and decisions. Compressed versions are collected under
+Quick references in the module they belong to, for anyone already comfortable with the
+material or an adult setting things up on a learner's behalf. Lessons don't link to
+them — if you're here to learn the thing, the teaching version is the one to work
+through.
 
 ## Hints
 

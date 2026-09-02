@@ -21,10 +21,6 @@ home and stays plugged in, whether that's a desktop or an old laptop retired to 
 shelf, can be. This session doesn't change which machine you have; it makes whatever
 machine you use come back on its own.
 
-If you already know your way around a computer — or you're setting this up on a
-learner's behalf — there's a [compressed version of this lesson](reference.md)
-with just the commands and decisions.
-
 ---
 
 ## Before you start

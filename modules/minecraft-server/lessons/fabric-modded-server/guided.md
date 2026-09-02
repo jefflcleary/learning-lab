@@ -18,10 +18,6 @@ version, your loader, and your players before it ever touches the server. By the
 end, friends join a modded server *with the unmodified game they already have* —
 and when a mod breaks things, you'll know how to read the wreckage.
 
-If you already know your way around a computer — or you're setting this up on a
-learner's behalf — there's a [compressed version of this lesson](reference.md)
-with just the commands and decisions.
-
 ---
 
 ## Before you start

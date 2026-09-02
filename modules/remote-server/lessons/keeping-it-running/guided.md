@@ -17,9 +17,6 @@ terminal on a machine in another building: with your friends playing, you'll shu
 laptop, unplug it, and carry it into another room. Nothing will happen. Nothing depends on
 it any more.
 
-If you already know your way around a computer — or you're setting this up on a learner's
-behalf — there's a [compressed version of this lesson](reference.md).
-
 ---
 
 ## Before you start

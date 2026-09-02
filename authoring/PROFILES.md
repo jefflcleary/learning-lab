@@ -78,6 +78,13 @@ paths, decisions, and gotchas. Does not want pedagogy.
 - Includes the "What you have now" list, so the state matches what other lessons
   expect regardless of which delivery was followed.
 - Volatile facts: same rule as everywhere — point at the source.
+- **The `guided` delivery never links to, advertises, or mentions the `reference`
+  version.** Offering a shortcut in the opening paragraphs of a lesson invites a reader
+  to skip the thing they came for, and it did exactly that in an earlier draft where
+  every setup-heavy lesson opened with the offer. Reference deliveries are discoverable
+  where they belong — the Quick references section of the module — and the reader who
+  needs one is by definition not the reader being taught. The link the other way, from
+  a reference back to its teaching version, is fine and should stay.
 
 ---
 

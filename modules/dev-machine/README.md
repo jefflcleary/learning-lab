@@ -9,10 +9,7 @@ Whatever you go on to build — a game server, a website, a robot — starts fro
 same place: a machine you've set up and understand. Other modules assume this one's
 result and link back here when they need it.
 
-There's one lesson today, for macOS. The lesson has a compressed version inside for
-anyone experienced who's setting up a machine on a learner's behalf — though the
-main version is worth reading even then, because knowing what's on your machine and
-why is the point.
+There's one lesson today, for macOS.
 
 Start with the [recommended path](PATH.md), or go straight to
 [Setting up a coding machine](lessons/dev-machine-setup/guided.md).

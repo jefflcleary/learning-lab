@@ -230,7 +230,7 @@ the *method* rather than the server.
 - **Trust a single measurement.** Take one reading immediately after a change, before
   anything settles. Then take another two minutes later. They may differ substantially —
   chunks are still loading, the collector has just run, a player moved. Teaches that a
-  measurement is a sample and that a single one is a rumour.
+  measurement is a sample and that one on its own establishes nothing.
 
 ### What just happened — the explanation
 

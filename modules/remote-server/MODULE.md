@@ -98,6 +98,83 @@ while the learner's own computer is switched off.**
 The milestone lands in `keeping-it-running`, and it lands as a gesture rather than a
 claim: shut the laptop, carry it out of the room, nothing happens.
 
+### Part 4 — How changes travel (planned, not written)
+
+**This was designed in detail and has not been built. It was recorded in
+`modules/minecraft-server/MODULE.md` and was deleted by accident during the module
+split; it is restored here, where it now belongs.**
+
+| Lesson | Goal | Status |
+|---|---|---|
+| *(unnamed)* | The two flows; staging as a rehearsal; an irreversible change tried on a copy of production first; a rollback drill; backups running off the box on a schedule | designed, not written |
+
+The spine is an asymmetry that the git lesson already half-draws:
+
+- **Up (your machine → production)** — the things the learner authored: datapacks,
+  scripts, `server.properties`, `whitelist.json`. If lost, they can be written again.
+  There is a canonical copy somewhere and production gets a copy of it.
+- **Down (production → your machine)** — the world. Nobody can rewrite the base a
+  friend built. It exists in one place, and that place is production.
+
+"Code goes up, data comes down" is the same rule as every web application with a
+database, arrived at from a Minecraft world rather than asserted. It composes with
+`modules/minecraft-server/lessons/git-for-your-server/`, whose "Draw the line between
+code and data" section already makes the learner write that line into a `.gitignore` on
+one machine; this lesson cashes it in across two.
+
+**The vocabulary, settled in design and written nowhere yet.** Three nouns and one verb,
+and the distinction that matters is fidelity to production:
+
+| | What it is | World | Lifespan | Answers |
+|---|---|---|---|---|
+| dev machine | a computer | — | — | where things get written |
+| sandbox | an expendable server | empty, its own | permanent | "does my thing work at all?" |
+| production | the family server | the real one | forever | — |
+
+**Staging is a verb, not a fourth noun.** "Rehearse it on a copy of production first."
+At family scale that is literally what it is: a copy run locally for an afternoon and
+deleted. Naming a permanent fourth box would teach a ceremony nobody at this scale
+performs. The load-bearing point: a sandbox cannot tell you whether a version upgrade
+will eat the chests in the family base, because it does not have those chests. Only a
+copy can.
+
+**The intended irreversible change is a Minecraft version upgrade** — genuinely one-way
+by design, already familiar from `modules/minecraft-server/lessons/choosing-a-version/`,
+and exactly the change nobody should make live. Shape: copy production's world down,
+upgrade the copy, look at what happened, throw the copy away, then decide with evidence.
+This is also the lesson's break-it-on-purpose section, and it is the first time breaking
+something on purpose *requires* a copy rather than the expendable server — which is the
+sandbox-versus-staging distinction landing on its own instead of being asserted.
+
+## Open decisions this module has not resolved
+
+- **The git remote.** The steady-state loop is edit → commit → push → ssh → pull →
+  restart, and there is nowhere to push: `git-for-your-server` is deliberately local-only
+  and puts GitHub in its Go further section. Three ways out, with the recommendation
+  recorded at the time: **(a)** promote GitHub to required — the standard shape, gets an
+  off-site copy of everything authored, and reuses the SSH keys made in
+  `renting-a-machine` the same day; **(b)** make the box itself the remote via a bare
+  repo and a `post-receive` hook — no third party, but push-shaped and a shape the
+  learner would have to unlearn; **(c)** drop git from the deploy and rsync the code like
+  the world — simplest, but the box then has no history and no way to answer "what
+  version is running?". **(a) was the recommendation, with (b) as a Go further.** Also
+  undecided: whether `git-for-your-server` grows a required GitHub section, or the new
+  lesson declares it a prerequisite. The former was preferred, since that lesson already
+  closes on "your history is trapped on one machine".
+- **A wording collision to resolve when the lesson is written.**
+  `modules/minecraft-server/lessons/choosing-a-version/` currently lumps "staging or
+  development" together as one loose phrase for "the place you try things". That is
+  honest where it sits — everything is on one machine at that point — but it collides
+  with giving staging a precise meaning. Cheapest fix is trimming that line to
+  "development"; do not touch it until the new lesson's wording exists.
+- **An inconsistent rule in `git-for-your-server`'s core**: "Do not walk GitHub
+  signup/auth in any delivery." This module walks provider signup, so the rule as
+  written is inconsistent across the lab. It should probably become "don't reproduce
+  screenshots or exact click paths for signup flows; walk the decisions and point at the
+  vendor's docs" — a rule both lessons can follow.
+
+---
+
 ---
 
 ## Cross-cutting decisions

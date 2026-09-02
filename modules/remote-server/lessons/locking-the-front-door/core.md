@@ -133,8 +133,11 @@ whether the next one will.
 - Reaching it needs a way to log in that is not the SSH key — on the providers this
   module names, resetting the root password from the panel. [verify current wording and
   location on the chosen provider as of 2026-09]
-- **It is rehearsed before it is needed.** A rescue path that has never been used is a
-  rumour. This ordering is not a suggestion; the firewall exercise depends on it.
+- **It is rehearsed before it is needed.** An untested rescue path is a claim, not a
+  capability — it might work, and nobody knows. This ordering is not a suggestion; the
+  firewall exercise depends on it. Deliveries must state the point plainly rather than
+  as an aphorism: "rumour" and similar were tried and read as ambiguous about whether
+  the path works or doesn't, which is exactly the distinction being drawn.
 
 ## Arc
 
@@ -251,8 +254,9 @@ you are paying for, on purpose, and got back in — because you found the exit b
 needed it. Most people meet that situation for the first time in an emergency, discover
 the rescue path exists while panicking, and remember the panic. You have it the other way
 round now, and the general form of it is worth keeping: **a recovery path you have never
-used is a rumour.** That applies to backups, to fire escapes, and to every "we can always
-restore from…" anybody ever tells you.
+path nobody has tested is a claim, not a capability.** It might work; nobody knows, and
+nobody finds out at a convenient moment. That applies to backups, to fire escapes, and to
+every "we can always restore from…" anybody ever tells you.
 
 ### Go further — open questions
 
