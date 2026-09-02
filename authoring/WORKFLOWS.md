@@ -180,7 +180,7 @@ Trigger: a core is ready and a profile needs its rendering, or a core changed.
       The work: take every command the learner is told to run and confirm each one was
       introduced. The backward pass is the one that catches a tool which is described
       but never installed — it reads as covered going forward, because it is on the
-      list. It is also the only one of the two that a script can do.
+      list. Do it as an enumeration, not an impression: write the commands down.
 - [ ] Nothing withheld except problem-solving; nothing given except orientation.
 - [ ] Every link resolves to a file that exists in this repo, or to a stable external
       source.
