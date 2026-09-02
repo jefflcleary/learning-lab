@@ -124,8 +124,32 @@ Every change here runs the protocol from last session — predict, baseline, one
 measure, attribute, undo if it didn't help, re-measure. It isn't repeated below. You've
 run it seven times.
 
-The order matters: cheapest and most reversible first, anything that rewrites the world
-last.
+The order matters, and it's worth being explicit about what decides it, because it isn't
+"software before hardware."
+
+For each thing you could change, ask three questions:
+
+- **How likely is it to be the actual cause**, given what you measured?
+- **What does it cost** — in money, in your time, and in what somebody has to give up?
+- **How reversible is it** if it doesn't help?
+
+Cheap, likely, and reversible go first. That's the whole framework, and the important
+word is *cost*, because it includes money and it includes your evening.
+
+This matters more than it sounds. It's tempting to treat spending money as a defeat and
+tuning as the virtuous option — but if your machine has 1 GB of memory, no amount of
+tuning will turn it into an adequate machine, and an evening spent trying is worth
+considerably more than the few dollars a month that would have fixed it outright. Buying
+capacity isn't giving up. Sometimes it's the cheapest thing on the list, and refusing to
+consider it is just a more expensive way to have the same problem.
+
+The counterweight matters equally: more machine won't help if the bottleneck is one core
+running the tick in order, because single-core speed is the thing you mostly *can't* buy
+more of. It won't help if the cause is a hopper clock or a mob farm, which will happily
+scale up alongside the machine. And it turns a one-off problem into a bill that arrives
+every month forever.
+
+Which is why the next step comes first.
 
 ### Name your constraint first
 
@@ -135,6 +159,26 @@ and what causes it? Use your signature table and a profile.
 Everything below gets chosen against that sentence. If you can't write it yet, go back
 and profile during the problem — the rest of this session will otherwise be guessing with
 extra steps.
+
+### Is this machine plausibly big enough?
+
+Before you spend an evening tuning, spend a minute on this: look at what the machine
+actually has — memory, cores, disk — against what you're asking of it, and ask whether
+those numbers are in the same neighbourhood.
+
+You're not looking for precision. You're looking for the obvious case. A machine with
+1 GB of memory running a world for six people is not a tuning problem; it's an
+undersized machine, and everything below this line will recover a few milliseconds
+from something that needs a few hundred. If that's where you are, resize it and come
+back — that's the cheapest fix available to you, and it's cheap in the way that counts:
+ten minutes and a small monthly difference, instead of an evening and no result.
+
+If the machine is *plausibly* adequate — the specs are in the right range for the number
+of people who play — then carry on down the list. Tuning is genuinely where the wins are
+in that case, and you'd be paying monthly for something a free change would have fixed.
+
+Write down which of those two you're in and why. It's the fork the rest of this session
+hangs on.
 
 ### Distance
 
@@ -214,14 +258,15 @@ distribution.
 The spikes you caused deliberately are gone, and you removed them on purpose, and you
 proved it by causing the problem again.
 
-### The last resort
+### The one with the worst odds
 
-Garbage collector flags. Now, and not before.
+Garbage collector flags. Now, and not before — though not because they're exotic or
+because reaching for them is somehow cheating. It's the expected value: high effort, low
+hit rate, and only diagnosable with evidence most people don't have.
 
-This is twelfth on a list of twelve. Most people reach for it first, spend an evening
-reading about collectors, apply a set of flags somebody recommended, and change nothing
-measurable — because they never established that collection was their problem to begin
-with.
+Most people reach for it first, spend an evening reading about collectors, apply a set of
+flags somebody recommended, and change nothing measurable — because they never
+established that collection was their problem to begin with.
 
 The precondition is evidence, not suspicion: actual pauses visible in `/spark gc` or in
 your tick distribution. If you don't have that, skip this step entirely and write down
@@ -232,6 +277,46 @@ result as data about *your* server and nobody else's.
 
 A perfectly good outcome here — and a common one — is: no measurable difference, flags
 removed, one line in the logbook. That's a result.
+
+### The considered purchase
+
+You've tuned. If the server is still short of what you need, the question is no longer
+whether to spend money — it's whether *this* gap is worth a recurring charge. And now you
+can answer it, because you know which resource is the limit.
+
+Match the measurement to the purchase, and notice that they don't all behave the same
+way:
+
+- **Memory saturated, or the machine swapping** → more memory. Usually cheap, and the
+  improvement is close to proportional.
+- **Disk full, or slow, or the save hitch you found** → more or faster disk. Also usually
+  cheap.
+- **One core pinned while the others sit idle** → a faster core. **This is the one you
+  often can't buy.** Single-thread speed varies far less between machines than memory or
+  disk does, so the jump from a small plan to a large one might double your memory and
+  barely move the number that's actually hurting you.
+- **Upload saturated** → more bandwidth, which may mean a different plan or a different
+  provider entirely.
+
+That asymmetry is the reason the whole module spent a session on "which resource is
+saturated?" before arriving here. Memory and disk you can buy. Single-core speed mostly
+you can't. Get that wrong and you'll pay every month for a machine that isn't any faster
+at the thing you cared about.
+
+**Do the arithmetic once, with real numbers.** Look up what the next rung up your
+provider's plan costs, subtract what you pay now, and multiply by twelve. Now compare
+that to an evening of your time. For most family-scale servers the answer surprises
+people, and it's worth having the actual figure rather than a feeling about it.
+
+One thing that makes this easier than it used to be: on a rented machine an upgrade is a
+**resize**, not a purchase. A plan change, a reboot, a higher bill — and reversible next
+month if it didn't help. You're renting, so you get to be wrong cheaply. Your provider's
+documentation covers how theirs works and whether it happens in place.
+
+And the cases where more machine won't help at all, which you should be able to name
+before you buy: a tick that has to run in order on one core; a cause that scales with the
+machine, like a farm or a redstone clock; and the problem not being the server in the
+first place — which is still item one on the list, and still the most common answer.
 
 ### Write the record
 

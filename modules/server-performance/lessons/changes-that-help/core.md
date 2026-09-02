@@ -68,7 +68,38 @@ to follow it is a skill that outlasts every specific setting in this lesson.
 
 ### The order of changes, and why it is this order
 
-Cheapest and most reversible first; anything that rewrites the world last.
+**The ordering principle is return on investment, not a preference for software over
+hardware.** For each candidate, three questions: how likely is it to be the actual cause,
+given what was measured; what does it cost — in money, in the learner's time, and in what
+somebody has to give up; and how reversible is it. Cheap, likely and reversible go first.
+
+Cost includes money, and this is the correction an earlier draft of this lesson needed.
+It ordered hardware last on the unexamined assumption that spending money is a defeat and
+tuning is virtuous. That is an ideology rather than an analysis, and on an undersized
+machine it is simply an expensive way to avoid spending a small amount: no amount of
+tuning turns a 1 GB machine into an adequate one, and an evening spent trying is worth
+more than the difference between two rungs of a hosting plan. Deliveries must carry this
+explicitly. The learner is being taught to reason about cost, and a lesson that quietly
+treats one kind of cost as free teaches the wrong thing.
+
+The honest counterweight, which deliveries must carry with equal weight: buying capacity
+does not help when the bottleneck is single-thread speed and the machine is already on
+the fastest core available; does not help when the cause is a hopper clock or a mob farm,
+which will scale up right alongside the machine; and converts a one-off problem into a
+recurring bill. And buying without knowing which resource is saturated is a guess that
+happens to cost money every month.
+
+So there are two distinct hardware moments, and they are different decisions:
+
+- **A gate, early:** is this machine plausibly big enough for what is being asked of it?
+  Answerable in a minute from the specification and the player count. If the answer is
+  clearly no, resizing is the cheapest available fix and everything else in the lesson is
+  an expensive detour.
+- **A considered purchase, late:** tuning has recovered what it can and the server is
+  still short. Now the question is whether the remaining gap is worth a recurring charge,
+  and the measurements make that answerable rather than a feeling.
+
+Within that frame, the sequence is:
 
 1. **Simulation distance**, then **view distance**. Free, instant, reversible, and the
    biggest single lever. Lower simulation distance first: it costs tick time, which is
@@ -85,7 +116,13 @@ Cheapest and most reversible first; anything that rewrites the world last.
    rather than technical.
 5. **Pregeneration.** Slow, writes a lot to disk, grows the world's size on disk
    considerably. Do it once, with a backup, when the rest is settled.
-6. **Garbage collector flags.** Last, and only with evidence.
+6. **Garbage collector flags.** Last — not because they are exotic, but because their
+   expected value is poor: high effort, low hit rate, and only diagnosable with specific
+   evidence. Deliveries must give that as the reason. "Last resort" framing invites the
+   learner to read the order as a morality tale rather than an expected-value calculation.
+7. **Resizing the machine**, where the gate did not already settle it. Costs money
+   monthly; costs little time; entirely reversible on a rented machine, which is a
+   genuine advantage over buying hardware and worth naming.
 
 ### Fabric optimisation mods
 
@@ -113,6 +150,34 @@ above is linked in deliveries, not merely named.
 The point deliveries must make: each of these targets a *different* one of the causes
 the learner has already caused deliberately. Which of them helps depends on which
 problem this server actually has, and the learner is now the only person who knows that.
+
+### The hardware decision
+
+- **What each measurement justifies.** Memory saturated or swapping: more memory, and it
+  is usually cheap and close to linear. Disk full or slow: more or faster disk, also
+  usually cheap. One core pinned while the others idle: a faster core — and this is the
+  one you often cannot buy much more of, because single-thread speed varies far less
+  between machines than memory or disk does. Network saturated: more bandwidth, which on
+  a rented machine may mean a different plan or a different provider.
+- **The asymmetry worth teaching:** memory and disk scale by paying more. Single-core
+  speed largely does not. That is why "which resource is saturated?" decides whether a
+  purchase will work at all, and why the module spends a whole lesson on it before this
+  one.
+- **On a rented machine an upgrade is a resize**, not a hardware purchase: a plan change,
+  a reboot, a higher monthly charge, and reversible next month. That is a materially
+  different decision from buying a component, and it connects directly to the billing
+  content in `modules/remote-server/lessons/renting-a-machine/`. [volatile: whether a
+  given provider resizes in place or requires a rebuild — deliveries point at the
+  provider's own documentation]
+- **The comparison to make explicit:** an evening of tuning against the annual difference
+  between two plan rungs. Deliveries should have the learner do that arithmetic once,
+  with their own provider's real prices, because it is the calculation that makes the
+  trade concrete rather than rhetorical — and because for most family-scale servers it
+  comes out on the side people do not expect.
+- **When more machine will not help, stated plainly:** a tick that must run in order on
+  one core; a cause that scales with the machine (farms, redstone, entity counts); a
+  problem that is not the server at all, which is item one on the checklist and remains
+  item one.
 
 ### Chunky, and pregeneration
 

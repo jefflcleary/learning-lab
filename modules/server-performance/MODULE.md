@@ -61,7 +61,10 @@ read an unfamiliar slowdown in a way that no amount of reading achieves.
 
 The module's central artifact, distributed across its lessons and stated as an ordered
 list in the cheap-checks lesson. Ordering principle: **cheapest and most likely first;
-the profiler is what you reach for when this list runs out, not before.**
+the profiler is what you reach for when this list runs out, not before.** "Cheapest"
+counts money, time and what somebody gives up — an ordering that treats spending money as
+a defeat is an ideology, not an analysis, and on an undersized machine it is an expensive
+way to avoid a small recurring cost.
 
 1. **It isn't the server.** The player's own frame rate, or the player's own
    connection. The most common single answer, and free to check. Everything else on
@@ -70,32 +73,36 @@ the profiler is what you reach for when this list runs out, not before.**
    a browser, a game, a backup, a search indexer, a video call. On a rented machine
    running nothing else this is rare — and that contrast is the cleanest available
    proof that the cause was contention rather than the server.
-3. **The heap is the wrong size.** Too small produces constant garbage collection and
+3. **The machine is too small for what is being asked of it.** A mismatch between the
+   specification and the job, checkable in a minute from the specs against the player
+   count. Cheaper to act on than anything below it when the answer is clearly yes, in
+   time as well as money.
+4. **The heap is the wrong size.** Too small produces constant garbage collection and
    a permanent stutter. Too large makes the machine swap, or makes individual pauses
    long. This is memory *sizing*, which is early and cheap; it is not flag tuning,
    which is last.
-4. **View distance and simulation distance are too high for this machine.** The single
+5. **View distance and simulation distance are too high for this machine.** The single
    biggest lever in `server.properties`, and cost rises sharply with each step.
-5. **The players are spread out.** Each player loads their own chunks, so four players
+6. **The players are spread out.** Each player loads their own chunks, so four players
    in four places costs far more than four players together. Not a fault — a fact, and
    the explanation for "it's only slow sometimes."
-6. **Someone is exploring.** Terrain nobody has visited has to be generated as they
+7. **Someone is exploring.** Terrain nobody has visited has to be generated as they
    travel. The spikes are real, self-resolving, and removable in advance by
    pregenerating.
-7. **Entities.** Mob farms, animal pens, dropped items, item frames, boats. A world
+8. **Entities.** Mob farms, animal pens, dropped items, item frames, boats. A world
    people have lived in for months accumulates these without anyone deciding to.
-8. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
+9. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
    whether or not anyone is nearby.
-9. **Mods.** Two distinguishable cases, and a profiler tells them apart: every mod adds
+10. **Mods.** Two distinguishable cases, and a profiler tells them apart: every mod adds
    some per-tick work, so many mods cost more than few; and a single badly-behaved mod
    can dominate a tick on its own. Attribution by mod is exactly what the profiler
    gives, which is why "too many mods" is a hypothesis rather than a conclusion.
-10. **The disk.** Saves that hitch every few minutes; a disk that is slow, full, or
+11. **The disk.** Saves that hitch every few minutes; a disk that is slow, full, or
     busy with something else.
-11. **The network.** A home upload saturated by somebody else's video call shows up as
+12. **The network.** A home upload saturated by somebody else's video call shows up as
     rubber-banding for every player while the server's own numbers stay perfect — which
     is exactly why symptom triage is first on this list and not last.
-12. **Garbage collector tuning.** Last, and only with evidence of pauses in a profile.
+13. **Garbage collector tuning.** Last, and only with evidence of pauses in a profile.
     Reaching for collector flags before the eleven items above is the most common way
     people spend an evening and change nothing.
 

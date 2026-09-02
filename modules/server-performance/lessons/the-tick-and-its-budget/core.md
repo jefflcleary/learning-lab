@@ -120,7 +120,11 @@ Two places, both labelled in deliveries:
 
 The module's central checklist. Ordering principle, which deliveries must state as the
 reason rather than leaving implicit: **cheapest and most likely first; the profiler is
-what you reach for when this list runs out, not before.**
+what you reach for when this list runs out, not before.** "Cheapest" counts money, time
+and what somebody gives up — not money alone and not effort alone. Item 3 exists because
+an earlier version of this list had no way to reach "the machine is undersized", which
+made the whole checklist an argument for tuning a machine that could not be tuned into
+adequacy.
 
 1. **It isn't the server.** The player's own frame rate, or their own connection.
    Checked with the previous lesson's three instruments. Free, and most often the
@@ -129,37 +133,43 @@ what you reach for when this list runs out, not before.**
    what is running. On a personal computer: a browser, a backup, an indexer, a video
    call, a game. On a machine that runs nothing else, rare — and that contrast is the
    cleanest proof available that contention was the cause.
-3. **The heap is the wrong size.** Too small produces constant garbage collection and a
+3. **The machine is too small for what is being asked of it.** Checked in a minute from
+   the specification against the player count. Not a fault and not a tuning problem — a
+   mismatch. When the answer is clearly yes, resizing is cheaper than everything below
+   it, in time as well as money, and deliveries must say so rather than treating a
+   purchase as a last resort. `modules/server-performance/lessons/changes-that-help/`
+   carries the decision itself.
+4. **The heap is the wrong size.** Too small produces constant garbage collection and a
    permanent stutter; too large makes the machine swap or makes individual pauses long.
    Checked by comparing `-Xmx` against the machine's total memory and looking for swap
    use. This is memory *sizing* — early and cheap. It is not collector tuning, which is
    last and mostly a distraction.
-4. **View distance and simulation distance are too high for this machine.** The biggest
+5. **View distance and simulation distance are too high for this machine.** The biggest
    single lever available. Cost rises sharply with each step, because each step adds a
    ring of chunks around every player. Checked by reading `server.properties`.
-5. **The players are spread out.** Each player loads chunks around themselves, so four
+6. **The players are spread out.** Each player loads chunks around themselves, so four
    players in four places cost far more than four players standing together. Not a
    fault — a fact, and the explanation for "it's only slow sometimes". Checked by
    asking where everybody is.
-6. **Somebody is exploring.** Terrain nobody has visited must be generated as they
+7. **Somebody is exploring.** Terrain nobody has visited must be generated as they
    travel, which is expensive and produces spikes rather than sustained load. Self
    resolving, and removable in advance by pregenerating. Checked by asking whether
    anyone is somewhere new.
-7. **Entities.** Mob farms, animal pens, dropped items, item frames, boats, minecarts.
+8. **Entities.** Mob farms, animal pens, dropped items, item frames, boats, minecarts.
    A world people have lived in for months accumulates these without anybody deciding
    to. Checked crudely by counting; properly with the profiler.
-8. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
+9. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
    whether or not anyone is nearby. Checked by knowing what has been built.
-9. **Mods.** Two distinguishable cases: every mod adds some per-tick work, so many mods
-   cost more than few; and one badly-behaved mod can dominate a tick by itself. A
-   profiler attributes time by mod, which is the only way to tell them apart — so "too
-   many mods" is a hypothesis, never a conclusion.
-10. **The disk.** Saves that hitch every few minutes; a disk that is slow, full, or
+10. **Mods.** Two distinguishable cases: every mod adds some per-tick work, so many mods
+    cost more than few; and one badly-behaved mod can dominate a tick by itself. A
+    profiler attributes time by mod, which is the only way to tell them apart — so "too
+    many mods" is a hypothesis, never a conclusion.
+11. **The disk.** Saves that hitch every few minutes; a disk that is slow, full, or
     busy with something else. Checked with `df -h` and the input/output wait figure.
-11. **The network.** A home upload saturated by somebody else's video call shows up as
+12. **The network.** A home upload saturated by somebody else's video call shows up as
     rubber-banding for every player while the server's own numbers stay perfect —
     which is why item 1 is item 1.
-12. **Garbage collector tuning.** Last. Only with evidence of pauses in a profile.
+13. **Garbage collector tuning.** Last. Only with evidence of pauses in a profile.
     Reaching for collector flags before the eleven items above is the most common way
     to spend an evening and change nothing.
 

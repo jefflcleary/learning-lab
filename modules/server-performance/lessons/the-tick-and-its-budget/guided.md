@@ -201,29 +201,34 @@ down what you checked, what you found, and how long it took.
    worth doing until it's ruled out.
 2. **Something else on the machine is taking the processor.** A browser, a backup, an
    indexer, a video call, a game. You did this on purpose last session.
-3. **The heap is the wrong size.** Too small means constant garbage collection and a
+3. **The machine is simply too small for what you're asking.** Not a fault, and not a
+   tuning problem — a mismatch between the specification and the job. Look at memory,
+   cores, and disk against the number of people who play, and ask whether they're in the
+   same neighbourhood. When they clearly aren't, this is the answer and it's cheaper to
+   act on than anything below it.
+4. **The heap is the wrong size.** Too small means constant garbage collection and a
    permanent stutter; too large means the machine swaps or pauses get long. Compare
    `-Xmx` against total memory and look for swap use.
-4. **View distance and simulation distance are too high for this machine.** The biggest
+5. **View distance and simulation distance are too high for this machine.** The biggest
    single lever. Each step up adds a whole ring of chunks around every player.
-5. **The players are spread out.** Everyone loads chunks around themselves, so four
+6. **The players are spread out.** Everyone loads chunks around themselves, so four
    people in four places costs far more than four people standing together. Not a fault
    — and it's the explanation for "it's only slow sometimes".
-6. **Somebody is exploring.** Land nobody has visited has to be generated as they travel.
+7. **Somebody is exploring.** Land nobody has visited has to be generated as they travel.
    Expensive, spiky rather than sustained, and it fixes itself once they stop.
-7. **Entities.** Mob farms, animal pens, dropped items, item frames, boats, minecarts. A
+8. **Entities.** Mob farms, animal pens, dropped items, item frames, boats, minecarts. A
    world people have lived in for months accumulates these without anyone deciding to.
-8. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
+9. **Redstone and hoppers.** Clocks and long hopper chains do work every tick, forever,
    whether or not anyone is nearby.
-9. **Mods.** Two different problems: many mods each adding a little, or one badly-behaved
-   mod eating a tick by itself. You can't tell those apart by counting — which is why
-   "too many mods" is a guess until something attributes the time.
-10. **The disk.** A hitch every few minutes when the server saves; a disk that's slow,
+10. **Mods.** Two different problems: many mods each adding a little, or one badly-behaved
+    mod eating a tick by itself. You can't tell those apart by counting — which is why
+    "too many mods" is a guess until something attributes the time.
+11. **The disk.** A hitch every few minutes when the server saves; a disk that's slow,
     full, or busy with something else.
-11. **The network.** Somebody else's video call saturating the upload looks like lag to
+12. **The network.** Somebody else's video call saturating the upload looks like lag to
     every player while the server's own numbers stay perfect. Which is why item 1 is item
     1.
-12. **Garbage collector tuning.** Last. Only with evidence of actual pauses. Reaching for
+13. **Garbage collector tuning.** Last. Only with evidence of actual pauses. Reaching for
     this before the eleven above is the most common way to spend an evening and change
     nothing.
 
