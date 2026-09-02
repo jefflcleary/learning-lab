@@ -73,6 +73,7 @@ const sidebars = {
             'modules/remote-server/lessons/locking-the-front-door/guided',
             'modules/remote-server/lessons/moving-the-server-across/guided',
             'modules/remote-server/lessons/keeping-it-running/guided',
+            'modules/remote-server/lessons/changing-a-live-server/guided',
             {
               type: 'category',
               label: 'Quick references',
@@ -81,6 +82,7 @@ const sidebars = {
                 'modules/remote-server/lessons/locking-the-front-door/reference',
                 'modules/remote-server/lessons/moving-the-server-across/reference',
                 'modules/remote-server/lessons/keeping-it-running/reference',
+                'modules/remote-server/lessons/changing-a-live-server/reference',
               ],
             },
           ],

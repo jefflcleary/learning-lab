@@ -17,6 +17,10 @@ check where you stand rather than take it on trust.
 4. **[Keeping it running](lessons/keeping-it-running/guided.md)** — teach the machine to
    start the server itself, prove it by restarting a computer nobody is logged into,
    hand the new address to your friends, and then shut your laptop and walk away.
+5. **[Changing a server other people are using](lessons/changing-a-live-server/guided.md)**
+   — now that people depend on it: which changes travel up to the server and which travel
+   down from it, how to try something irreversible on a copy of the real world instead of
+   the real one, and how long it actually takes you to put things back.
 
 Lesson one is worth doing days ahead of the rest, because opening an account can take
 longer than you expect.

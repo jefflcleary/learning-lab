@@ -98,77 +98,53 @@ while the learner's own computer is switched off.**
 The milestone lands in `keeping-it-running`, and it lands as a gesture rather than a
 claim: shut the laptop, carry it out of the room, nothing happens.
 
-### Part 4 — How changes travel (planned, not written)
-
-**This was designed in detail and has not been built. It was recorded in
-`modules/minecraft-server/MODULE.md` and was deleted by accident during the module
-split; it is restored here, where it now belongs.**
+### Part 4 — How changes travel
 
 | Lesson | Goal | Status |
 |---|---|---|
-| *(unnamed)* | The two flows; staging as a rehearsal; an irreversible change tried on a copy of production first; a rollback drill; backups running off the box on a schedule | designed, not written |
+| `changing-a-live-server` | The two flows; a change sent up; the world pulled down without disconnecting anyone; an irreversible change rehearsed on a copy of production; a measured rollback; scheduled backups held off the machine | core + guided + reference written |
 
-The spine is an asymmetry that the git lesson already half-draws:
+The spine is an asymmetry the git lesson already half-draws:
 
-- **Up (your machine → production)** — the things the learner authored: datapacks,
-  scripts, `server.properties`, `whitelist.json`. If lost, they can be written again.
-  There is a canonical copy somewhere and production gets a copy of it.
-- **Down (production → your machine)** — the world. Nobody can rewrite the base a
-  friend built. It exists in one place, and that place is production.
+- **Up (the learner's machine → the rented machine)** — the things they authored:
+  datapacks, scripts, `server.properties`, `whitelist.json`. If lost, writable again.
+- **Down (the rented machine → the learner's machine)** — the world. Nobody can rewrite
+  the base a friend built. It exists in one place.
 
-"Code goes up, data comes down" is the same rule as every web application with a
-database, arrived at from a Minecraft world rather than asserted. It composes with
+"Code goes up, data comes down" is the same rule as any application with a database,
+arrived at from a Minecraft world rather than asserted. It composes with
 `modules/minecraft-server/lessons/git-for-your-server/`, whose "Draw the line between
 code and data" section already makes the learner write that line into a `.gitignore` on
 one machine; this lesson cashes it in across two.
 
-**The vocabulary, settled in design and written nowhere yet.** Three nouns and one verb,
-and the distinction that matters is fidelity to production:
+**The vocabulary.** Three things exist and only two are machines: the learner's own
+computer, the sandbox server (expendable, empty world, permanent), and production.
+**Rehearsing is a verb, not a fourth machine** — a copy of production run temporarily and
+deleted. The load-bearing argument, which the lesson lands rather than asserts: the
+sandbox cannot answer the question, because it has an empty world and therefore does not
+contain the chests the learner is worried about.
 
-| | What it is | World | Lifespan | Answers |
-|---|---|---|---|---|
-| dev machine | a computer | — | — | where things get written |
-| sandbox | an expendable server | empty, its own | permanent | "does my thing work at all?" |
-| production | the family server | the real one | forever | — |
+**The irreversible change is a Minecraft version upgrade** — one-way by design, already
+familiar from `modules/minecraft-server/lessons/choosing-a-version/`, and exactly the
+change nobody should make live.
 
-**Staging is a verb, not a fourth noun.** "Rehearse it on a copy of production first."
-At family scale that is literally what it is: a copy run locally for an afternoon and
-deleted. Naming a permanent fourth box would teach a ceremony nobody at this scale
-performs. The load-bearing point: a sandbox cannot tell you whether a version upgrade
-will eat the chests in the family base, because it does not have those chests. Only a
-copy can.
+**`rsync` does both directions.** An earlier draft of this note treated "which git
+remote?" as a decision blocking this lesson. It never was — rsync alone is sufficient and
+was already taught in Part 3. Git across two machines remains a possible later lesson,
+earning its place only once a learner has felt what rsync does not give them: a box that
+cannot say which version it is running, and cannot be rolled back without their own
+computer.
 
-**The intended irreversible change is a Minecraft version upgrade** — genuinely one-way
-by design, already familiar from `modules/minecraft-server/lessons/choosing-a-version/`,
-and exactly the change nobody should make live. Shape: copy production's world down,
-upgrade the copy, look at what happened, throw the copy away, then decide with evidence.
-This is also the lesson's break-it-on-purpose section, and it is the first time breaking
-something on purpose *requires* a copy rather than the expendable server — which is the
-sandbox-versus-staging distinction landing on its own instead of being asserted.
+---
 
-## Notes for whoever writes Part 4
+## Still outstanding
 
-None of these block the lesson. They are things to have decided by the time it is
-drafted, not questions for anyone to answer first.
-
-- **Use `rsync` for both directions.** It is already taught in
-  `lessons/moving-the-server-across/`, it needs no account and no third-party service,
-  and it is sufficient for the whole lesson: authored files up, the world down. An
-  earlier draft of this note treated "which git remote?" as a blocking decision. It
-  never was — rsync alone works, and inflating it into a fork twice was an authoring
-  error rather than a real constraint.
-- **Git across two machines is a separate, optional, later lesson**, not a prerequisite
-  for this one. It earns its place only once the learner has felt what rsync alone does
-  not give them: the box cannot say which version it is running, and cannot be rolled
-  back without the learner's own computer. Write it when that pain is real, not before.
-  If it is ever written, it needs somewhere to push — GitHub is the ordinary answer, and
-  `lessons/renting-a-machine/` already makes the SSH key that would authenticate it.
 - **Watch the word "staging" in
-  `modules/minecraft-server/lessons/choosing-a-version/`.** It currently lumps "staging
-  or development" together as one loose phrase for "the place you try things", which is
-  honest where it sits — everything is on one machine at that point. If Part 4 gives
-  staging a precise meaning, trim that line to "development". Do not touch it until the
-  new wording exists.
+  `modules/minecraft-server/lessons/choosing-a-version/`.** It lumps "staging or
+  development" together as one loose phrase for "the place you try things", which is
+  honest where it sits — everything is on one machine at that point. Part 4 deliberately
+  avoids the noun and treats rehearsing as a verb, so the collision is mild and no change
+  has been made. Revisit only if that lesson is otherwise being edited.
 
 ---
 

@@ -21,9 +21,15 @@ one mistake with it that locks you out of a machine you're paying for — which 
 make deliberately, once, after you've proved you can get back in. How to make a program
 start itself when a machine boots, on a computer where nobody ever logs in.
 
-It ends with a gesture rather than a claim. With your friends playing, you shut your
-laptop, unplug it, and carry it into another room. Nothing happens. Nothing depends on
-it any more.
+There's a gesture in the middle of it rather than a claim: with your friends playing, you
+shut your laptop, unplug it, and carry it into another room. Nothing happens. Nothing
+depends on it any more.
+
+And then a last lesson about what changes once that's true. When people are depending on
+a server, changing it stops being free — so you'll learn which changes travel up to it
+and which travel down from it, how to try something that can't be undone on a copy of the
+real world rather than the real one, and how long it actually takes you to put things
+back when something goes wrong.
 
 Two things to know before you start. This costs money — a small amount, every month,
 for as long as the machine exists — and one of these lessons is about finding out
