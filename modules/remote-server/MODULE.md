@@ -146,32 +146,29 @@ This is also the lesson's break-it-on-purpose section, and it is the first time 
 something on purpose *requires* a copy rather than the expendable server — which is the
 sandbox-versus-staging distinction landing on its own instead of being asserted.
 
-## Open decisions this module has not resolved
+## Notes for whoever writes Part 4
 
-- **The git remote.** The steady-state loop is edit → commit → push → ssh → pull →
-  restart, and there is nowhere to push: `git-for-your-server` is deliberately local-only
-  and puts GitHub in its Go further section. Three ways out, with the recommendation
-  recorded at the time: **(a)** promote GitHub to required — the standard shape, gets an
-  off-site copy of everything authored, and reuses the SSH keys made in
-  `renting-a-machine` the same day; **(b)** make the box itself the remote via a bare
-  repo and a `post-receive` hook — no third party, but push-shaped and a shape the
-  learner would have to unlearn; **(c)** drop git from the deploy and rsync the code like
-  the world — simplest, but the box then has no history and no way to answer "what
-  version is running?". **(a) was the recommendation, with (b) as a Go further.** Also
-  undecided: whether `git-for-your-server` grows a required GitHub section, or the new
-  lesson declares it a prerequisite. The former was preferred, since that lesson already
-  closes on "your history is trapped on one machine".
-- **A wording collision to resolve when the lesson is written.**
-  `modules/minecraft-server/lessons/choosing-a-version/` currently lumps "staging or
-  development" together as one loose phrase for "the place you try things". That is
-  honest where it sits — everything is on one machine at that point — but it collides
-  with giving staging a precise meaning. Cheapest fix is trimming that line to
-  "development"; do not touch it until the new lesson's wording exists.
-- **An inconsistent rule in `git-for-your-server`'s core**: "Do not walk GitHub
-  signup/auth in any delivery." This module walks provider signup, so the rule as
-  written is inconsistent across the lab. It should probably become "don't reproduce
-  screenshots or exact click paths for signup flows; walk the decisions and point at the
-  vendor's docs" — a rule both lessons can follow.
+None of these block the lesson. They are things to have decided by the time it is
+drafted, not questions for anyone to answer first.
+
+- **Use `rsync` for both directions.** It is already taught in
+  `lessons/moving-the-server-across/`, it needs no account and no third-party service,
+  and it is sufficient for the whole lesson: authored files up, the world down. An
+  earlier draft of this note treated "which git remote?" as a blocking decision. It
+  never was — rsync alone works, and inflating it into a fork twice was an authoring
+  error rather than a real constraint.
+- **Git across two machines is a separate, optional, later lesson**, not a prerequisite
+  for this one. It earns its place only once the learner has felt what rsync alone does
+  not give them: the box cannot say which version it is running, and cannot be rolled
+  back without the learner's own computer. Write it when that pain is real, not before.
+  If it is ever written, it needs somewhere to push — GitHub is the ordinary answer, and
+  `lessons/renting-a-machine/` already makes the SSH key that would authenticate it.
+- **Watch the word "staging" in
+  `modules/minecraft-server/lessons/choosing-a-version/`.** It currently lumps "staging
+  or development" together as one loose phrase for "the place you try things", which is
+  honest where it sits — everything is on one machine at that point. If Part 4 gives
+  staging a precise meaning, trim that line to "development". Do not touch it until the
+  new wording exists.
 
 ---
 

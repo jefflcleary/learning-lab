@@ -309,6 +309,23 @@ This keeps material from rotting, and doubles as practice at the most useful res
 skill there is: finding out the present state of something rather than trusting a
 description of it.
 
+## Signup and account-creation steps
+
+When a lesson genuinely needs an account to proceed, the steps are part of the lesson
+like any other setup, and are given plainly. Orientation is never withheld, and an
+account is orientation.
+
+What is withheld is only the part that rots: screenshots and exact click paths. Walk the
+*decisions* the learner has to make, state what they will end up with, and point at the
+vendor's own documentation for the current screens. Say plainly when signup can block —
+an identity check, a payment method, a wait — and when it can, say that it is worth doing
+days ahead.
+
+Where a lesson does *not* require an account, it does not manufacture one. A signup is
+not a gate to add for its own sake.
+
+---
+
 ## Exploration lessons
 
 Some lessons go further than pointing at a volatile fact: they are built around

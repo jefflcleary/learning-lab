@@ -262,7 +262,10 @@ next step, deliberately left for go-further because auth flows are volatile.
   the learner always knows the full size of today's surface.
 - The diff-reading moment should explicitly connect to type-don't-paste: the diff
   is the payoff of having chosen every character.
-- Do not walk GitHub signup/auth in any delivery — point at GitHub's docs.
+- GitHub is Go further here, so no delivery of *this* lesson needs account-creation
+  steps — point at GitHub's docs. This is not a lab-wide prohibition: a lesson that
+  genuinely requires an account should include the steps like any other setup, per
+  the signup-flow rule in `authoring/PRINCIPLES.md`.
 - Do not assert which server-generated folders exist (`libraries/`, `versions/`
   vary); drive the ignore list from the learner's own `git status` output.
 - Adjust the add/commit file list phrasing to "what exists in your folder" —
