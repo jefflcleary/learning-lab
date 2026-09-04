@@ -78,6 +78,21 @@ state with a known exit, which is the thing this whole lab exists to install.
   privilege. [verify group name is `sudo` on current Ubuntu as of 2026-09] Both take
   `sudo` in front where the learner is not root, and deliveries give them that way since
   it is harmless when they are.
+- **Deliveries must name `/etc/sudoers` explicitly.** `usermod -aG sudo <name>` *is* the
+  answer to "how do I add a user to sudoers", which is how every other guide phrases it —
+  and an earlier draft never used the word, so a learner looking for the concept could not
+  find it and could not connect what they had done to what they read elsewhere. The
+  mechanism: `/etc/sudoers` holds the rules for who may run what; Ubuntu ships it with a
+  rule granting the `sudo` group full privileges; so group membership is the grant and the
+  file is not edited.
+- [verify as of 2026-09] The group is `sudo` on Ubuntu and Debian, `wheel` on Fedora, RHEL
+  and relatives. Worth one line in deliveries as the first thing to check when the same
+  command fails on a different machine.
+- **`visudo`** is the editor for `/etc/sudoers` and validates syntax before saving,
+  because a malformed file can leave every account on the machine unable to run an
+  administrative command. Deliveries name it, note that it is not needed here, and draw
+  the connection to the lockout theme — it is the same shape of failure as the firewall
+  exercise, recoverable through the same rescue console.
 - **The `minecraft` account is framed as an account for the server, not as "a non-root
   account for you".** That framing survives both starting states — a learner whose
   provider already gave them a sudo-capable account is not being told to solve a problem

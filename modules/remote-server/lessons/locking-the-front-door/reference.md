@@ -35,6 +35,11 @@ sudo rsync --archive --chown=minecraft:minecraft ~/.ssh /home/minecraft/
 
 - Drop the `sudo` if already root; harmless either way. `~` resolves to whichever account
   is logged in, so the rsync source is correct in both cases.
+- `usermod -aG sudo` **is** "adding a user to sudoers": `/etc/sudoers` already carries a
+  rule granting the `sudo` group full privileges, so group membership is the grant. Group
+  is `sudo` on Ubuntu/Debian, `wheel` on RHEL-family. Edit the file only via `visudo`,
+  which syntax-checks before saving — a bad `/etc/sudoers` locks everyone out of
+  administrative access.
 - The `rsync` line is the one that catches people: `authorized_keys` must be **owned** by
   the new account or SSH ignores it. Copying alone is not enough.
 - What it does: adds the same public key to a second account's `authorized_keys`. It does

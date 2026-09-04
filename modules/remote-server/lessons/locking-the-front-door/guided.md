@@ -157,9 +157,29 @@ sudo adduser minecraft
 sudo usermod -aG sudo minecraft
 ```
 
-The second line puts the new account in the `sudo` group, which is what actually grants
-the privilege. (Drop the `sudo` from both if you're already root — it'll work either way,
-and it does no harm.)
+(Drop the `sudo` from both if you're already root — it'll work either way, and it does no
+harm.)
+
+That second line is worth a moment, because it's the answer to a question you'll see
+asked in a hundred other places as **"how do I add a user to sudoers?"**
+
+There's a file on every Linux machine, `/etc/sudoers`, holding the rules for who may run
+what with administrative power. You don't edit it. Ubuntu ships it with a rule already in
+place saying *anyone in the `sudo` group gets full privileges* — so adding somebody to
+that group is how you grant sudo, and `usermod -aG sudo` is doing exactly what those
+other guides mean.
+
+Two things worth carrying:
+
+- **The group name isn't universal.** Ubuntu and Debian use `sudo`. Fedora, RHEL and
+  their relatives use `wheel`. Same idea, different name, and it's the first thing to
+  check if this ever doesn't work on some other machine.
+- **If you ever do need to edit that file, you use `visudo` rather than an editor.** It
+  checks the syntax before saving, because a mistake in `/etc/sudoers` can leave *nobody*
+  on the machine able to run an administrative command — a lockout with a familiar shape,
+  and one you'd be fixing through the same rescue console you're about to go and find.
+
+You don't need to edit it here. Group membership does the whole job.
 
 ### Let your key open that account too
 
