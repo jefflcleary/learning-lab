@@ -191,14 +191,25 @@ layouts change. What matters is the decisions, which are yours:
 - **The SSH key.** Paste in the contents of the `.pub` file from the last step. This is
   the moment the machine learns to let you in.
 
-When the machine exists, the console shows its public address. Write it down.
+When the machine exists, the console shows its public address. Write it down, along with
+the username the provider tells you to connect as.
+
+Some providers also email a temporary password and ask you to change it on your first
+connection. If yours does, expect that step — it isn't a sign anything went wrong, and it
+happens whether or not you attached an SSH key.
 
 ### Get in, and read what you rented
+
+Your provider tells you which account to connect as, in the console or in the email it
+sends when the machine is created. **It won't necessarily be `root`.** Some providers
+hand you the administrator account directly; others — including OVHcloud — create a
+named account for you instead, usually `ubuntu` on an Ubuntu machine, and switch the
+administrator account off. Both are normal. Use whichever name your provider gave you.
 
 <span className="run-where run-where-local">On your Mac</span>
 
 ```
-ssh root@<the address>
+ssh <the username>@<the address>
 ```
 
 The first time, it prints a fingerprint and asks whether you want to continue. That's
@@ -223,10 +234,17 @@ Take a minute over that. What you rented is not a Minecraft appliance. It's a co
 general-purpose computer, with an operating system, a disk, a memory budget, and a list
 of programs already running — and all of it is now yours to look after.
 
-`whoami` will have answered **root**. That's the administrator account that exists on
-every Linux machine; it can do anything at all, and nothing warns it. Providers hand you
-a machine as root because there's no other account yet. The next session is largely about
-fixing that.
+Look at what `whoami` answered, because it decides where the next session starts.
+
+- If it said **root**, you are the administrator account that exists on every Linux
+  machine. It can do anything at all, and nothing warns it or asks whether you meant it.
+- If it said something else — `ubuntu`, or another name — your provider made you an
+  ordinary account and gave it the ability to borrow administrator powers when it needs
+  them. It also, usually, switched the administrator account off entirely.
+
+The second is the better starting position and it's what this module's default provider
+does. Either way, next session is about understanding the difference and making the
+machine properly yours.
 
 Leave with `exit`.
 
@@ -284,7 +302,7 @@ Now try connecting to a port where nothing is listening:
 <span className="run-where run-where-local">On your Mac</span>
 
 ```
-ssh -p 2222 root@<the address>
+ssh -p 2222 <the username>@<the address>
 ```
 
 Read that failure too. They're different words for different situations, and the
@@ -325,9 +343,9 @@ The fingerprint prompt was the same idea pointing the other way: the machine pro
 *you* that it's the same machine as last time. Both directions matter, and most people
 only ever think about one of them.
 
-One thing to carry forward. You logged in as root, which can do anything on that machine
-with no confirmation and no undo. That's fine for five minutes and a bad way to live, and
-it's where the next session starts.
+One thing to carry forward. Whichever account you logged in as, something on that machine
+can do anything at all with no confirmation and no undo — either you are that account, or
+you can become it. That's where the next session starts.
 
 ---
 

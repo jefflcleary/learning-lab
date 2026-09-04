@@ -33,8 +33,9 @@ state with a known exit, which is the thing this whole lab exists to install.
 
 ## Prerequisites
 
-- A rented Ubuntu machine you can reach as root over SSH, and its public address —
-  established by `modules/remote-server/lessons/renting-a-machine/`
+- A rented Ubuntu machine you can reach over SSH, and its public address — established by
+  `modules/remote-server/lessons/renting-a-machine/`. **Which account that is varies by
+  provider and this lesson must not assume `root`.**
 - Access to the provider's control panel for that machine, which is where the rescue
   path lives. Same lesson.
 
@@ -59,7 +60,14 @@ state with a known exit, which is the thing this whole lab exists to install.
 
 - **root** is the administrator account on every Linux machine. It can do anything,
   including irreversibly destroy the system, and nothing warns it or asks for
-  confirmation. A new machine arrives as root because there is no other account yet.
+  confirmation.
+- **The starting account is provider-dependent [verify as of 2026-09].** Some providers
+  hand over `root`. OVHcloud — this module's default — creates a named account (`ubuntu`
+  on Ubuntu), grants it sudo, disables root and refuses root over SSH. An earlier draft
+  of this lesson was written entirely on the assumption that the learner begins as root,
+  which is wrong on the provider the module recommends. Deliveries open by having the
+  learner run `whoami` and `id` and name which of the two situations they are in; the
+  rest of the lesson works from either.
 - Working as root all the time is avoided everywhere, for two reasons worth stating
   plainly: a mistyped command has no safety margin, and nothing in the record
   distinguishes "I meant to do something administrative" from "I was tidying up".
@@ -67,13 +75,32 @@ state with a known exit, which is the thing this whole lab exists to install.
   `sudo` in front of the individual commands that need administrative power.
 - `adduser <name>` creates a user with a home directory at `/home/<name>`.
   `usermod -aG sudo <name>` puts that user in the `sudo` group, which is what grants the
-  privilege. [verify group name is `sudo` on current Ubuntu as of 2026-09]
+  privilege. [verify group name is `sudo` on current Ubuntu as of 2026-09] Both take
+  `sudo` in front where the learner is not root, and deliveries give them that way since
+  it is harmless when they are.
+- **The `minecraft` account is framed as an account for the server, not as "a non-root
+  account for you".** That framing survives both starting states — a learner whose
+  provider already gave them a sudo-capable account is not being told to solve a problem
+  they do not have — and it is the better idea anyway: a program with its own account can
+  be given exactly what it needs, and `User=minecraft` in the systemd unit later depends
+  on it existing.
 - A new user's `~/.ssh/authorized_keys` starts empty, so a freshly created user cannot be
   logged into with the key that works for root until the file is copied across — **with
   ownership set to the new user, or SSH ignores it**. The standard one-liner, run as
   root: `rsync --archive --chown=<name>:<name> ~/.ssh /home/<name>/`
 - `sudo whoami` answering `root` is the neat one-command demonstration: the power,
-  borrowed for exactly one command and handed straight back.
+  borrowed for exactly one command and handed straight back. Deliveries pair it with a
+  plain `whoami` answering `minecraft`, because the pair is what makes the distinction
+  land — two different questions with two different answers.
+- **Authentication versus identity, and the misreading that made this necessary.** Copying
+  `.ssh` into the new account's home reads to some learners as linking their key *to the
+  first account*, or as making `ssh minecraft@…` log them in as root. It does neither.
+  `authorized_keys` is a per-account list of public keys permitted to log in **as that
+  account**; the operation adds one key to a second list and copies no privilege. The key
+  proves who you are; the username typed decides what you are. Deliveries must state both
+  halves explicitly and must say plainly that logging in as `minecraft` makes you
+  `minecraft` — the concepts are separable and a learner who conflates them cannot reason
+  about any of what follows.
 
 ### SSH configuration
 

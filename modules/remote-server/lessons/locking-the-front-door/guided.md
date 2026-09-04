@@ -27,9 +27,10 @@ proved the way back works, and it's the part you'll still remember in a year.
 
 You need:
 
-- **A rented Ubuntu machine you can reach as root over SSH, and its address.**
+- **A rented Ubuntu machine you can reach over SSH, and its address.**
   [Renting a machine and getting into it](../renting-a-machine/guided.md) gets you there.
-  Quick check: `ssh root@<your address>` returns a prompt.
+  Quick check: `ssh <your username>@<your address>` returns a prompt. The username came
+  from your provider and may or may not be `root` — that session covers which.
 - **Access to that machine's control panel** on your provider's website. The way back in,
   when you lock yourself out, lives there.
 
@@ -112,71 +113,118 @@ This applies for the rest of this session, and it is not advice:
 A session that's already open keeps working no matter what you break. The question is
 always whether the *next* one will, and the only way to know is to open one.
 
-Open two terminals now. Log in as root in both. Leave one of them alone.
+Open two terminals now and log into the machine in both. Leave one of them alone.
 
-### Make an account that's yours
+### Find out who you are
 
-You're currently root: the administrator account that exists on every Linux machine. It
-can do anything, with no confirmation and no undo. Your provider handed you the machine
-as root because there was no other account yet.
-
-Nobody runs a machine this way, for two reasons worth saying plainly. A mistyped command
-has no safety margin — there's nothing between you and the consequence. And nothing in the
-record distinguishes "I meant to do something administrative" from "I was tidying up".
-
-The convention everywhere is a normal account for ordinary work, plus `sudo` in front of
-the individual commands that need more.
+Before changing anything, establish which of two situations you're in:
 
 <span className="run-where run-where-remote">On the rented machine</span>
 
 ```
-adduser minecraft
-usermod -aG sudo minecraft
+whoami
+id
 ```
 
-The second line puts your new user in the `sudo` group, which is what actually grants the
-privilege.
+**If `whoami` says `root`**, you are the administrator account that exists on every Linux
+machine. It can do anything, with no confirmation and no undo, and some providers hand
+you the machine this way because there's no other account yet.
 
-### Get your key across
+**If it says something else** — `ubuntu`, or another name your provider chose — then your
+provider has already done the first half of this for you. Look at what `id` printed: if
+`sudo` is among the groups listed, this account can borrow administrator powers one
+command at a time. Providers that do this usually also switch the root account off
+entirely, which is why you couldn't have logged in as root even if you'd tried.
 
-Your new user can't log in yet. Work out why before reading the hints.
+The second is the better starting position, and it's what this module's default provider
+gives you. Nobody runs a machine as root full-time, for two reasons worth saying plainly:
+a mistyped command has no safety margin, and nothing in the record distinguishes "I meant
+to do something administrative" from "I was tidying up".
+
+### Make an account for the server
+
+Either way, you want one more account — not for you, for the *server*.
+
+The Minecraft server is going to run as somebody. It shouldn't be root, and it's tidier
+if it isn't you either: a program with its own account can be given exactly the files it
+needs and nothing else, and when you look at what's running you can see at a glance which
+things are yours and which are the server's.
+
+<span className="run-where run-where-remote">On the rented machine</span>
+
+```
+sudo adduser minecraft
+sudo usermod -aG sudo minecraft
+```
+
+The second line puts the new account in the `sudo` group, which is what actually grants
+the privilege. (Drop the `sudo` from both if you're already root — it'll work either way,
+and it does no harm.)
+
+### Let your key open that account too
+
+You can't log in as `minecraft` yet. Work out why before reading the hints.
 
 <details>
 <summary>Stuck? Start here</summary>
 
-Root can log in with your key. Your new user can't. What does root have that the new user
-doesn't? Somewhere on this machine there's a file that decides which keys are allowed to
-log in as a particular person.
+You can log in as the account your provider gave you. You can't log in as `minecraft`.
+The difference isn't your key — it's the same key either way. Somewhere on this machine
+there's something that decides which keys are allowed to log in *as a particular
+account*.
 
 </details>
 
 <details>
 <summary>The concept</summary>
 
-Every user has their own `~/.ssh/authorized_keys` — a file listing the public keys allowed
-to log in as them. That's the entire mechanism: a line in that file grants access,
-deleting the line takes it away. Root's copy has your key in it, put there by your
-provider when the machine was created. Your new user's doesn't exist yet.
+Every account on the machine has its own file at `~/.ssh/authorized_keys`, listing the
+public keys allowed to log in **as that account**. That's the whole mechanism: a line in
+that file grants access, deleting the line takes it away.
 
-Copying the file isn't quite enough. SSH refuses to trust a key file that belongs to
-somebody else, so the ownership has to change along with the copy.
+Your public key is currently on one account's list — the one your provider set up, put
+there when the machine was created. It isn't on `minecraft`'s list, because `minecraft`
+was created two minutes ago and its list is empty.
+
+So the job is: add your public key to the second list as well. The same key, named on two
+lists.
+
+One wrinkle. SSH refuses to trust a list of who-may-log-in-as-me if that file belongs to
+somebody else — otherwise anyone who could write to it could add themselves. So the
+ownership has to change along with the copy.
 
 </details>
 
 <details>
 <summary>The shape of it</summary>
 
-Run this as root. It copies the whole `.ssh` folder and sets the new owner in one step:
+Copying the whole `.ssh` folder is the quickest way to do it, since the list lives inside.
+`~` here means the home directory of whichever account you're logged in as, so this works
+the same whether that's root or a named account:
 
 <span className="run-where run-where-remote">On the rented machine</span>
 
 ```
-rsync --archive --chown=minecraft:minecraft ~/.ssh /home/minecraft/
+sudo rsync --archive --chown=minecraft:minecraft ~/.ssh /home/minecraft/
 ```
 
 </details>
 
-Now prove it, in a **new** terminal:
+**One thing this does not do**, because the wording around it invites the wrong reading:
+it does not connect your key to the *first* account, and it does not give `minecraft` that
+account's powers. Nothing about either account is copied. All that moved was a list of
+public keys, and your key is now named on two of them.
+
+Worth separating two ideas that are easy to run together:
+
+- **Your key proves who you are.** One key, and it doesn't belong to any account on the
+  server.
+- **The username you type decides what you are.** `ssh minecraft@…` logs you in as
+  `minecraft` — not as root, not as the provider's account. You'd get `minecraft`'s home
+  directory, `minecraft`'s permissions, and nothing else.
+
+Which is exactly what you want. You are never logged in as root in this module, and you
+shouldn't be. Prove it, in a **new** terminal:
 
 <span className="run-where run-where-local">On your Mac</span>
 
@@ -184,21 +232,24 @@ Now prove it, in a **new** terminal:
 ssh minecraft@<the address>
 ```
 
-And then, once you're in:
-
 <span className="run-where run-where-remote">On the rented machine</span>
 
 ```
+whoami
 sudo whoami
 ```
 
-It answers `root`. That's the whole idea in one line: the power, borrowed for exactly one
-command, and handed straight back.
+The first answers `minecraft` — that's who you are. The second answers `root` — that's
+the power, borrowed for exactly one command and handed straight back. Two different
+questions with two different answers, which is the entire point of the arrangement.
 
 ### Close the doors you're not using
 
 There are two ways into this machine you don't want: logging in with a password, and
 logging in as root.
+
+Depending on your provider, one or both may already be closed — some disable root
+entirely before handing the machine over. Check before you change anything.
 
 The settings live in `/etc/ssh/sshd_config`. **Before you change either, look at what's
 already there.** Current Ubuntu images often set both the way you want them already, and
@@ -305,9 +356,9 @@ What that teaches is worth more than the firewall itself: **"locked out" is not 
 of disaster, it's a state with an exit** — and it cost you four minutes instead of your
 world because you found the exit before you needed it.
 
-**Break the ownership of your key file.** As root, change the owner of the `minecraft`
-user's `~/.ssh/authorized_keys` to root, then try to log in as `minecraft` from a new
-terminal.
+**Break the ownership of your key file.** With `sudo`, change the owner of the
+`minecraft` account's `~/.ssh/authorized_keys` to root, then try to log in as `minecraft`
+from a new terminal.
 
 Permission denied — the same failure you caused deliberately last session, except now you
 know exactly what caused it. The file is present. It's correct. It's readable. And SSH

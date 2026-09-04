@@ -23,7 +23,7 @@ gets a command prompt on it. Then it does one more thing that is not optional �
 out what the machine costs, which billing model it is on, and where the control that
 stops it lives.
 
-Payoff: `ssh root@<address>` returns a prompt on a machine in another state or another
+Payoff: `ssh <username>@<address>` returns a prompt on a machine in another state or another
 country. That is a genuinely startling moment the first time and the lesson should not
 rush past it.
 
@@ -47,7 +47,8 @@ look after.
 - A key pair on the learner's own machine, and the understanding of which half may be
   published — cited as: "the learner has an SSH key pair and can log into a remote
   machine — established by `modules/remote-server/lessons/renting-a-machine/`."
-- A rented Ubuntu LTS machine at a known public address, reachable as root over SSH.
+- A rented Ubuntu LTS machine at a known public address, reachable over SSH as whichever
+  account the provider created.
 - The learner can read a machine they have just met: `whoami`, `ls /`, `df -h`,
   `free -h`, `uname -a`.
 - Knowledge of what the machine costs, which billing model it is on, and where it gets
@@ -198,9 +199,19 @@ its keep twice.
   wants. [volatile as of 2026-09: which release is current — point at Ubuntu's releases
   page]
 - **root** is the administrator account that exists on every Linux machine. It can do
-  anything, including irreversibly destroy the system, and nothing warns it. Providers
-  hand over a new machine as root because there is no other account yet. The next lesson
-  fixes that; this one names it.
+  anything, including irreversibly destroy the system, and nothing warns it.
+- **Which account the provider hands over varies, and deliveries must not assume `root`.**
+  [verify per provider as of 2026-09] Some providers give the administrator account
+  directly. OVHcloud — this module's default — instead creates a named account (`ubuntu`
+  on Ubuntu images), grants it sudo, disables the root account, and refuses root over SSH
+  entirely; the username is given in the console and the delivery email. An earlier draft
+  of this module hardcoded `ssh root@…` throughout, which is simply wrong on the provider
+  it recommends. The fix is not to hardcode the other answer: deliveries have the learner
+  read the username from the provider and `whoami` to see which case they are in, which is
+  the provider-agnostic version and a better lesson besides.
+- [volatile as of 2026-09] Some providers, OVHcloud included, email a temporary password
+  and force a change on first connection, independently of any SSH key attached at order
+  time. Deliveries name this so it does not read as a fault.
 - Reading a machine you have just met, none of which changes anything: `whoami`,
   `ls /`, `df -h` (disk), `free -h` (memory), `uname -a` (kernel and processor).
 
@@ -247,7 +258,7 @@ Deliveries also carry, because each costs an hour otherwise: that advertised pri
 be the long-commitment rate so a no-commitment configurator shows more; and that
 low-latency locations may exclude inclusions the ordinary ones have.
 
-**3. Get in.** `ssh root@<address>`, answer the host key prompt having understood what
+**3. Get in.** `ssh <username>@<address>`, answer the host key prompt having understood what
 it asks, arrive at a prompt. Then the read-the-surface pass, changing nothing. The point
 is the realisation that this is an entire general-purpose computer.
 
@@ -266,7 +277,7 @@ aloud what happens if this machine is forgotten about for a year.
 
 - **Connect to something that isn't there.** Mistype the address — change one digit —
   and wait. Read the failure. Then try connecting to a port nothing is listening on
-  (`ssh -p 2222 root@<address>`) and read *that* failure. The two are different words
+  (`ssh -p 2222 <username>@<address>`) and read *that* failure. The two are different words
   for different situations: a timeout means nothing answered at all, a refusal means
   something answered and said no. Teaches the distinction that makes every future
   connection problem faster to diagnose. Undo: nothing.

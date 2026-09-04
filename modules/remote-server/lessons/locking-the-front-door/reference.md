@@ -5,7 +5,8 @@
 Compressed version: commands and hazards only. The teaching version is
 [guided.md](guided.md).
 
-Goal: a non-root user with `sudo` logging in by key, password and root SSH logins closed,
+Goal: a dedicated `minecraft` account with `sudo` logging in by key, password and root
+SSH logins closed,
 a firewall allowing SSH, and the provider's rescue console proved.
 
 If a learner will do this material later, leave them the firewall lockout and the log of
@@ -16,26 +17,39 @@ rescue path below is proved.
 open and logged in, and prove a *new* connection works in a third before closing the
 first.
 
-## User and key
+## Starting account
+
+`whoami` first — providers differ and the module does not assume. Some hand over `root`;
+OVHcloud creates a named account (`ubuntu` on Ubuntu), grants it sudo, and disables root
+entirely. `id` shows whether the account is in the `sudo` group.
+
+## Service account and key
 
 <span className="run-where run-where-remote">On the rented machine</span>
 
 ```
-adduser minecraft
-usermod -aG sudo minecraft
-rsync --archive --chown=minecraft:minecraft ~/.ssh /home/minecraft/
+sudo adduser minecraft
+sudo usermod -aG sudo minecraft
+sudo rsync --archive --chown=minecraft:minecraft ~/.ssh /home/minecraft/
 ```
 
+- Drop the `sudo` if already root; harmless either way. `~` resolves to whichever account
+  is logged in, so the rsync source is correct in both cases.
 - The `rsync` line is the one that catches people: `authorized_keys` must be **owned** by
-  the new user or SSH ignores it. Copying alone is not enough.
-- Verify in a new terminal: `ssh minecraft@<address>`, then `sudo whoami` → `root`.
+  the new account or SSH ignores it. Copying alone is not enough.
+- What it does: adds the same public key to a second account's `authorized_keys`. It does
+  **not** link the key to the first account or transfer any privilege. Authentication (the
+  key) and identity (the username you type) are separate.
+- Verify in a new terminal: `ssh minecraft@<address>`, then `whoami` → `minecraft`,
+  `sudo whoami` → `root`.
 
 ## SSH config
 
 - `/etc/ssh/sshd_config`, plus anything in `/etc/ssh/sshd_config.d/`, which **overrides
   it**. Reading only the main file will tell you something untrue.
 - Want `PasswordAuthentication no` and `PermitRootLogin no`. **Check first** — current
-  Ubuntu images frequently set both already, and that is a good outcome.
+  Ubuntu images frequently set both already, and some providers disable root outright
+  before handing the machine over. Finding them already correct is a good outcome.
 - Restart the SSH server after any change, then prove a fresh connection before closing
   the original session.
 

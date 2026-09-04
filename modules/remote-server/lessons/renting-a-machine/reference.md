@@ -63,8 +63,13 @@ Exit condition for this section, and the reason it is provider-independent from 
 <span className="run-where run-where-local">On your Mac</span>
 
 ```
-ssh root@<address>
+ssh <username>@<address>
 ```
+
+The username comes from the provider, in the console or the delivery email — **not
+necessarily `root`**. OVHcloud creates a named account (`ubuntu` on Ubuntu) and disables
+the administrator account; other providers hand you `root` directly. Some also email a
+temporary password and force a change on first login.
 
 Accept the host fingerprint on first connect (recorded in `~/.ssh/known_hosts`; a later
 change makes `ssh` refuse — rebuilding a machine at the same address is the usual
@@ -80,8 +85,8 @@ free -h
 uname -a
 ```
 
-You are root: can do anything, nothing warns you. Fine for five minutes; the next
-lesson fixes it.
+Check what `whoami` returns. Either you are `root` (all power, no warnings) or an
+ordinary account with sudo available. Which one decides where the next lesson starts.
 
 Diagnosing a failed connection: `ssh -v` prints each step and stops at the failure. The
 provider's console shows whether the machine is running and which key was attached.
@@ -107,6 +112,7 @@ Three failure shapes, worth being able to name apart:
 ## What you have now
 
 - An SSH key pair, with the public half installed on a rented machine
-- A rented Ubuntu LTS machine at a known public address, reachable as root over SSH
+- A rented Ubuntu LTS machine at a known public address, reachable over SSH as the
+  account the provider set up
 - A read of the machine: disk, memory, kernel, what is running
 - The monthly cost, the billing model, and the location of the off switch
