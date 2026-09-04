@@ -19,9 +19,15 @@ first.
 
 ## Starting account
 
-`whoami` first — providers differ and the module does not assume. Some hand over `root`;
-OVHcloud creates a named account (`ubuntu` on Ubuntu), grants it sudo, and disables root
-entirely. `id` shows whether the account is in the `sudo` group.
+`whoami` then `sudo -v` — providers differ and the module does not assume. Some hand over
+`root`. OVHcloud creates an account named after the OS (`ubuntu`, `debian`, `rocky`),
+grants it sudo, and disables root; `sudo passwd root` is their documented way to enable
+root if you ever want it. [verified against OVHcloud docs 2026-09-04]
+
+`sudo -v` is the direct test rather than reading `id` output, since sudoers can grant
+rights without group membership. Neither root nor sudo means you cannot proceed and
+cannot fix it from inside the machine — that is a provider question, usually a root
+password set from their control panel.
 
 ## Service account and key
 

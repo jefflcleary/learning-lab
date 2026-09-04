@@ -61,6 +61,21 @@ state with a known exit, which is the thing this whole lab exists to install.
 - **root** is the administrator account on every Linux machine. It can do anything,
   including irreversibly destroy the system, and nothing warns it or asks for
   confirmation.
+- **Whether the starting account has sudo must be checked, not assumed, and the check is
+  `sudo -v` rather than reading `id`.** Group membership is the usual mechanism but not
+  the only one — sudoers can name a user directly — so the direct question is the right
+  one. It matters because every step after it uses sudo: a delivery that assumes the
+  answer strands anyone whose answer is no, with no path forward and no explanation.
+  Deliveries carry an explicit else-branch: neither root nor sudo cannot be fixed from
+  inside the machine, because granting administrator rights is itself an administrative
+  act, so it is a provider question — typically a root password set from their control
+  panel, reachable through the browser console this lesson finds later.
+- [verified against OVHcloud's own documentation 2026-09-04] On OVHcloud the default
+  account is named after the operating system (`ubuntu`, `debian`, `rocky`), **does** come
+  with sudo — their docs say to use sudo from the main user for administrative tasks — and
+  the root account is disabled, with `sudo passwd root` the documented way to enable it.
+  So the assumption happens to hold on this module's default provider; the lesson still
+  does not rest on it.
 - **The starting account is provider-dependent [verify as of 2026-09].** Some providers
   hand over `root`. OVHcloud — this module's default — creates a named account (`ubuntu`
   on Ubuntu), grants it sudo, disables root and refuses root over SSH. An earlier draft

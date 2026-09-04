@@ -123,18 +123,42 @@ Before changing anything, establish which of two situations you're in:
 
 ```
 whoami
-id
+sudo -v
 ```
 
 **If `whoami` says `root`**, you are the administrator account that exists on every Linux
 machine. It can do anything, with no confirmation and no undo, and some providers hand
-you the machine this way because there's no other account yet.
+you the machine this way because there's no other account yet. `sudo` is irrelevant to
+you for now — you already have everything it would grant.
 
-**If it says something else** — `ubuntu`, or another name your provider chose — then your
-provider has already done the first half of this for you. Look at what `id` printed: if
-`sudo` is among the groups listed, this account can borrow administrator powers one
-command at a time. Providers that do this usually also switch the root account off
-entirely, which is why you couldn't have logged in as root even if you'd tried.
+**If it says something else** — `ubuntu`, `debian`, or another name matching the operating
+system you chose — then your provider has already done the first half of this for you.
+That's what `sudo -v` was checking. It's the direct question, "am I allowed to use sudo?",
+and it either returns quietly (possibly after asking for your password) or tells you that
+this account isn't allowed to. Providers that set things up this way usually also switch
+the root account off entirely, which is why you couldn't have logged in as root even if
+you'd tried.
+
+OVHcloud, this module's default, does exactly that: the account is named after the
+operating system, it comes with sudo already, and root is disabled.
+
+<details>
+<summary>What if you're not root and sudo says you're not allowed?</summary>
+
+Then you have neither administrator rights nor a way to borrow them, and nothing below
+this line will work — every step of it needs one or the other.
+
+This isn't something you can fix from inside the machine, by definition: granting
+administrator rights is an administrative act. It's a question for your provider, and how
+you resolve it is specific to them — usually a root password you can set from their
+control panel, or a documented first-login procedure you haven't done yet. Their
+documentation is the place to look, and the browser console you'll meet later in this
+session is often how you do it.
+
+It's rare. Most providers hand over one or the other deliberately, because a machine you
+can't administer is a machine you can't use.
+
+</details>
 
 The second is the better starting position, and it's what this module's default provider
 gives you. Nobody runs a machine as root full-time, for two reasons worth saying plainly:
